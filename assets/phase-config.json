@@ -1,0 +1,49 @@
+{
+  "INIT_A": {
+    "preconditions": {},
+    "allowed_agents": ["main_bot"],
+    "timeout": 3,
+    "points": 0
+  },
+  "INIT_B": {
+    "preconditions": {},
+    "allowed_agents": ["second_bot"],
+    "timeout": 3,
+    "points": 0
+  },
+  "GRAB_CUBES": {
+    "allowed_agents": ["second_bot"],
+    "preconditions": {
+
+    },
+    "timeout": 30,
+    "points": 500
+  },
+  "CLEAR_DECK": {
+    "allowed_agents": ["main_bot", "second_bot"],
+    "preconditions": {
+
+    },
+    "timeout": 20,
+    "points": 100
+  },
+  "FETCH_CUBE_ORDER": {
+    "allowed_agents": ["main_bot"],
+    "preconditions": {
+
+    },
+    "timeout": 20,
+    "points": 0
+  },
+  "STACK_CUBES": {
+    "allowed_agents": ["second-bot"],
+    "preconditions": {
+      "grabbed_cubes": true,
+      "fetched_order": true,
+      "deck_is_cleared": true,
+      "time_left": 50
+    },
+    "timeout": 50,
+    "points": 1000
+  }
+}
