@@ -1,28 +1,35 @@
 {
   "INIT_A": {
     "preconditions": {},
-    "allowed_agents": ["main_bot"],
+    "allowed_agents": [
+      "main_bot"
+    ],
     "timeout": 3,
     "points": 0
   },
   "INIT_B": {
     "preconditions": {},
-    "allowed_agents": ["second_bot"],
+    "allowed_agents": [
+      "second_bot"
+    ],
     "timeout": 3,
     "points": 0
   },
   "GRAB_CUBES": {
-    "allowed_agents": ["second_bot"],
+    "allowed_agents": [
+      "second_bot"
+    ],
     "preconditions": {
-
     },
     "timeout": 30,
     "points": 500
   },
   "CLEAR_DECK": {
-    "allowed_agents": ["main_bot", "second_bot"],
+    "allowed_agents": [
+      "main_bot",
+      "second_bot"
+    ],
     "preconditions": {
-
     },
     "timeout": 20,
     "points": 100

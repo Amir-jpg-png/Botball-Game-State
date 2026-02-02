@@ -1,4 +1,4 @@
-#include "WorldState.h"
+#include "GameTableState.h"
 
 #include <fstream>
 #include <utility>
@@ -7,15 +7,15 @@
 
 using json = nlohmann::json;
 
-std::any WorldState::get(const std::string& key) {
+std::any GameTableState::get(const std::string& key) {
     return m_environment.at(key);
 }
 
-void WorldState::set(const std::string& key, std::any value) {
+void GameTableState::set(const std::string& key, std::any value) {
     m_environment[key] = std::move(value);
 }
 
-WorldState::WorldState(const std::string& path) {
+GameTableState::GameTableState(const std::string& path) {
     std::ifstream file(path);
 
     if (!file.is_open()) {

@@ -1,6 +1,9 @@
 #include "Phase.h"
 
-Phase::Phase(const std::string &phase_name, const json &data) {
+#include <utility>
+
+Phase::Phase(const std::string &phase_name, const json &data, std::function<void()> action) {
+    m_action = std::move(action);
     m_id = phase_name;
     m_time_to_completion = data.at("timeout").get<int>();
     for (const auto& [condition_key, condition_value] : data.items()) {
