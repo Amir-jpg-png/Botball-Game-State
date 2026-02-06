@@ -1,6 +1,7 @@
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 cmake_minimum_required(VERSION 3.16)
 
 # set the project name and version
@@ -12,6 +13,7 @@ file(GLOB INCLUDE_FILES "include/*.h" "lib/*.hpp")
 
 add_library(${PROJECT_NAME} STATIC
         include/gamestate.h)
+
 
 # specify the C++ standard
 target_compile_features(${PROJECT_NAME} PUBLIC cxx_std_17)
@@ -44,7 +46,6 @@ set(public_headers
         ${INCLUDE_FILES}
 )
 set_target_properties(${PROJECT_NAME} PROPERTIES PUBLIC_HEADER "${public_headers}")
-
 
 
 # set the compiler and linker flags

@@ -35,15 +35,18 @@
     "points": 100
   },
   "FETCH_CUBE_ORDER": {
-    "allowed_agents": ["main_bot"],
+    "allowed_agents": [
+      "main_bot"
+    ],
     "preconditions": {
-
     },
     "timeout": 20,
     "points": 0
   },
   "STACK_CUBES": {
-    "allowed_agents": ["second-bot"],
+    "allowed_agents": [
+      "second-bot"
+    ],
     "preconditions": {
       "grabbed_cubes": true,
       "fetched_order": true,

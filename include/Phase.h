@@ -2,22 +2,27 @@
 #define TECH_GAME_STATE_PHASE_H
 #include <unordered_map>
 #include <any>
-#include "string"
+#include <string>
 #include "json.hpp"
+#include "GameTableState.h"
 
 using json = nlohmann::json;
 
 class Phase {
-    std::string m_id;
     int m_time_to_completion;
-    std::function<void()> m_action;
+    int m_points;
+    bool m_done;
+    std::string m_id;
     std::vector<std::string> m_allowed_agents;
-    std::unordered_map<std::string, std::any> m_conditions;
-    std::unordered_map<std::string, std::any> m_completion;
-public:
-    explicit Phase(const std::string &phase_name, const json &data, std::function<void()> action);
+    std::map<std::string, std::any> m_conditions;
+    std::map<std::string, std::any> m_completion;
 
-    [[nodiscard]] std::string get_id() const {
+public:
+    explicit Phase(const std::string &phase_name, const json &data);
+
+    void execute(GameTableState &world, const std::function<void()> &action);
+
+    [[nodiscard]] const std::string &get_id() const {
         return m_id;
     }
 
@@ -25,22 +30,29 @@ public:
         return m_time_to_completion;
     }
 
-    void execute() const {
-        m_action();
-    }
-
-    [[nodiscard]] std::vector<std::string> get_allowed_agents() const {
+    [[nodiscard]] const std::vector<std::string> &get_allowed_agents() const {
         return m_allowed_agents;
     }
 
-    [[nodiscard]] std::unordered_map<std::string, std::any> get_conditions() const {
+    [[nodiscard]] const std::map<std::string, std::any> &get_conditions() const {
         return m_conditions;
     }
 
-    [[nodiscard]] std::unordered_map<std::string, std::any> get_completion() const {
+    [[nodiscard]] const std::map<std::string, std::any> &get_completion() const {
         return m_completion;
+    }
+
+    [[nodiscard]] std::map<std::string, std::any> get_completion_copy() const {
+        return m_completion;
+    }
+
+    [[nodiscard]] bool get_done() const {
+        return m_done;
+    }
+
+    [[nodiscard]] int get_points() const {
+        return m_points;
     }
 };
 
-
-#endif //TECH_GAME_STATE_PHASE_H
+#endif // TECH_GAME_STATE_PHASE_H

@@ -5,11 +5,18 @@
 #include <string>
 
 class GameTableState {
-        std::map<std::string, std::any> m_environment;
-        void set(const std::string& key, std::any value);
-    public:
-        std::any get(const std::string& key);
-        explicit GameTableState(const std::string& path);
+    std::map<std::string, std::any> m_environment;
+
+public:
+    void set(const std::string &key, std::any value);
+
+    [[nodiscard]] bool has(const std::string &key) const;
+
+    [[nodiscard]] std::any get(const std::string &key) const;
+
+    [[nodiscard]] std::map<std::string, std::any> getAll() const;
+
+    explicit GameTableState(const std::string &path);
 };
 
 
