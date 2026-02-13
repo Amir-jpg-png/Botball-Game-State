@@ -3,9 +3,10 @@
 #include <any>
 #include <map>
 #include <string>
+#include "Util.h"
 
 class GameTableState {
-    std::map<std::string, std::any> m_environment;
+    std::unordered_map<std::string, std::any> m_environment;
 
 public:
     void set(const std::string &key, std::any value);
@@ -14,7 +15,7 @@ public:
 
     [[nodiscard]] std::any get(const std::string &key) const;
 
-    [[nodiscard]] std::map<std::string, std::any> getAll() const;
+    [[nodiscard]] std::unordered_map<std::string, std::any> getAll() const;
 
     explicit GameTableState(const std::string &path);
 };

@@ -1,59 +1,51 @@
 {
   "INIT_A": {
-    "preconditions": {},
-    "allowed_agents": [
-      "main_bot"
-    ],
-    "timeout": 3,
+    "allowed_agents": "bot_a",
+    "conditions": {},
+    "completion": {
+      "init_a": true
+    },
+    "timeout": 2,
     "points": 0
   },
   "INIT_B": {
-    "preconditions": {},
-    "allowed_agents": [
-      "second_bot"
-    ],
-    "timeout": 3,
-    "points": 0
-  },
-  "GRAB_CUBES": {
-    "allowed_agents": [
-      "second_bot"
-    ],
-    "preconditions": {
+    "allowed_agents": "bot_b",
+    "conditions": {},
+    "completion": {
+      "init_b": true
     },
-    "timeout": 30,
-    "points": 500
+    "timeout": 2,
+    "points": 0
   },
   "CLEAR_DECK": {
-    "allowed_agents": [
-      "main_bot",
-      "second_bot"
-    ],
-    "preconditions": {
+    "allowed_agents": "bot_a",
+    "conditions": {
+      "init_a": true
     },
-    "timeout": 20,
+    "completion": {
+      "deck_cleared": true
+    },
+    "timeout": 5,
     "points": 100
   },
-  "FETCH_CUBE_ORDER": {
-    "allowed_agents": [
-      "main_bot"
-    ],
-    "preconditions": {
+  "WAIT_FOR_INIT": {
+    "allowed_agents": "bot_a",
+    "conditions": {
+      "init_b": true
     },
-    "timeout": 20,
-    "points": 0
+    "completion": {
+      "dummy": true
+    },
+    "timeout": 5,
+    "points": 50
   },
-  "STACK_CUBES": {
-    "allowed_agents": [
-      "second-bot"
-    ],
-    "preconditions": {
-      "grabbed_cubes": true,
-      "fetched_order": true,
-      "deck_is_cleared": true,
-      "time_left": 50
+  "LONG_TASK": {
+    "allowed_agents": "bot_a",
+    "conditions": {},
+    "completion": {
+      "x": true
     },
-    "timeout": 50,
-    "points": 1000
+    "timeout": 10,
+    "points": 100
   }
 }
