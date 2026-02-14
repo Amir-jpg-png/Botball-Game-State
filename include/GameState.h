@@ -29,7 +29,7 @@ class GameState {
     std::unique_ptr<PhaseState> m_phase_state;
     std::string m_agent;
 
-    [[nodiscard]] Phase get_next_best_phase() const;
+    [[nodiscard]] std::optional<Phase> get_next_best_phase() const;
 
     // computes the potential of a phase by adding the points of all phases that would be OPEN after the completion of the phase and dividing them by the amount of phases that get unlocked
     [[nodiscard]] double compute_potential(const Phase &phase_candidate) const;

@@ -1,9 +1,9 @@
 #include <GameState.h>
 
 int main() {
-    GameState gs("/Users/amir/workspace/robotik/TechSupport/ECER2026/game-state/config/state-config/table-config.json",
-                 "/Users/amir/workspace/robotik/TechSupport/ECER2026/game-state/config/state-config/phase-config.json",
-                 "/Users/amir/workspace/robotik/TechSupport/ECER2026/game-state/config/state-config/game-state-config.json");
+    GameState gs("/home/pi/gamestate/config/state-config/table-config.json",
+                 "/home/pi/gamestate/config/state-config/phase-config.json",
+                 "/home/pi/gamestate/config/state-config/game-state-config.json");
 
     std::unordered_map<std::string, std::function<void()> > actions;
 

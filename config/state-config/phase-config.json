@@ -1,4 +1,13 @@
 {
+  "INIT_A": {
+    "allowed_agents": "bot_a",
+    "conditions": {},
+    "completion": {
+      "init_a": true
+    },
+    "timeout": 2,
+    "points": 0
+  },
   "INIT_B": {
     "allowed_agents": "bot_b",
     "conditions": {},

@@ -124,7 +124,7 @@ int GameState::time_remaining() const {
     return 120 - duration_cast<std::chrono::seconds>(now - m_game_start).count();
 }
 
-Phase GameState::get_next_best_phase() const {
+std::optional<Phase> GameState::get_next_best_phase() const {
     std::unique_ptr<Phase> best;
     double best_score = -std::numeric_limits<double>::infinity();
 
@@ -149,6 +149,7 @@ Phase GameState::get_next_best_phase() const {
         }
     }
 
+    if (!best) { return std::nullopt; }
     return *best;
 }
 
@@ -212,9 +213,11 @@ void GameState::run(const std::unordered_map<std::string, std::function<void()> 
             auto &phase_a = m_phase_state->get_phase_bot_a();
             if (phase_a.get_done()) {
                 m_phase_state->remove_phase(phase_a.get_id());
-                const auto next = get_next_best_phase();
-                m_phase_state->set_phase_bot_a(next);
-                continue;
+                if (const auto next = get_next_best_phase(); next.has_value()) {
+                    m_phase_state->set_phase_bot_a(next.value());
+                    continue;
+                }
+                break;
             }
             std::function<void()> action_a;
             try {
@@ -229,9 +232,11 @@ void GameState::run(const std::unordered_map<std::string, std::function<void()> 
             auto &phase_b = m_phase_state->get_phase_bot_b();
             if (phase_b.get_done()) {
                 m_phase_state->remove_phase(phase_b.get_id());
-                const auto next = get_next_best_phase();
-                m_phase_state->set_phase_bot_b(next);
-                continue;
+                if (const auto next = get_next_best_phase(); next.has_value()) {
+                    m_phase_state->set_phase_bot_b(next.value());
+                    continue;
+                }
+                break;
             }
             std::function<void()> action_b;
             try {

@@ -15,6 +15,9 @@ add_library(${PROJECT_NAME} STATIC
         include/gamestate.h)
 
 add_executable(main "main.cpp")
+set_target_properties(main PROPERTIES
+        RUNTIME_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/bin"
+)
 target_link_libraries(main PRIVATE ${PROJECT_NAME})
 
 
@@ -46,7 +49,6 @@ set(public_headers
         ${INCLUDE_FILES}
 )
 set_target_properties(${PROJECT_NAME} PROPERTIES PUBLIC_HEADER "${public_headers}")
-
 
 # set the compiler and linker flags
 target_compile_definitions(${PROJECT_NAME} PUBLIC NDEBUG)
