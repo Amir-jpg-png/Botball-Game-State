@@ -6,8 +6,8 @@ Phase::Phase(const std::string &phase_id, const json &data) {
     m_status = OPEN;
     m_time_to_completion = data.at("timeout").get<int>();
     m_points = data.at("points").get<int>();
-    m_conditions = get_key_value_unordered_map(data.at("conditions"));
-    m_completion = get_key_value_unordered_map(data.at("completion"));
+    m_conditions = get_key_value(data.at("conditions"));
+    m_completion = get_key_value(data.at("completion"));
     try {
         m_allowed_agent = data.at("allowed_agents").get<std::string>();
     } catch (json::type_error &e) {
@@ -18,7 +18,6 @@ Phase::Phase(const std::string &phase_id, const json &data) {
 const std::string &Phase::get_id() const {
     return m_id;
 }
-
 
 int Phase::get_time_to_completion() const {
     return m_time_to_completion;

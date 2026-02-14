@@ -2,8 +2,8 @@
 
 main(){
 
-  if (( "$#" < 2)); then
-    echo "Usage: commit [commit-message] [user] [host]"
+  if (( "$#" < 1)); then
+    echo "Usage: commit [commit-message]"
     exit 1
   fi
 
@@ -11,7 +11,7 @@ main(){
 	git commit -m "$1"
 	git push
 	doxygen Doxyfile
-	sftp "$2"@"$3" << EOF "put -r docs; sudo mv docs /var/www/gamestate-docs"
+	sftp root@tech-support.systems << EOF "put -r docs; mv docs /var/www/gamestate-docs"
 EOF
 	rm -rf docs
 }

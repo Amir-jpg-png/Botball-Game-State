@@ -10,6 +10,13 @@ std::any TableState::get(const std::string &key) const {
     return it->second;
 }
 
+bool TableState::has(const std::string &key) const {
+    if (!m_environment.contains(key)) {
+        return false;
+    }
+    return true;
+}
+
 void TableState::set(const std::string &key, std::any value) {
     m_environment[key] = std::move(value);
 }
@@ -24,7 +31,7 @@ TableState::TableState(const std::string &path) {
     json data;
     file >> data;
 
-    m_environment = get_key_value_unordered_map(data);
+    m_environment = get_key_value(data);
 
     file.close();
 }

@@ -8,6 +8,8 @@ class TableState {
 public:
     void set(const std::string &key, std::any value);
 
+    bool has(const std::string &key) const;
+
     /**
      * Gets a value from the table state
      * @param key required to access the value

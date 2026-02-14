@@ -43,9 +43,9 @@
     "allowed_agents": "bot_a",
     "conditions": {},
     "completion": {
-      "x": true
+      "dummy": true
     },
-    "timeout": 120,
+    "timeout": 10,
     "points": 100
   }
 }

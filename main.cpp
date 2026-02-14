@@ -19,6 +19,10 @@ int main() {
         std::cout << "[ACTION] CLEAR_DECK\n";
     };
 
+    actions["LONG_TASK"] = [&] {
+        std::cout << "[ACTION] LONG_TASK\n";
+    };
+
     gs.connect("bot_a");
     gs.run(actions);
 

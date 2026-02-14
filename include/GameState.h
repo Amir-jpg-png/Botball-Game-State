@@ -42,6 +42,8 @@ class GameState {
     // Returns the time remaining for the game (Will probably be replaced by techlib functionality)
     [[nodiscard]] int time_remaining() const;
 
+    void validate_phase(const Phase &phase) const;
+
 public:
     explicit GameState(const std::string &table_config_path, const std::string &phase_config_path,
                        const std::string &game_state_config_path);

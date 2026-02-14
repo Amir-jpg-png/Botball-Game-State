@@ -5,6 +5,35 @@
 
 // Private
 
+void GameState::validate_phase(const Phase &phase) const {
+    for (const auto &[key, value]: phase.get_conditions()) {
+        if (!m_game_table_model.has(key)) {
+            fatal("error: condition key '" + key + "' of phase '" +
+                  phase.get_id() + "' not present in table state");
+        }
+        if (m_game_table_model.get(key).type() != value.type()) {
+            fatal(
+                "error: type mismatch for condition '" + key +
+                "' in phase '" + phase.get_id() + "'");
+        }
+    }
+
+    for (const auto &[key, value]: phase.get_completion()) {
+        if (!m_game_table_model.has(key)) {
+            fatal(
+                "error: completion key '" + key + "' of phase '" +
+                phase.get_id() + "' not present in table state");
+        }
+        if (m_game_table_model.get(key).type() != value.type()) {
+            fatal(
+                "error: type mismatch for completion '" + key +
+                "' in phase '" + phase.get_id() + "'"
+            );
+        }
+    }
+}
+
+
 static bool value_satisfies(const std::any &actual, const std::any &required) {
     if (actual.type() != required.type())
         return false;
@@ -156,6 +185,9 @@ GameState::GameState(const std::string &table_config_path, const std::string &ph
     m_config.Kt = config.at("time_weight_factor");
     m_config.Kpt = config.at("potential_weight_factor");
     m_config.time_buffer = config.at("time_buffer_factor");
+    for (Phase &phase: open_phases) {
+        validate_phase(phase);
+    }
 }
 
 void GameState::connect(const std::string &agent) {
@@ -180,7 +212,14 @@ void GameState::run(const std::unordered_map<std::string, std::function<void()> 
                 m_phase_state->set_phase_bot_a(next);
                 continue;
             }
-            auto &action_a = actions.at(phase_a.get_id());
+            std::function<void()> action_a;
+            try {
+                action_a = actions.at(phase_a.get_id());
+            } catch (const std::exception &e) {
+                fatal(
+                    "error: action for phase '" + phase_a.get_id() +
+                    "' not specified please add function to action registry");
+            }
             phase_a.execute(m_game_table_model, action_a);
         } else if (m_agent == "bot_b") {
             auto &phase_b = m_phase_state->get_phase_bot_b();
@@ -190,7 +229,14 @@ void GameState::run(const std::unordered_map<std::string, std::function<void()> 
                 m_phase_state->set_phase_bot_b(next);
                 continue;
             }
-            auto &action_b = actions.at(phase_b.get_id());
+            std::function<void()> action_b;
+            try {
+                action_b = actions.at(phase_b.get_id());
+            } catch (const std::exception &e) {
+                fatal(
+                    "error: action for phase '" + phase_b.get_id() +
+                    "' not specified please add function to action registry");
+            }
             phase_b.execute(m_game_table_model, action_b);
         } else {
             throw std::logic_error("Unknown agent type");

@@ -1,5 +1,7 @@
 {
   "init_a": false,
   "init_b": false,
-  "deck_cleared": false
+  "deck_cleared": false,
+  "x": false,
+  "dummy": false
 }
