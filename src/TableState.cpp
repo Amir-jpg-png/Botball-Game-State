@@ -1,21 +1,24 @@
-#include "GameTableState.h"
+#include "TableState.h"
 
 #include <fstream>
 #include <utility>
 
-std::any GameTableState::get(const std::string &key) const {
-    return m_environment.at(key);
+std::any TableState::get(const std::string &key) const {
+    const auto it = m_environment.find(key);
+    if (it == m_environment.end())
+        throw std::logic_error("table state missing key: " + key);
+    return it->second;
 }
 
-void GameTableState::set(const std::string &key, std::any value) {
+void TableState::set(const std::string &key, std::any value) {
     m_environment[key] = std::move(value);
 }
 
-GameTableState::GameTableState(const std::string &path) {
+TableState::TableState(const std::string &path) {
     std::ifstream file(path);
 
     if (!file.is_open()) {
-        throw std::runtime_error("Could not open world state config file: " + path);
+        throw std::runtime_error("Could not open table state config file: " + path);
     }
 
     json data;
@@ -26,13 +29,6 @@ GameTableState::GameTableState(const std::string &path) {
     file.close();
 }
 
-bool GameTableState::has(const std::string &key) const {
-    if (!m_environment.count(key)) {
-        return false;
-    }
-    return true;
-}
-
-std::unordered_map<std::string, std::any> GameTableState::getAll() const {
+std::unordered_map<std::string, std::any> TableState::getAll() const {
     return m_environment;
 }

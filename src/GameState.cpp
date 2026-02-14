@@ -1,88 +1,45 @@
 #include "GameState.h"
 
 #include <fstream>
-#include <json.hpp>
 #include <utility>
-#include <any>
 
-using json = nlohmann::json;
+// Private
 
 static bool value_satisfies(const std::any &actual, const std::any &required) {
     if (actual.type() != required.type())
         return false;
 
-    // bool: exact match
     if (required.type() == typeid(bool))
         return std::any_cast<bool>(actual) == std::any_cast<bool>(required);
 
-    // int: >=
     if (required.type() == typeid(int))
-        return std::any_cast<int>(actual) >= std::any_cast<int>(required);
+        return std::any_cast<int>(actual) == std::any_cast<int>(required);
 
-    // double: >=
     if (required.type() == typeid(double))
-        return std::any_cast<double>(actual) >= std::any_cast<double>(required);
+        return std::any_cast<double>(actual) == std::any_cast<double>(required);
 
-    // string: exact match
     if (required.type() == typeid(std::string))
         return std::any_cast<std::string>(actual) == std::any_cast<std::string>(required);
 
     throw std::runtime_error("Unsupported condition type in value_satisfies()");
 }
 
-// TODO: enhance conditions met for arrays
-// TODO: write template helpers rather than accepting std::any
+void GameState::update_phase_status(Phase &phase) const {
+    if (phase.get_done()) return;
+    if (phase.get_status() == TIMEOUT) return;
 
-GameState::GameState(const std::string &world_config_path, const std::string &phase_config_path)
-    : m_game_table_model(world_config_path) {
-    std::ifstream file(phase_config_path);
+    phase.set_status(OPEN);
 
-    if (!file.is_open()) {
-        throw std::runtime_error("error: could not open phase config file");
-    }
-
-    json data;
-    file >> data;
-
-    Phase init_a("INIT_A", data.at("INIT_A"));
-    Phase init_b("INIT_B", data.at("INIT_B"));
-
-    m_phase_state = std::make_unique<PhaseState>(init_a, init_b);
-
-    auto &open_phases = m_phase_state->get_open_phases();
-    for (const auto &[phase_name, phase]: data.items()) {
-        open_phases.emplace_back(phase_name, phase);
-    }
-
-    file.close();
-}
-
-
-Phase *GameState::get_next_best_phase(const std::string &agent) const {
-    Phase *best = nullptr;
-    double best_score = -std::numeric_limits<double>::infinity();
-
-    for (Phase &phase: m_phase_state->get_open_phases()) {
-        if (phase.get_done())
-            continue;
-
-        // Agent permission
-        if (std::ranges::find(phase.get_allowed_agents(), agent) == phase.get_allowed_agents().end())
-            continue;
-
-        if (!conditions_met(phase))
-            continue;
-
-        const double score =
-                phase.get_points() - 0.1 * phase.get_time_to_completion() + 0.5 * compute_potential(phase);
-
-        if (score > best_score) {
-            best_score = score;
-            best = &phase;
+    for (const auto &[key, required]: phase.get_conditions()) {
+        if (!value_satisfies(m_game_table_model.get(key), required)) {
+            phase.set_status(BLOCKED);
+            return;
         }
     }
 
-    return best;
+    if (time_remaining() <= phase.get_time_to_completion()) {
+        phase.set_status(TIMEOUT);
+    }
 }
 
 double GameState::compute_potential(const Phase &phase_candidate) const {
@@ -133,18 +90,75 @@ double GameState::compute_potential(const Phase &phase_candidate) const {
     return unlocked_count == 0 ? 0.0 : total_points / unlocked_count;
 }
 
-bool GameState::conditions_met(const Phase &phase) const {
-    for (const auto &[key, required]: phase.get_conditions()) {
-        if (!m_game_table_model.has(key))
-            return false;
-
-        if (const std::any &actual = m_game_table_model.get(key); !value_satisfies(actual, required))
-            return false;
-    }
-    return true;
+int GameState::time_remaining() const {
+    auto now = std::chrono::steady_clock::now();
+    return 120 - duration_cast<std::chrono::seconds>(now - m_game_start).count();
 }
 
-void GameState::start(const std::string &agent) {
+Phase GameState::get_next_best_phase() const {
+    std::unique_ptr<Phase> best;
+    double best_score = -std::numeric_limits<double>::infinity();
+
+    for (Phase &phase: m_phase_state->get_open_phases()) {
+        if (phase.get_allowed_agent() != m_agent) {
+            continue;
+        }
+
+        update_phase_status(phase);
+        if (phase.get_status() != OPEN) {
+            continue;
+        }
+
+        const double score =
+                m_config.Kp * phase.get_points() - m_config.Kt * phase.get_time_to_completion() * m_config.time_buffer +
+                m_config.Kpt *
+                compute_potential(phase);
+
+        if (score > best_score) {
+            best_score = score;
+            best = std::make_unique<Phase>(phase);
+        }
+    }
+
+    return *best;
+}
+
+// Public
+
+GameState::GameState(const std::string &table_config_path, const std::string &phase_config_path,
+                     const std::string &game_state_config_path)
+    : m_game_table_model(table_config_path) {
+    std::ifstream file(phase_config_path);
+    std::ifstream config_file(game_state_config_path);
+
+    if (!file.is_open()) {
+        throw std::runtime_error("error: could not open phase config file");
+    }
+
+    json data;
+    file >> data;
+
+    Phase init_a("INIT_A", data.at("INIT_A"));
+    Phase init_b("INIT_B", data.at("INIT_B"));
+
+    m_phase_state = std::make_unique<PhaseState>(init_a, init_b);
+
+    auto &open_phases = m_phase_state->get_open_phases();
+    for (const auto &[phase_name, phase]: data.items()) {
+        open_phases.emplace_back(phase_name, phase);
+    }
+
+    file.close();
+
+    json config;
+    config_file >> config;
+    m_config.Kp = config.at("points_weight_factor");
+    m_config.Kt = config.at("time_weight_factor");
+    m_config.Kpt = config.at("potential_weight_factor");
+    m_config.time_buffer = config.at("time_buffer_factor");
+}
+
+void GameState::connect(const std::string &agent) {
     if (agent == "bot_a") {
         printf("sending gamestate...");
     } else {
@@ -155,13 +169,15 @@ void GameState::start(const std::string &agent) {
 }
 
 void GameState::run(const std::unordered_map<std::string, std::function<void()> > &actions) {
+    m_game_start = std::chrono::steady_clock::now();
     // IS RUNNING && open_phases != empty
     while (!m_phase_state->get_open_phases().empty()) {
         if (m_agent == "bot_a") {
             auto &phase_a = m_phase_state->get_phase_bot_a();
             if (phase_a.get_done()) {
-                const auto *next = get_next_best_phase(m_agent);
-                m_phase_state->set_phase_bot_a(*next);
+                m_phase_state->remove_phase(phase_a.get_id());
+                const auto next = get_next_best_phase();
+                m_phase_state->set_phase_bot_a(next);
                 continue;
             }
             auto &action_a = actions.at(phase_a.get_id());
@@ -169,8 +185,9 @@ void GameState::run(const std::unordered_map<std::string, std::function<void()> 
         } else if (m_agent == "bot_b") {
             auto &phase_b = m_phase_state->get_phase_bot_b();
             if (phase_b.get_done()) {
-                const auto *next = get_next_best_phase(m_agent);
-                m_phase_state->set_phase_bot_b(*next);
+                m_phase_state->remove_phase(phase_b.get_id());
+                const auto next = get_next_best_phase();
+                m_phase_state->set_phase_bot_b(next);
                 continue;
             }
             auto &action_b = actions.at(phase_b.get_id());

@@ -45,7 +45,7 @@
     "completion": {
       "x": true
     },
-    "timeout": 10,
+    "timeout": 120,
     "points": 100
   }
 }

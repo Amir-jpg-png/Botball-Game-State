@@ -1,65 +1,63 @@
 #include "Phase.h"
 
-#include <utility>
-#include <GameTableState.h>
 
-Phase::Phase(const std::string &phase_name, const json &data) {
-    m_id = phase_name;
-    m_done = false;
+Phase::Phase(const std::string &phase_id, const json &data) {
+    m_id = phase_id;
+    m_status = OPEN;
     m_time_to_completion = data.at("timeout").get<int>();
     m_points = data.at("points").get<int>();
-    for (const auto &[condition_key, condition_value]: data.items()) {
-        if (condition_value.is_boolean()) {
-            m_conditions[condition_key] = condition_value.get<bool>();
-        } else if (condition_value.is_number_integer()) {
-            m_conditions[condition_key] = condition_value.get<int>();
-        } else if (condition_value.is_number_float()) {
-            m_conditions[condition_key] = condition_value.get<double>();
-        } else if (condition_value.is_string()) {
-            m_conditions[condition_key] = condition_value.get<std::string>();
-        } else if (condition_value.is_array()) {
-            if (condition_value.empty()) {
-                throw std::runtime_error("Array '" + condition_key + "' is empty; cannot determine type.");
-            }
-
-            const bool all_bool = std::all_of(condition_value.begin(), condition_value.end(),
-                                              [](const json &v) { return v.is_boolean(); });
-            const bool all_int = std::all_of(condition_value.begin(), condition_value.end(),
-                                             [](const json &v) { return v.is_number_integer(); });
-            const bool all_double = std::all_of(condition_value.begin(), condition_value.end(),
-                                                [](const json &v) { return v.is_number_float(); });
-            const bool all_string = std::all_of(condition_value.begin(), condition_value.end(),
-                                                [](const json &v) { return v.is_string(); });
-
-            if (const int type_count = all_bool + all_int + all_double + all_string; type_count != 1) {
-                throw std::runtime_error("Array '" + condition_key + "' contains mixed types.");
-            }
-
-            if (all_bool)
-                m_conditions[condition_key] = condition_value.get<std::vector<bool> >();
-            else if (all_int)
-                m_conditions[condition_key] = condition_value.get<std::vector<int> >();
-            else if (all_double)
-                m_conditions[condition_key] = condition_value.get<std::vector<double> >();
-            else if (all_string)
-                m_conditions[condition_key] = condition_value.get<std::vector<std::string> >();
-        } else {
-            throw std::runtime_error("Unsupported JSON type for key: " + condition_key);
-        }
-    }
+    m_conditions = get_key_value_unordered_map(data.at("conditions"));
+    m_completion = get_key_value_unordered_map(data.at("completion"));
     try {
-        m_allowed_agents = data.at("allowed_agents").get<std::vector<std::string> >();
+        m_allowed_agent = data.at("allowed_agents").get<std::string>();
     } catch (json::type_error &e) {
         throw std::runtime_error("error failed to get allowed agents on phase " + m_id + ": " + e.what());
     }
 }
 
-void Phase::execute(GameTableState &world, const std::function<void()> &action) {
+const std::string &Phase::get_id() const {
+    return m_id;
+}
+
+
+int Phase::get_time_to_completion() const {
+    return m_time_to_completion;
+}
+
+const std::string &Phase::get_allowed_agent() const {
+    return m_allowed_agent;
+}
+
+const std::unordered_map<std::string, std::any> &Phase::get_conditions() const {
+    return m_conditions;
+}
+
+const std::unordered_map<std::string, std::any> &Phase::get_completion() const {
+    return m_completion;
+}
+
+bool Phase::get_done() const {
+    return m_status == DONE;
+}
+
+PhaseStatus Phase::get_status() const {
+    return m_status;
+}
+
+int Phase::get_points() const {
+    return m_points;
+}
+
+void Phase::set_status(const PhaseStatus status) {
+    m_status = status;
+}
+
+void Phase::execute(TableState &table, const std::function<void()> &action) {
     action();
 
     for (const auto &[key, value]: m_completion) {
-        world.set(key, value);
+        table.set(key, value);
     }
 
-    m_done = true;
+    m_status = DONE;
 }

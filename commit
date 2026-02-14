@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+main(){
+
+  if (( "$#" < 2)); then
+    echo "Usage: commit [commit-message] [user] [host]"
+    exit 1
+  fi
+
+	git add .
+	git commit -m "$1"
+	git push
+	doxygen Doxyfile
+	sftp "$2"@"$3" << EOF "put -r docs"
+EOF
+	rm -rf docs
+}
+
+main "$@"

@@ -14,6 +14,9 @@ file(GLOB INCLUDE_FILES "include/*.h" "lib/*.hpp")
 add_library(${PROJECT_NAME} STATIC
         include/gamestate.h)
 
+add_executable(main "main.cpp")
+target_link_libraries(main PRIVATE ${PROJECT_NAME})
+
 
 # specify the C++ standard
 target_compile_features(${PROJECT_NAME} PUBLIC cxx_std_17)
@@ -24,6 +27,7 @@ set_target_properties(${PROJECT_NAME} PROPERTIES VERSION ${PROJECT_VERSION})
 # Set the shared object version property to the project's major version.
 set_target_properties(${PROJECT_NAME} PROPERTIES VERSION ${PROJECT_VERSION_MAJOR})
 
+set(public_headers ${INCLUDE_FILES})
 
 target_sources(${PROJECT_NAME}
         PRIVATE
@@ -31,13 +35,9 @@ target_sources(${PROJECT_NAME}
 )
 
 target_include_directories(${PROJECT_NAME}
-        PRIVATE
-        # where the library itself will look for its internal headers
-        ${CMAKE_CURRENT_SOURCE_DIR}/lib
         PUBLIC
-        # where top-level project will look for the library's public headers
         $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
-        # where external projects will look for the library's public headers
+        $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/lib>
         $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>
 )
 
