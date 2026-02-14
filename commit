@@ -11,7 +11,7 @@ main(){
 	git commit -m "$1"
 	git push
 	doxygen Doxyfile
-	sftp "$2"@"$3" << EOF "put -r docs"
+	sftp "$2"@"$3" << EOF "put -r docs; sudo mv docs /var/www/gamestate-docs"
 EOF
 	rm -rf docs
 }
