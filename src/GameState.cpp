@@ -33,7 +33,6 @@ void GameState::validate_phase(const Phase &phase) const {
     }
 }
 
-
 static bool value_satisfies(const std::any &actual, const std::any &required) {
     if (actual.type() != required.type())
         return false;
@@ -161,6 +160,10 @@ GameState::GameState(const std::string &table_config_path, const std::string &ph
     std::ifstream file(phase_config_path);
     std::ifstream config_file(game_state_config_path);
 
+    m_logger = create_logger("GS");
+
+    m_logger->info("Configuring Game State...");
+
     if (!file.is_open()) {
         throw std::runtime_error("error: could not open phase config file");
     }
@@ -193,6 +196,8 @@ GameState::GameState(const std::string &table_config_path, const std::string &ph
     for (Phase &phase: open_phases) {
         validate_phase(phase);
     }
+
+    m_logger->info("Game State configured successfully");
 }
 
 void GameState::connect(const std::string &agent) {

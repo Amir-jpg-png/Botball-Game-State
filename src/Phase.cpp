@@ -1,6 +1,5 @@
 #include "Phase.h"
 
-
 Phase::Phase(const std::string &phase_id, const json &data) {
     m_id = phase_id;
     m_status = OPEN;

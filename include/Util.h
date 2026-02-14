@@ -3,10 +3,28 @@
 #include <json.hpp>
 #include <any>
 #include <iostream>
+#include <spdlog/sinks/dup_filter_sink.h>
+#include <spdlog/sinks/basic_file_sink.h>
+#include <spdlog/sinks/stdout_color_sinks.h>
+#include <spdlog/spdlog.h>
+#include <list>
 
 inline void fatal(const std::string &msg) {
     std::cerr << msg << std::endl;
     exit(1);
+}
+
+
+inline std::list<std::string> split_string(const std::string &s, char delim) {
+    std::list<std::string> items;
+
+    std::string current;
+    std::stringstream ss(s);
+    while (std::getline(ss, current, delim)) {
+        items.push_back(current);
+    }
+
+    return items;
 }
 
 using json = nlohmann::json;
@@ -53,6 +71,65 @@ inline std::unordered_map<std::string, std::any> get_key_value(const json &data)
         }
     }
     return result;
+}
+
+inline std::shared_ptr<spdlog::logger> create_logger(const std::string &logger_name) {
+    std::string new_name = split_string(logger_name, '/').back();
+    if (new_name == "left_motor") {
+        new_name = "left_m";
+    } else if (new_name == "right_motor") {
+        new_name = "right_m";
+    }
+
+    if (new_name.size() > 8) {
+        std::cout << "logger_name" << new_name << " is longer than 8 characters. Please chose a shorter name!";
+        new_name = new_name.substr(0, 8);
+    }
+
+    // create global logging sinks
+    static const std::string pattern = "[%T.%e] %^%=8l%$ %-10n %v";
+    static const auto stdout_sink = [&]() {
+        auto sink = std::make_shared<spdlog::sinks::stdout_color_sink_mt>();
+        sink->set_pattern(pattern);
+        sink->set_level(spdlog::level::info);
+        return sink;
+    }();
+    static const auto latest_file_sink = [&]() {
+        auto sink = std::make_shared<spdlog::sinks::basic_file_sink_mt>("../gamestate-logs/latest.log", true);
+        sink->set_pattern(pattern);
+        sink->set_level(spdlog::level::trace);
+        return sink;
+    }();
+    static const auto permanent_file_sink = [&]() {
+        // get timestamp as string
+        auto t = std::time(nullptr);
+        auto tm = *std::localtime(&t);
+        std::ostringstream oss;
+        oss << std::put_time(&tm, "%Y-%m-%d_%H-%M-%S");
+
+        auto sink = std::make_shared<spdlog::sinks::basic_file_sink_mt>("../gamestate-logs/" + oss.str() + ".log");
+        sink->set_pattern(pattern);
+        sink->set_level(spdlog::level::trace);
+        return sink;
+    }();
+
+    // create per-logger dup filter sink
+    auto dup_sink = std::make_shared<spdlog::sinks::dup_filter_sink_mt>(
+        std::chrono::seconds(1)
+    );
+    dup_sink->set_level(spdlog::level::trace);
+
+    dup_sink->set_level(spdlog::level::trace);
+    dup_sink->add_sink(stdout_sink);
+    dup_sink->add_sink(latest_file_sink);
+    dup_sink->add_sink(permanent_file_sink);
+
+    // initialize logger
+    auto logger = std::make_shared<spdlog::logger>("[" + new_name + "]", dup_sink);
+    logger->set_level(spdlog::level::trace);
+    logger->flush_on(spdlog::level::info);
+
+    return logger;
 }
 
 #endif //TECH_GAME_STATE_INCLUDE_H

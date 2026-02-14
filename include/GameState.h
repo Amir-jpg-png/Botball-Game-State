@@ -28,6 +28,7 @@ class GameState {
     TableState m_game_table_model;
     std::unique_ptr<PhaseState> m_phase_state;
     std::string m_agent;
+    std::shared_ptr<spdlog::logger> m_logger;
 
     [[nodiscard]] std::optional<Phase> get_next_best_phase() const;
 

@@ -18,8 +18,11 @@ add_executable(main "main.cpp")
 set_target_properties(main PROPERTIES
         RUNTIME_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/bin"
 )
-target_link_libraries(main PRIVATE ${PROJECT_NAME})
+find_package(spdlog REQUIRED)
+find_package(fmt REQUIRED)
 
+target_link_libraries(tech-game-state PRIVATE spdlog::spdlog fmt::fmt)
+target_link_libraries(main PRIVATE tech-game-state)
 
 # specify the C++ standard
 target_compile_features(${PROJECT_NAME} PUBLIC cxx_std_17)
@@ -63,6 +66,7 @@ install(TARGETS ${PROJECT_NAME}
         PUBLIC_HEADER DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/${PROJECT_NAME} # include/techlib
         INCLUDES DESTINATION ${CMAKE_INSTALL_INCLUDEDIR} # include
 )
+
 
 # set the namespace
 set(namespace "tech-gamestate")
