@@ -167,10 +167,14 @@ GameState::GameState(const std::string &table_config_path, const std::string &ph
     json data;
     file >> data;
 
-    Phase init_a("INIT_A", data.at("INIT_A"));
-    Phase init_b("INIT_B", data.at("INIT_B"));
+    try {
+        Phase init_a("INIT_A", data.at("INIT_A"));
+        Phase init_b("INIT_B", data.at("INIT_B"));
 
-    m_phase_state = std::make_unique<PhaseState>(init_a, init_b);
+        m_phase_state = std::make_unique<PhaseState>(init_a, init_b);
+    } catch (std::exception &e) {
+        fatal("error: Phases INIT_A or INIT_B not found in config");
+    }
 
     auto &open_phases = m_phase_state->get_open_phases();
     for (const auto &[phase_name, phase]: data.items()) {

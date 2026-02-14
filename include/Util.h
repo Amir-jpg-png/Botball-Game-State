@@ -6,7 +6,7 @@
 
 inline void fatal(const std::string &msg) {
     std::cerr << msg << std::endl;
-    std::terminate();
+    exit(1);
 }
 
 using json = nlohmann::json;
