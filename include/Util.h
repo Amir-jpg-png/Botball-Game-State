@@ -14,7 +14,6 @@ inline void fatal(const std::string &msg) {
     exit(1);
 }
 
-
 inline std::list<std::string> split_string(const std::string &s, char delim) {
     std::list<std::string> items;
 

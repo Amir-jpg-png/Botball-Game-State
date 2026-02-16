@@ -1,0 +1,26 @@
+[16:04:26.226]   info   [GS]       configuring Game State...
+[16:04:26.227]   info   [GS]       configured game state successfully
+[16:04:26.227]   info   [GS]       listening for a connection from bot_b
+[16:04:26.227]   info   [GS]       phase 'INIT_A' done
+[16:04:26.228]  trace   [GS]       updating phase CLEAR_DECK...
+[16:04:26.228]  trace   [GS]       phase status CLEAR_DECK: 0
+[16:04:26.228]   info   [GS]       potential of phase CLEAR_DECK: 0
+[16:04:26.228]   info   [GS]       score of phase CLEAR_DECK: 48.65
+[16:04:26.228]  trace   [GS]       updating phase LONG_TASK...
+[16:04:26.228]  trace   [GS]       phase status LONG_TASK: 0
+[16:04:26.228]   info   [GS]       potential of phase LONG_TASK: 0
+[16:04:26.229]   info   [GS]       score of phase LONG_TASK: 50
+[16:04:26.229]  trace   [GS]       updating phase WAIT_FOR_INIT...
+[16:04:26.229]   info   [GS]       selected phase LONG_TASK as next phase
+[16:04:26.229]   info   [GS]       executing phase LONG_TASK
+[16:04:26.229]   info   [GS]       phase 'LONG_TASK' done
+[16:04:26.229]  trace   [GS]       updating phase CLEAR_DECK...
+[16:04:26.229]  trace   [GS]       phase status CLEAR_DECK: 0
+[16:04:26.229]   info   [GS]       potential of phase CLEAR_DECK: 0
+[16:04:26.229]   info   [GS]       score of phase CLEAR_DECK: 48.65
+[16:04:26.229]  trace   [GS]       updating phase WAIT_FOR_INIT...
+[16:04:26.229]   info   [GS]       selected phase CLEAR_DECK as next phase
+[16:04:26.230]   info   [GS]       executing phase CLEAR_DECK
+[16:04:26.230]   info   [GS]       phase 'CLEAR_DECK' done
+[16:04:26.230]  trace   [GS]       updating phase WAIT_FOR_INIT...
+[16:04:26.230]   info   [GS]       no more phases to execute

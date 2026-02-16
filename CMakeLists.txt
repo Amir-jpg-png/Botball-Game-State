@@ -5,7 +5,7 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 cmake_minimum_required(VERSION 3.16)
 
 # set the project name and version
-project(tech-game-state VERSION 1.0.0 DESCRIPTION "Botball library of team 'TechSupport'")
+project(tech-game-state VERSION 1.0.0 DESCRIPTION "Botball Game State library of team 'TechSupport'")
 
 # define the source and header files
 file(GLOB SRC_FILES "src/*.cpp")

@@ -1,0 +1,10 @@
+[15:38:10.836]   info   [GS]       configuring Game State...
+[15:38:10.837]   info   [GS]       configured game state successfully
+[15:38:10.838]   info   [GS]       potential of phase CLEAR_DECK: 48.65
+[15:38:10.838]   info   [GS]       potential of phase LONG_TASK: 50
+[15:38:10.838]   info   [GS]       selected phase LONG_TASK as next phase
+[15:38:10.838]   info   [GS]       executing phase LONG_TASK
+[15:38:10.839]   info   [GS]       potential of phase CLEAR_DECK: 48.65
+[15:38:10.839]   info   [GS]       selected phase CLEAR_DECK as next phase
+[15:38:10.839]   info   [GS]       executing phase CLEAR_DECK
+[15:38:10.839]   info   [GS]       no more phases to execute

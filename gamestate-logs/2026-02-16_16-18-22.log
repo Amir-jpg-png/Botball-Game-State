@@ -1,0 +1,10 @@
+[16:18:22.710]   info   [GS]       configuring Game State...
+[16:18:22.711]   info   [GS]       configured game state successfully
+[16:18:22.711]   info   [GS]       listening for a connection from bot_b
+[16:18:22.711]   info   [GS]       phase 'INIT_A' done
+[16:18:22.712]   info   [GS]       get next best phase: bot_a
+[16:18:22.712]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[16:18:22.712]  trace   [GS]       updating phase CLEAR_DECK...
+[16:18:22.712]  trace   [GS]       phase status CLEAR_DECK: 0
+[16:18:22.712]   info   [GS]       potential of phase CLEAR_DECK: 0
+[16:18:22.713]   info   [GS]       score of phase CLEAR_DECK: 48.65

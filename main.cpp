@@ -1,9 +1,9 @@
 #include <GameState.h>
 
 int main() {
-    GameState gs("/home/pi/gamestate/config/state-config/table-config.json",
-                 "/home/pi/gamestate/config/state-config/phase-config.json",
-                 "/home/pi/gamestate/config/state-config/game-state-config.json");
+    GameState gs("/tmp/game-state/config/state-config/table-config.json",
+                 "/tmp/game-state/config/state-config/phase-config.json",
+                 "/tmp/game-state/config/state-config/game-state-config.json");
 
     std::unordered_map<std::string, std::function<void()> > actions;
 
@@ -21,6 +21,10 @@ int main() {
 
     actions["LONG_TASK"] = [&] {
         std::cout << "[ACTION] LONG_TASK\n";
+    };
+
+    actions["WAIT_FOR_INIT"] = [&] {
+        std::cout << "[ACTION] WAIT_FOR_INIT\n";
     };
 
     gs.connect("bot_a");

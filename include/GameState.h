@@ -11,7 +11,6 @@ struct Config {
     double Kp;
     double Kt;
     double Kpt;
-    double time_buffer;
 };
 
 /**

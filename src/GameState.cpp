@@ -53,21 +53,31 @@ static bool value_satisfies(const std::any &actual, const std::any &required) {
 }
 
 void GameState::update_phase_status(Phase &phase) const {
-    if (phase.get_done()) return;
-    if (phase.get_status() == TIMEOUT) return;
+    m_logger->trace("updating phase {}...", phase.get_id());
+    if (phase.get_done()) {
+        m_logger->trace("skipped phase {} because it is done", phase.get_id());
+        return;
+    }
+    if (phase.get_status() == TIMEOUT) {
+        m_logger->trace("skipped phase {} because it timed out", phase.get_id());
+        return;
+    }
+    const PhaseStatus status = phase.get_status();
 
     phase.set_status(OPEN);
 
     for (const auto &[key, required]: phase.get_conditions()) {
         if (!value_satisfies(m_game_table_model.get(key), required)) {
             phase.set_status(BLOCKED);
-            return;
         }
     }
 
     if (time_remaining() <= phase.get_time_to_completion()) {
         phase.set_status(TIMEOUT);
+        m_logger->info("phase {} timed out", phase.get_id());
     }
+    if (status != OPEN && phase.get_status() == OPEN) { m_logger->info("unlocked phase {}", phase.get_id()); }
+    m_logger->trace("phase status {}: {}", phase.get_id(), phase.get_status());
 }
 
 double GameState::compute_potential(const Phase &phase_candidate) const {
@@ -115,7 +125,9 @@ double GameState::compute_potential(const Phase &phase_candidate) const {
         }
     }
 
-    return unlocked_count == 0 ? 0.0 : total_points / unlocked_count;
+    double potential = unlocked_count == 0 ? 0.0 : total_points / unlocked_count;
+    m_logger->info("potential of phase {}: {}", phase_candidate.get_id(), potential);
+    return potential;
 }
 
 int GameState::time_remaining() const {
@@ -127,28 +139,36 @@ std::optional<Phase> GameState::get_next_best_phase() const {
     std::unique_ptr<Phase> best;
     double best_score = -std::numeric_limits<double>::infinity();
 
+    m_logger->info("get next best phase: {}", m_agent);
     for (Phase &phase: m_phase_state->get_open_phases()) {
+        m_logger->trace("skipped phase {} because agent is not allowed", phase.get_id());
         if (phase.get_allowed_agent() != m_agent) {
             continue;
         }
 
         update_phase_status(phase);
         if (phase.get_status() != OPEN) {
+            m_logger->trace("skipped phase {} because it is not open", phase.get_id());
             continue;
         }
 
         const double score =
-                m_config.Kp * phase.get_points() - m_config.Kt * phase.get_time_to_completion() * m_config.time_buffer +
+                m_config.Kp * phase.get_points() - m_config.Kt * phase.get_time_to_completion() +
                 m_config.Kpt *
                 compute_potential(phase);
 
+        m_logger->info("score of phase {}: {}", phase.get_id(), score);
         if (score > best_score) {
             best_score = score;
             best = std::make_unique<Phase>(phase);
         }
     }
 
-    if (!best) { return std::nullopt; }
+    if (!best) {
+        m_logger->info("no more phases to execute");
+        return std::nullopt;
+    }
+    m_logger->info("selected phase {} as next phase", best->get_id());
     return *best;
 }
 
@@ -162,10 +182,10 @@ GameState::GameState(const std::string &table_config_path, const std::string &ph
 
     m_logger = create_logger("GS");
 
-    m_logger->info("Configuring Game State...");
+    m_logger->info("configuring Game State...");
 
     if (!file.is_open()) {
-        throw std::runtime_error("error: could not open phase config file");
+        fatal("could not open phase config file");
     }
 
     json data;
@@ -192,20 +212,19 @@ GameState::GameState(const std::string &table_config_path, const std::string &ph
     m_config.Kp = config.at("points_weight_factor");
     m_config.Kt = config.at("time_weight_factor");
     m_config.Kpt = config.at("potential_weight_factor");
-    m_config.time_buffer = config.at("time_buffer_factor");
     for (Phase &phase: open_phases) {
         validate_phase(phase);
     }
 
-    m_logger->info("Game State configured successfully");
+    m_logger->info("configured game state successfully");
 }
 
 void GameState::connect(const std::string &agent) {
     if (agent == "bot_a") {
-        printf("sending gamestate...");
+        m_logger->info("listening for a connection from bot_b");
     } else {
         // listen for GameState
-        printf("waiting for bot_a...");
+        m_logger->info("waiting for bot_a...");
     }
     m_agent = agent;
 }
@@ -217,9 +236,11 @@ void GameState::run(const std::unordered_map<std::string, std::function<void()> 
         if (m_agent == "bot_a") {
             auto &phase_a = m_phase_state->get_phase_bot_a();
             if (phase_a.get_done()) {
+                m_logger->info("phase '{}' done", phase_a.get_id());
                 m_phase_state->remove_phase(phase_a.get_id());
                 if (const auto next = get_next_best_phase(); next.has_value()) {
                     m_phase_state->set_phase_bot_a(next.value());
+                    m_logger->info("executing phase {}", next.value().get_id());
                     continue;
                 }
                 break;
@@ -236,9 +257,11 @@ void GameState::run(const std::unordered_map<std::string, std::function<void()> 
         } else if (m_agent == "bot_b") {
             auto &phase_b = m_phase_state->get_phase_bot_b();
             if (phase_b.get_done()) {
+                m_logger->info("phase '{}' done", phase_b.get_id());
                 m_phase_state->remove_phase(phase_b.get_id());
                 if (const auto next = get_next_best_phase(); next.has_value()) {
                     m_phase_state->set_phase_bot_b(next.value());
+                    m_logger->info("executing phase {}", next.value().get_id());
                     continue;
                 }
                 break;
@@ -253,7 +276,7 @@ void GameState::run(const std::unordered_map<std::string, std::function<void()> 
             }
             phase_b.execute(m_game_table_model, action_b);
         } else {
-            throw std::logic_error("Unknown agent type");
+            fatal("unknown agent");
         }
     }
 }
