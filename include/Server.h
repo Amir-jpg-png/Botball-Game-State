@@ -12,7 +12,7 @@ class Server {
     json m_table_data;
     json m_phase_data;
     json m_config_data;
-    std::shared_ptr<spdlog::logger> m_log = std::make_shared<spdlog::logger>("SERVER");
+    std::shared_ptr<spdlog::logger> m_log = create_logger("SERVER");
 
 public:
     /**

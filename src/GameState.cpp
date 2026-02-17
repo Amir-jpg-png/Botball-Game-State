@@ -158,12 +158,11 @@ GameState GameState::connect(const std::string &agent, const std::string &game_s
     if (agent == "bot_a") {
         Server srv;
         srv.init(table_state_config_path, phase_state_config_path, game_state_config_path);
-        // GameState gs = srv.serve(3000);
-        // return gs;
-        throw std::logic_error("Cannot connect to the server");
+        GameState gs = srv.serve(3000);
+        return gs;
     } else {
         fatal("error: agent not in allowed agents ('bot_a', 'bot_b')");
-        throw std::logic_error("invalid agent type");
+        throw std::runtime_error("agent not in allowed agents");
     }
 }
 

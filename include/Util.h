@@ -86,6 +86,7 @@ inline std::shared_ptr<spdlog::logger> LOG = create_logger("LOG");
 
 inline void fatal(const std::string &msg, const std::shared_ptr<spdlog::logger> &log = LOG) {
     log->error(msg);
+    log->flush();
     exit(1);
 }
 
