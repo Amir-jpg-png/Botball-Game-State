@@ -4,6 +4,7 @@
 
 class TableState {
     std::unordered_map<std::string, std::any> m_environment;
+    std::shared_ptr<spdlog::logger> m_log;
 
 public:
     void set(const std::string &key, std::any value);
