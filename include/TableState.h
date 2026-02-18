@@ -7,6 +7,8 @@ class TableState {
     std::shared_ptr<spdlog::logger> m_log;
 
 public:
+    explicit TableState(const json &data);
+
     void set(const std::string &key, std::any value);
 
     bool has(const std::string &key) const;

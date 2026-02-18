@@ -4,6 +4,8 @@
 #include <utility>
 #include <Server.h>
 
+#include "Client.h"
+
 // Private
 
 static bool value_satisfies(const std::any &actual, const std::any &required) {
@@ -26,13 +28,13 @@ static bool value_satisfies(const std::any &actual, const std::any &required) {
 }
 
 void GameState::update_phase_status(Phase &phase) const {
-    m_logger->trace("updating phase {}...", phase.get_id());
+    m_log->trace("updating phase {}...", phase.get_id());
     if (phase.get_done()) {
-        m_logger->trace("skipped phase {} because it is done", phase.get_id());
+        m_log->trace("skipped phase {} because it is done", phase.get_id());
         return;
     }
     if (phase.get_status() == TIMEOUT) {
-        m_logger->trace("skipped phase {} because it timed out", phase.get_id());
+        m_log->trace("skipped phase {} because it timed out", phase.get_id());
         return;
     }
     const PhaseStatus status = phase.get_status();
@@ -47,10 +49,10 @@ void GameState::update_phase_status(Phase &phase) const {
 
     if (time_remaining() <= phase.get_time_to_completion()) {
         phase.set_status(TIMEOUT);
-        m_logger->info("phase {} timed out", phase.get_id());
+        m_log->info("phase {} timed out", phase.get_id());
     }
-    if (status != OPEN && phase.get_status() == OPEN) { m_logger->info("unlocked phase {}", phase.get_id()); }
-    m_logger->trace("phase status {}: {}", phase.get_id(), phase.get_status());
+    if (status != OPEN && phase.get_status() == OPEN) { m_log->info("unlocked phase {}", phase.get_id()); }
+    m_log->trace("phase status {}: {}", phase.get_id(), phase.get_status());
 }
 
 double GameState::compute_potential(const Phase &phase_candidate) const {
@@ -99,7 +101,7 @@ double GameState::compute_potential(const Phase &phase_candidate) const {
     }
 
     double potential = unlocked_count == 0 ? 0.0 : total_points / unlocked_count;
-    m_logger->info("potential of phase {}: {}", phase_candidate.get_id(), potential);
+    m_log->info("potential of phase {}: {}", phase_candidate.get_id(), potential);
     return potential;
 }
 
@@ -112,16 +114,16 @@ std::optional<Phase> GameState::get_next_best_phase() {
     std::unique_ptr<Phase> best;
     double best_score = -std::numeric_limits<double>::infinity();
 
-    m_logger->info("get next best phase: {}", m_agent);
+    m_log->info("get next best phase: {}", m_agent);
     for (Phase &phase: m_phase_state.get_open_phases()) {
-        m_logger->trace("skipped phase {} because agent is not allowed", phase.get_id());
+        m_log->trace("skipped phase {} because agent is not allowed", phase.get_id());
         if (phase.get_allowed_agent() != m_agent) {
             continue;
         }
 
         update_phase_status(phase);
         if (phase.get_status() != OPEN) {
-            m_logger->trace("skipped phase {} because it is not open", phase.get_id());
+            m_log->trace("skipped phase {} because it is not open", phase.get_id());
             continue;
         }
 
@@ -130,7 +132,7 @@ std::optional<Phase> GameState::get_next_best_phase() {
                 m_config.Kpt *
                 compute_potential(phase);
 
-        m_logger->info("score of phase {}: {}", phase.get_id(), score);
+        m_log->info("score of phase {}: {}", phase.get_id(), score);
         if (score > best_score) {
             best_score = score;
             best = std::make_unique<Phase>(phase);
@@ -138,10 +140,10 @@ std::optional<Phase> GameState::get_next_best_phase() {
     }
 
     if (!best) {
-        m_logger->info("no more phases to execute");
+        m_log->info("no more phases to execute");
         return std::nullopt;
     }
-    m_logger->info("selected phase {} as next phase", best->get_id());
+    m_log->info("selected phase {} as next phase", best->get_id());
     return *best;
 }
 
@@ -153,17 +155,23 @@ GameState::GameState(TableState table_state, const Config &config, PhaseState ph
       m_phase_state(std::move(phase_state)) {
 }
 
-GameState GameState::connect(const std::string &agent, const std::string &game_state_config_path,
-                             const std::string &table_state_config_path, const std::string &phase_state_config_path) {
-    if (agent == "bot_a") {
-        Server srv;
-        srv.init(table_state_config_path, phase_state_config_path, game_state_config_path);
-        GameState gs = srv.serve(3000);
-        return gs;
-    } else {
-        fatal("error: agent not in allowed agents ('bot_a', 'bot_b')");
-        throw std::runtime_error("agent not in allowed agents");
-    }
+GameState GameState::connect_server(const std::string &game_state_config_path,
+                                    const std::string &table_state_config_path,
+                                    const std::string &phase_state_config_path) {
+    Server srv;
+    srv.init(table_state_config_path, phase_state_config_path, game_state_config_path);
+    GameState gs = srv.serve(3000);
+    gs.m_agent = "bot_a";
+    gs.m_log = create_logger("GS");
+    return gs;
+}
+
+GameState GameState::connect_client(const std::string &ip, const uint16_t port) {
+    Client client;
+    auto gs = client.get_remote_state(ip, port);
+    gs.m_agent = "bot_b";
+    gs.m_log = create_logger("GS");
+    return gs;
 }
 
 void GameState::run(const std::unordered_map<std::string, std::function<void()> > &actions) {
@@ -173,11 +181,11 @@ void GameState::run(const std::unordered_map<std::string, std::function<void()> 
         if (m_agent == "bot_a") {
             auto &phase_a = m_phase_state.get_phase_bot_a();
             if (phase_a.get_done()) {
-                m_logger->info("phase '{}' done", phase_a.get_id());
+                m_log->info("phase '{}' done", phase_a.get_id());
                 m_phase_state.remove_phase(phase_a.get_id());
                 if (const auto next = get_next_best_phase(); next.has_value()) {
                     m_phase_state.set_phase_bot_a(next.value());
-                    m_logger->info("executing phase {}", next.value().get_id());
+                    m_log->info("executing phase {}", next.value().get_id());
                     continue;
                 }
                 break;
@@ -194,11 +202,11 @@ void GameState::run(const std::unordered_map<std::string, std::function<void()> 
         } else if (m_agent == "bot_b") {
             auto &phase_b = m_phase_state.get_phase_bot_b();
             if (phase_b.get_done()) {
-                m_logger->info("phase '{}' done", phase_b.get_id());
+                m_log->info("phase '{}' done", phase_b.get_id());
                 m_phase_state.remove_phase(phase_b.get_id());
                 if (const auto next = get_next_best_phase(); next.has_value()) {
                     m_phase_state.set_phase_bot_b(next.value());
-                    m_logger->info("executing phase {}", next.value().get_id());
+                    m_log->info("executing phase {}", next.value().get_id());
                     continue;
                 }
                 break;

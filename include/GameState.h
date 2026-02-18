@@ -27,7 +27,7 @@ class GameState {
     TableState m_game_table_model;
     PhaseState m_phase_state;
     std::string m_agent;
-    std::shared_ptr<spdlog::logger> m_logger;
+    std::shared_ptr<spdlog::logger> m_log;
 
     [[nodiscard]] std::optional<Phase> get_next_best_phase();
 
@@ -52,14 +52,18 @@ public:
      * @param table_state_config_path path to table state config file on bot_a (server)
      * @param game_state_config_path path to game state config file on bot_a (server)
      * @param phase_state_config_path path to phase_state_config_path on bot_a (server)
+     * @param ip specifies ip address of bot_a (only for client)
+     * @param port specifies port of bot_a (only for client)
      *
      */
-    [[nodiscard]] static GameState connect(const std::string &agent, const std::string &game_state_config_path,
-                                           const std::string &table_state_config_path,
-                                           const std::string &phase_state_config_path);
+    [[nodiscard]] static GameState connect_server(const std::string &game_state_config_path,
+                                                  const std::string &table_state_config_path,
+                                                  const std::string &phase_state_config_path);
+
+    [[nodiscard]] static GameState connect_client(const std::string &ip, uint16_t port);
 
     /**
-     * Starts by executing INIT_A and INIT_B and starts calculating, executing and transitioning between phases afterwards.
+     * Starts by executing INIT_A and INIT_B and starts calculating, executing and transitioning between phases afterward.
      * @param actions a registry of all functions, each phase needs to have a corresponding function
      */
     void run(const std::unordered_map<std::string, std::function<void()> > &actions);

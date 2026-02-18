@@ -14,15 +14,20 @@ file(GLOB INCLUDE_FILES "include/*.h" "lib/*.hpp")
 add_library(${PROJECT_NAME} STATIC
         include/gamestate.h)
 
-add_executable(main "main.cpp")
-set_target_properties(main PROPERTIES
+add_executable(bot_a "bot_a.cpp")
+add_executable(bot_b "bot_b.cpp")
+set_target_properties(bot_a PROPERTIES
+        RUNTIME_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/bin"
+)
+set_target_properties(bot_b PROPERTIES
         RUNTIME_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/bin"
 )
 find_package(spdlog REQUIRED)
 find_package(fmt REQUIRED)
 
 target_link_libraries(tech-game-state PRIVATE spdlog::spdlog fmt::fmt)
-target_link_libraries(main PRIVATE tech-game-state)
+target_link_libraries(bot_a PRIVATE tech-game-state)
+target_link_libraries(bot_b PRIVATE tech-game-state)
 
 # specify the C++ standard
 target_compile_features(${PROJECT_NAME} PUBLIC cxx_std_17)

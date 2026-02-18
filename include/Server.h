@@ -4,8 +4,9 @@
 
 #include "GameState.h"
 #include "PhaseState.h"
+#include <Socket.h>
 
-class Server {
+class Server : private Socket {
     Config m_cfg = {};
     std::unique_ptr<PhaseState> m_phase_state;
     std::unique_ptr<TableState> m_table_state;
@@ -39,23 +40,7 @@ public:
      * listens for a request from bot_b, responds with an acknowledgement, await another request and send the (in init) constructed objects to bot_b
      * @param port to listen on
      */
-    [[nodiscard]] GameState serve(int port) const;
-
-    /**
-     * gets data from a remote socket and keeps reading in until the buffer is full
-     * @param fd sockets file descriptor
-     * @param buf buffer that bytes get loaded into
-     * @param len length of the buffer
-     */
-    void recv_all(int fd, void *buf, size_t len) const;
-
-    /**
-     * sends data to a remote socket and keeps sending bytes until all bytes are sent
-     * @param fd sockets file descriptor
-     * @param buf buffer that bytes get loaded from
-     * @param len length of the buffer
-     */
-    void send_all(int fd, const void *buf, size_t len) const;
+    [[nodiscard]] GameState serve(int port);
 };
 
 #endif //TECH_GAME_STATE_SERVER_H

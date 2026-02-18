@@ -37,6 +37,10 @@ TableState::TableState(const std::string &path) {
     file.close();
 }
 
+TableState::TableState(const json &data) {
+    m_environment = get_key_value(data);
+}
+
 std::unordered_map<std::string, std::any> TableState::getAll() const {
     return m_environment;
 }

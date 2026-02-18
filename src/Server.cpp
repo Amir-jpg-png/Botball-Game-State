@@ -3,7 +3,15 @@
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <arpa/inet.h>
+#include <netdb.h>
 
+char *get_ip() {
+    char hostname[256];
+    gethostname(hostname, sizeof(hostname));
+    const hostent *host_entry = gethostbyname(hostname);
+    char *ip = inet_ntoa(*reinterpret_cast<struct in_addr *>(host_entry->h_addr_list[0]));
+    return ip;
+}
 
 void Server::validate_phase(const Phase &phase) const {
     for (const auto &[key, value]: phase.get_conditions()) {
@@ -92,29 +100,13 @@ json Server::generate_response() const {
     return resp;
 }
 
-GameState Server::serve(const int port) const {
-    const int server_fd = socket(AF_INET, SOCK_STREAM, 0);
-    if (server_fd < 0) fatal("failed to create socket", m_log);
-
-    constexpr int opt = 1;
-    setsockopt(server_fd, SOL_SOCKET, SO_REUSEADDR, &opt, sizeof(opt));
-
-    sockaddr_in addr{};
-    addr.sin_family = AF_INET;
-    addr.sin_addr.s_addr = INADDR_ANY;
-    addr.sin_port = htons(port);
-
-    if (bind(server_fd, reinterpret_cast<sockaddr *>(&addr), sizeof(addr)) < 0)
-        fatal("error: failed to bind socket", m_log);
-
-    if (listen(server_fd, 1) < 0)
-        fatal("error: failed to listen on socket");
-
-    m_log->info("listening on port: {}", port);
+GameState Server::serve(const int port) {
+    init_server(port);
+    m_log->info("listening on: {}:{}", get_ip(), port);
     sockaddr_in client_addr{};
     socklen_t client_len = sizeof(client_addr);
 
-    const int client_fd = accept(server_fd, reinterpret_cast<sockaddr *>(&client_addr), &client_len);
+    const int client_fd = accept(m_fd, reinterpret_cast<sockaddr *>(&client_addr), &client_len);
     if (client_fd < 0)
         fatal("error: failed to accept connection", m_log);
 
@@ -123,15 +115,9 @@ GameState Server::serve(const int port) const {
     uint16_t client_port = ntohs(client_addr.sin_port);
     m_log->info("accepted connection from {}:{}", ip, client_port);
 
-    uint32_t len_net;
-    recv_all(client_fd, &len_net, sizeof(len_net));
+    json msg = recv_json(client_fd);
 
-    const uint32_t len = ntohl(len_net);
-    std::vector<char> buf(len);
-
-    recv_all(client_fd, buf.data(), len);
     std::string req_type;
-    json msg = json::parse(buf.begin(), buf.end());
     try {
         req_type = msg.at("type");
     } catch (std::exception &) {
@@ -140,34 +126,12 @@ GameState Server::serve(const int port) const {
 
 
     if (req_type == "REQUEST_STATE") {
-        const std::string payload = generate_response().dump();
-        const uint32_t resp_len = payload.size();
-        const uint32_t resp_len_net = htonl(resp_len);
-        send_all(client_fd, &resp_len_net, sizeof(resp_len_net));
-        send_all(client_fd, payload.data(), resp_len);
+        send_json(client_fd, generate_response());
     } else {
         fatal("error: unknown request type", m_log);
     }
     close(client_fd);
-    close(server_fd);
+    close(m_fd);
     auto gs = GameState(*m_table_state, m_cfg, *m_phase_state);
     return gs;
-}
-
-void Server::recv_all(const int fd, void *buf, const size_t len) const {
-    size_t total = 0;
-    while (total < len) {
-        const ssize_t n = recv(fd, static_cast<char *>(buf) + total, len - total, 0);
-        if (n < 0) fatal("error: connection lost", m_log);
-        total += n;
-    }
-}
-
-void Server::send_all(const int fd, const void *buf, const size_t len) const {
-    size_t total = 0;
-    while (total < len) {
-        const ssize_t n = send(fd, static_cast<const char *>(buf) + total, len - total, 0);
-        if (n < 0) fatal("error: connection lost", m_log);
-        total += n;
-    }
 }

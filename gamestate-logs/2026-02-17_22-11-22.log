@@ -1,0 +1,4 @@
+[22:11:22.208]   info   [SERVER]   successfully created TableState
+[22:11:22.208]   info   [SERVER]   successfully created PhaseState
+[22:11:22.209]   info   [SERVER]   successfully created Config (GameState Config)
+[22:11:22.209]   info   [SERVER]   listening on port: 3000
