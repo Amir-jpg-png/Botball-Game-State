@@ -1,0 +1,6 @@
+[16:42:10.808]   info   [SERVER]   successfully created TableState
+[16:42:10.809]   info   [SERVER]   successfully created PhaseState
+[16:42:10.810]   info   [SERVER]   successfully created Config (GameState Config)
+[16:42:10.811]   info   [SERVER]   listening on: 172.17.0.4:3000
+[16:43:09.309]   info   [SERVER]   accepted connection from 172.17.0.5:42838
+[16:43:09.310]  error   [LOG]      unknown agent

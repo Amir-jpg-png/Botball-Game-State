@@ -41,6 +41,8 @@ public:
      */
     [[nodiscard]] std::vector<Phase> &get_open_phases();
 
+    const std::vector<Phase> &get_open_phases_const() const;
+
     void remove_phase(const std::string &key);
 };
 

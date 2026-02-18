@@ -35,3 +35,7 @@ void PhaseState::remove_phase(const std::string &key) {
         }
     }
 }
+
+const std::vector<Phase> &PhaseState::get_open_phases_const() const {
+    return m_open_phases;
+}

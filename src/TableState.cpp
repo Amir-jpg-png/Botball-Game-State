@@ -22,10 +22,11 @@ void TableState::set(const std::string &key, std::any value) {
 }
 
 TableState::TableState(const std::string &path) {
+    m_log = create_logger("TS");
     std::ifstream file(path);
 
     if (!file.is_open()) {
-        throw std::runtime_error("Could not open table state config file: " + path);
+        fatal("could not open table state file: " + path, m_log);
     }
 
     json data;
@@ -34,6 +35,10 @@ TableState::TableState(const std::string &path) {
     m_environment = get_key_value(data);
 
     file.close();
+}
+
+TableState::TableState(const json &data) {
+    m_environment = get_key_value(data);
 }
 
 std::unordered_map<std::string, std::any> TableState::getAll() const {

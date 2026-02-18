@@ -1,0 +1,5 @@
+[16:45:19.897]   info   [SERVER]   successfully created TableState
+[16:45:19.899]   info   [SERVER]   successfully created PhaseState
+[16:45:19.899]   info   [SERVER]   successfully created Config (GameState Config)
+[16:45:19.900]   info   [SERVER]   listening on: 172.17.0.4:3000
+[16:45:45.487]   info   [SERVER]   accepted connection from 172.17.0.3:45564
