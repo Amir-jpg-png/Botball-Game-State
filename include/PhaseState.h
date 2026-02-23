@@ -7,6 +7,7 @@ class PhaseState {
     std::vector<Phase> m_open_phases;
     Phase m_phase_bot_a;
     Phase m_phase_bot_b;
+    std::shared_ptr<spdlog::logger> m_log = create_logger("PS");
 
 public:
     explicit PhaseState(Phase phase_bot_a, Phase phase_bot_b);
@@ -44,6 +45,10 @@ public:
     const std::vector<Phase> &get_open_phases_const() const;
 
     void remove_phase(const std::string &key);
+
+    Phase &get_phase(const std::string &phase_id);
+
+    Phase *get_phase_ptr(const std::string &phase_id);
 };
 
 

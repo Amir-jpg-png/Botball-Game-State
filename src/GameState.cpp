@@ -3,8 +3,9 @@
 #include <fstream>
 #include <utility>
 #include <Server.h>
-
+#include <thread>
 #include "Client.h"
+#include <mutex>
 
 // Private
 
@@ -110,7 +111,7 @@ int GameState::time_remaining() const {
     return 120 - duration_cast<std::chrono::seconds>(now - m_game_start).count();
 }
 
-std::optional<Phase> GameState::get_next_best_phase() {
+std::optional<std::string> GameState::get_next_best_phase() {
     std::unique_ptr<Phase> best;
     double best_score = -std::numeric_limits<double>::infinity();
 
@@ -144,8 +145,9 @@ std::optional<Phase> GameState::get_next_best_phase() {
         return std::nullopt;
     }
     m_log->info("selected phase {} as next phase", best->get_id());
-    return *best;
+    return best->get_id();
 }
+
 
 // Public
 
@@ -158,70 +160,125 @@ GameState::GameState(TableState table_state, const Config &config, PhaseState ph
 GameState GameState::connect_server(const std::string &game_state_config_path,
                                     const std::string &table_state_config_path,
                                     const std::string &phase_state_config_path) {
-    Server srv;
-    srv.init(table_state_config_path, phase_state_config_path, game_state_config_path);
-    GameState gs = srv.serve(3000);
+    auto *srv = new Server();
+    srv->init(table_state_config_path, phase_state_config_path, game_state_config_path);
+
+    GameState gs = srv->serve(3000);
+
+    gs.m_socket = std::unique_ptr<Socket>(srv);
+
     gs.m_agent = "bot_a";
     gs.m_log = create_logger("GS");
+
     return gs;
 }
 
 GameState GameState::connect_client(const std::string &ip, const uint16_t port) {
-    Client client;
-    auto gs = client.get_remote_state(ip, port);
+    auto *client = new Client();
+    auto gs = client->get_remote_state(ip, port);
+
+    gs.m_socket = std::unique_ptr<Socket>(client);
     gs.m_agent = "bot_b";
     gs.m_log = create_logger("GS");
     return gs;
 }
 
+void validate_checksum(const json &data) {
+    json data_without_checksum;
+    data_without_checksum["type"] = data["type"];
+    data_without_checksum["payload"] = data["payload"];
+    uint32_t checksum = calculate_checksum(data_without_checksum);
+    if (checksum != data["checksum"].get<uint32_t>()) {
+        std::cerr << "do something here" << std::endl;
+    }
+}
+
+void GameState::listen() {
+    m_listen_thread = std::thread([this]() {
+        while (m_listening) {
+            try {
+                const json data = m_socket->recv_json();
+                if (m_socket->get_closed()) {
+                    break;
+                }
+                if (data["type"] == "UPDATE_TABLE") {
+                    // Log the incoming update for debugging
+                    m_log->debug("Received update: {}", data["payload"].dump());
+
+                    // Lock to prevent main thread from reading table while we write
+                    std::lock_guard lock(m_state_mutex);
+
+                    // get_key_value returns the map of any.
+                    // We iterate and update the internal model.
+                    auto updates = get_key_value(data["payload"]);
+                    for (const auto &[key, val]: updates) {
+                        // Use the internal set() that doesn't trigger another broadcast
+                        m_game_table_model.set(key, val);
+                    }
+                }
+            } catch (const std::exception &e) {
+                if (m_listening) {
+                    m_log->error("Listener error: {}", e.what());
+                }
+                break;
+            }
+        }
+    });
+}
+
 void GameState::run(const std::unordered_map<std::string, std::function<void()> > &actions) {
     m_game_start = std::chrono::steady_clock::now();
-    // IS RUNNING && open_phases != empty
-    while (!m_phase_state.get_open_phases().empty()) {
-        if (m_agent == "bot_a") {
-            auto &phase_a = m_phase_state.get_phase_bot_a();
-            if (phase_a.get_done()) {
-                m_log->info("phase '{}' done", phase_a.get_id());
-                m_phase_state.remove_phase(phase_a.get_id());
-                if (const auto next = get_next_best_phase(); next.has_value()) {
-                    m_phase_state.set_phase_bot_a(next.value());
-                    m_log->info("executing phase {}", next.value().get_id());
-                    continue;
-                }
+    m_listening = true;
+    listen();
+
+    while (true) {
+        // 1. Work with the BOT'S OWN COPY of the phase.
+        // This is a member variable, NOT a pointer into a moving vector.
+        Phase &bot_phase = (m_agent == "bot_a") ? m_phase_state.get_phase_bot_a() : m_phase_state.get_phase_bot_b();
+        std::string current_id = bot_phase.get_id();
+
+        std::unique_lock lock(m_state_mutex);
+
+        // 2. Check if the current phase is done
+        if (bot_phase.get_done()) {
+            m_phase_state.remove_phase(current_id);
+            auto next_id_opt = get_next_best_phase();
+
+            if (!next_id_opt.has_value()) {
+                m_log->info("No more phases for {}. Exiting.", m_agent);
                 break;
             }
-            std::function<void()> action_a;
-            try {
-                action_a = actions.at(phase_a.get_id());
-            } catch (const std::exception &) {
-                fatal(
-                    "error: action for phase '" + phase_a.get_id() +
-                    "' not specified please add function to action registry");
-            }
-            phase_a.execute(m_game_table_model, action_a);
-        } else if (m_agent == "bot_b") {
-            auto &phase_b = m_phase_state.get_phase_bot_b();
-            if (phase_b.get_done()) {
-                m_log->info("phase '{}' done", phase_b.get_id());
-                m_phase_state.remove_phase(phase_b.get_id());
-                if (const auto next = get_next_best_phase(); next.has_value()) {
-                    m_phase_state.set_phase_bot_b(next.value());
-                    m_log->info("executing phase {}", next.value().get_id());
-                    continue;
-                }
-                break;
-            }
-            std::function<void()> action_b;
-            try {
-                action_b = actions.at(phase_b.get_id());
-            } catch (const std::exception &) {
-                fatal(
-                    "error: action for phase '" + phase_b.get_id() +
-                    "' not specified please add function to action registry");
-            }
-            phase_b.execute(m_game_table_model, action_b);
-        } else {
-            fatal("unknown agent");
+
+            // Copy the new phase from the master list into the bot's private slot
+            Phase next_p = m_phase_state.get_phase(next_id_opt.value());
+            if (m_agent == "bot_a") m_phase_state.set_phase_bot_a(next_p);
+            else m_phase_state.set_phase_bot_b(next_p);
+            continue; // Refresh the 'bot_phase' reference at the top of the loop
         }
+
+        auto action = actions.at(current_id);
+
+        // 3. It is now safe to unlock. 'bot_phase' is a stable member variable.
+        lock.unlock();
+
+        // 4. EXECUTE ON THE COPY
+        bot_phase.execute(m_game_table_model, action, *m_socket);
+
+        // 5. SYNC: Update the version in the master vector so the other bot/server knows it's done
+        lock.lock();
+        Phase *master_p = m_phase_state.get_phase_ptr(current_id);
+        if (master_p) {
+            *master_p = bot_phase;
+        }
+        lock.unlock();
+
+        std::this_thread::sleep_for(std::chrono::milliseconds(10));
     }
+
+    m_socket->shutdown_socket();
+    if (m_listen_thread.joinable()) {
+        m_listen_thread.join();
+        m_log->info("stopping listening thread...");
+    }
+    m_socket->close_socket();
 }

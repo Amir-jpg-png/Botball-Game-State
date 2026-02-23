@@ -8,12 +8,15 @@
 class Socket {
 protected:
     int m_fd = -1;
+    bool m_closed = true;
     std::shared_ptr<spdlog::logger> m_log;
 
 private:
     sockaddr_in addr = {};
 
 public:
+    virtual ~Socket() = default;
+
     /**
      * Opens an IPv4 TCP Socket
      */
@@ -34,23 +37,27 @@ public:
 
     /**
      * gets data from a remote socket and keeps reading in until the buffer is full
-     * @param fd sockets file descriptor
      * @param buf buffer that bytes get loaded into
      * @param len length of the buffer
      */
-    void recv_all(int fd, void *buf, size_t len) const;
+    void recv_all(void *buf, size_t len) const;
 
     /**
      * sends data to a remote socket and keeps sending bytes until all bytes are sent
-     * @param fd sockets file descriptor
      * @param buf buffer that bytes get loaded from
      * @param len length of the buffer
      */
-    void send_all(int fd, const void *buf, size_t len) const;
+    void send_all(const void *buf, size_t len) const;
 
-    void send_json(int fd, const json &data) const;
+    void send_json(const json &data) const;
 
-    [[nodiscard]] json recv_json(int fd) const;
+    [[nodiscard]] json recv_json() const;
+
+    void close_socket();
+
+    void shutdown_socket();
+
+    bool get_closed() const;
 };
 
 #endif //TECH_GAME_STATE_SOCKET_H

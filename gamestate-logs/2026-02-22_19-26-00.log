@@ -1,0 +1,13 @@
+[19:26:00.324]   info   [CLIENT]   successfully created TableState
+[19:26:00.324]   info   [CLIENT]   successfully created PhaseState
+[19:26:00.324]   info   [CLIENT]   successfully created config (GameState config)
+[19:26:00.325]  debug   [GS]       Received update: {"init_a":true}
+[19:26:00.335]   info   [GS]       phase 'INIT_B' done
+[19:26:00.335]   info   [GS]       get next best phase: bot_b
+[19:26:00.336]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[19:26:00.336]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[19:26:00.336]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[19:26:00.336]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[19:26:00.336]   info   [GS]       no more phases to execute
+[19:26:00.336]   info   [GS]       No more phases available. exiting.
+[19:26:00.338]  debug   [GS]       Received update: {"dummy":true}

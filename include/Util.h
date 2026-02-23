@@ -84,7 +84,7 @@ inline std::shared_ptr<spdlog::logger> create_logger(const std::string &logger_n
 
 inline std::shared_ptr<spdlog::logger> LOG = create_logger("LOG");
 
-inline void fatal(const std::string &msg, const std::shared_ptr<spdlog::logger> &log = LOG) {
+[[noreturn]] inline void fatal(const std::string &msg, const std::shared_ptr<spdlog::logger> &log = LOG) {
     log->error(msg);
     log->flush();
     exit(1);
@@ -134,5 +134,14 @@ inline std::unordered_map<std::string, std::any> get_key_value(const json &data)
     return result;
 }
 
+inline uint32_t calculate_checksum(const std::string &s) {
+    // Simple example using a basic hash (use zlib crc32 for production)
+    uint32_t hash = 0x811c9dc5;
+    for (const char c: s) {
+        hash ^= static_cast<uint32_t>(c);
+        hash *= 0x01000193;
+    }
+    return hash;
+}
 
 #endif //TECH_GAME_STATE_INCLUDE_H

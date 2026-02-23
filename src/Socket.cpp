@@ -13,6 +13,7 @@ void Socket::init_socket(const uint16_t port) {
 
     addr.sin_family = AF_INET;
     addr.sin_port = htons(port);
+    m_closed = false;
 }
 
 void Socket::init_server(const uint16_t port) {
@@ -38,39 +39,55 @@ void Socket::init_client(const std::string &ip_address, const uint16_t port) {
     };
 }
 
-void Socket::recv_all(const int fd, void *buf, const size_t len) const {
+void Socket::recv_all(void *buf, const size_t len) const {
     size_t total = 0;
-    while (total < len) {
-        const ssize_t n = recv(fd, static_cast<char *>(buf) + total, len - total, 0);
+    while (total < len && !m_closed) {
+        const ssize_t n = recv(m_fd, static_cast<char *>(buf) + total, len - total, 0);
         if (n < 0) fatal("error: connection lost", m_log);
         total += n;
     }
 }
 
-void Socket::send_all(const int fd, const void *buf, const size_t len) const {
+void Socket::send_all(const void *buf, const size_t len) const {
     size_t total = 0;
-    while (total < len) {
-        const ssize_t n = send(fd, static_cast<const char *>(buf) + total, len - total, 0);
+    while (total < len && !m_closed) {
+        const ssize_t n = send(m_fd, static_cast<const char *>(buf) + total, len - total, 0);
         if (n < 0) fatal("error: connection lost", m_log);
         total += n;
     }
 }
 
-void Socket::send_json(const int fd, const json &data) const {
+void Socket::send_json(const json &data) const {
     const std::string payload = data.dump();
     const uint32_t len = payload.size();
     const uint32_t len_net = htonl(len);
-    send_all(fd, &len_net, sizeof(len_net));
-    send_all(fd, payload.data(), len);
+    send_all(&len_net, sizeof(len_net));
+    send_all(payload.data(), len);
 }
 
-json Socket::recv_json(const int fd) const {
+json Socket::recv_json() const {
     uint32_t len_net;
-    recv_all(fd, &len_net, sizeof(len_net));
+    recv_all(&len_net, sizeof(len_net));
     const uint32_t len = ntohl(len_net);
 
     std::vector<char> buf(len);
-    recv_all(fd, buf.data(), len);
+    recv_all(buf.data(), len);
+    json obj;
+    if (!m_closed) obj = json::parse(buf.begin(), buf.end());
 
-    return json::parse(buf.begin(), buf.end());
+    return obj;
+}
+
+void Socket::close_socket() {
+    close(m_fd);
+    m_closed = true;
+}
+
+void Socket::shutdown_socket() {
+    shutdown(m_fd, SHUT_RD);
+    m_closed = true;
+}
+
+[[nodiscard]] bool Socket::get_closed() const {
+    return m_closed;
 }

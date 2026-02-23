@@ -1,0 +1,16 @@
+[18:43:10.471]   info   [CLIENT]   successfully created TableState
+[18:43:10.472]   info   [CLIENT]   successfully created PhaseState
+[18:43:10.472]   info   [CLIENT]   successfully created config (GameState config)
+[18:43:10.474]   info   [GS]       get next best phase: bot_b
+[18:43:10.476]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[18:43:10.476]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[18:43:10.476]  trace   [GS]       skipped phase INIT_B because agent is not allowed
+[18:43:10.476]  trace   [GS]       updating phase INIT_B...
+[18:43:10.476]  trace   [GS]       phase status INIT_B: 0
+[18:43:10.476]   info   [GS]       potential of phase INIT_B: 50
+[18:43:10.477]   info   [GS]       score of phase INIT_B: 14.399999999999999
+[18:43:10.478]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[18:43:10.478]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[18:43:10.478]   info   [GS]       selected phase INIT_B as next phase
+[18:43:10.479]   info   [GS]       Executing phase: INIT_B
+[18:43:10.479]   info   [GS]       All assigned phases complete. Exiting loop.

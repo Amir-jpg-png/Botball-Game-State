@@ -1,0 +1,51 @@
+[07:27:06.809]   info   [SERVER]   successfully created TableState
+[07:27:06.811]   info   [SERVER]   successfully created PhaseState
+[07:27:06.812]   info   [SERVER]   successfully created Config (GameState Config)
+[07:27:06.813]   info   [SERVER]   listening on: 172.17.0.2:3000
+[07:27:21.327]   info   [SERVER]   accepted connection from 172.17.0.3:35720
+[07:27:21.339]   info   [GS]       get next best phase: bot_a
+[07:27:21.339]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[07:27:21.339]  trace   [GS]       updating phase CLEAR_DECK...
+[07:27:21.339]  trace   [GS]       phase status CLEAR_DECK: 0
+[07:27:21.339]   info   [GS]       potential of phase CLEAR_DECK: 0
+[07:27:21.340]   info   [GS]       score of phase CLEAR_DECK: 48.5
+[07:27:21.340]  trace   [GS]       skipped phase INIT_B because agent is not allowed
+[07:27:21.340]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[07:27:21.340]  trace   [GS]       updating phase LONG_TASK...
+[07:27:21.340]  trace   [GS]       phase status LONG_TASK: 0
+[07:27:21.340]   info   [GS]       potential of phase LONG_TASK: 0
+[07:27:21.341]   info   [GS]       score of phase LONG_TASK: 50
+[07:27:21.342]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[07:27:21.342]  trace   [GS]       updating phase WAIT_FOR_INIT...
+[07:27:21.342]  trace   [GS]       phase status WAIT_FOR_INIT: 1
+[07:27:21.342]  trace   [GS]       skipped phase WAIT_FOR_INIT because it is not open
+[07:27:21.342]   info   [GS]       selected phase LONG_TASK as next phase
+[07:27:21.343]  debug   [GS]       Received update: {"init_b":true}
+[07:27:21.353]   info   [GS]       get next best phase: bot_a
+[07:27:21.354]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[07:27:21.354]  trace   [GS]       updating phase CLEAR_DECK...
+[07:27:21.354]  trace   [GS]       phase status CLEAR_DECK: 0
+[07:27:21.354]   info   [GS]       potential of phase CLEAR_DECK: 0
+[07:27:21.354]   info   [GS]       score of phase CLEAR_DECK: 48.5
+[07:27:21.355]  trace   [GS]       skipped phase INIT_B because agent is not allowed
+[07:27:21.355]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[07:27:21.355]  trace   [GS]       updating phase WAIT_FOR_INIT...
+[07:27:21.355]   info   [GS]       unlocked phase WAIT_FOR_INIT
+[07:27:21.355]  trace   [GS]       phase status WAIT_FOR_INIT: 0
+[07:27:21.355]   info   [GS]       potential of phase WAIT_FOR_INIT: 0
+[07:27:21.355]   info   [GS]       score of phase WAIT_FOR_INIT: 23.5
+[07:27:21.356]   info   [GS]       selected phase CLEAR_DECK as next phase
+[07:27:21.366]   info   [GS]       get next best phase: bot_a
+[07:27:21.367]  trace   [GS]       skipped phase INIT_B because agent is not allowed
+[07:27:21.367]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[07:27:21.367]  trace   [GS]       updating phase WAIT_FOR_INIT...
+[07:27:21.367]  trace   [GS]       phase status WAIT_FOR_INIT: 0
+[07:27:21.367]   info   [GS]       potential of phase WAIT_FOR_INIT: 0
+[07:27:21.367]   info   [GS]       score of phase WAIT_FOR_INIT: 23.5
+[07:27:21.367]   info   [GS]       selected phase WAIT_FOR_INIT as next phase
+[07:27:21.378]   info   [GS]       get next best phase: bot_a
+[07:27:21.378]  trace   [GS]       skipped phase INIT_B because agent is not allowed
+[07:27:21.378]   info   [GS]       no more phases to execute
+[07:27:21.378]   info   [GS]       No more phases for bot_a. Exiting.
+[07:27:22.374]  error   [GS]       Listener error: [json.exception.parse_error.101] parse error at line 1, column 1: syntax error while parsing value - unexpected end of input; expected '[', '{', or a literal
+[07:27:22.374]   info   [GS]       stopping listening thread...

@@ -10,8 +10,8 @@ GameState Client::get_remote_state(const std::string &ip_address, const uint16_t
     init_client(ip_address, port);
     json req;
     req["type"] = "REQUEST_STATE";
-    send_json(m_fd, req);
-    json resp = recv_json(m_fd);
+    send_json(req);
+    const json resp = recv_json();
     return parse_remote_state(resp);
 }
 

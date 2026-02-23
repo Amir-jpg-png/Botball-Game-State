@@ -106,8 +106,9 @@ GameState Server::serve(const int port) {
     sockaddr_in client_addr{};
     socklen_t client_len = sizeof(client_addr);
 
-    const int client_fd = accept(m_fd, reinterpret_cast<sockaddr *>(&client_addr), &client_len);
-    if (client_fd < 0)
+    int listen_fd = m_fd;
+    m_fd = accept(m_fd, reinterpret_cast<sockaddr *>(&client_addr), &client_len);
+    if (m_fd < 0)
         fatal("error: failed to accept connection", m_log);
 
     char ip[INET_ADDRSTRLEN];
@@ -115,7 +116,7 @@ GameState Server::serve(const int port) {
     uint16_t client_port = ntohs(client_addr.sin_port);
     m_log->info("accepted connection from {}:{}", ip, client_port);
 
-    json msg = recv_json(client_fd);
+    json msg = recv_json();
 
     std::string req_type;
     try {
@@ -126,12 +127,11 @@ GameState Server::serve(const int port) {
 
 
     if (req_type == "REQUEST_STATE") {
-        send_json(client_fd, generate_response());
+        send_json(generate_response());
     } else {
         fatal("error: unknown request type", m_log);
     }
-    close(client_fd);
-    close(m_fd);
+    close(listen_fd);
     auto gs = GameState(*m_table_state, m_cfg, *m_phase_state);
     return gs;
 }

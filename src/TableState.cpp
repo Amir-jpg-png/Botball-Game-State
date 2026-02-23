@@ -17,6 +17,32 @@ bool TableState::has(const std::string &key) const {
     return true;
 }
 
+
+void TableState::set(const std::string &key, std::any value, const Socket &so) {
+    // 1. Update local state
+    m_environment[key] = value;
+
+    // 2. Prepare the payload (a simple key-value object)
+    json payload;
+    if (value.type() == typeid(std::string)) {
+        payload[key] = std::any_cast<std::string>(value);
+    } else if (value.type() == typeid(bool)) {
+        payload[key] = std::any_cast<bool>(value);
+    } else if (value.type() == typeid(double)) {
+        payload[key] = std::any_cast<double>(value);
+    } else if (value.type() == typeid(int)) {
+        payload[key] = std::any_cast<int>(value);
+    }
+
+    // 3. Wrap in the protocol message
+    json msg;
+    msg["type"] = "UPDATE_TABLE";
+    msg["payload"] = payload; // This is now { "init_b": true }
+    msg["checksum"] = calculate_checksum(msg["payload"].dump()); // Checksum the payload
+
+    so.send_json(msg);
+}
+
 void TableState::set(const std::string &key, std::any value) {
     m_environment[key] = std::move(value);
 }

@@ -1,5 +1,6 @@
 #ifndef TECH_GAME_STATE_TABLE_STATE_H
 #define TECH_GAME_STATE_TABLE_STATE_H
+#include "Socket.h"
 #include "Util.h"
 
 class TableState {
@@ -8,6 +9,8 @@ class TableState {
 
 public:
     explicit TableState(const json &data);
+
+    void set(const std::string &key, std::any value, const Socket &so);
 
     void set(const std::string &key, std::any value);
 

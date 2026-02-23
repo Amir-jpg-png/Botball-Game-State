@@ -50,11 +50,11 @@ void Phase::set_status(const PhaseStatus status) {
     m_status = status;
 }
 
-void Phase::execute(TableState &table, const std::function<void()> &action) {
+void Phase::execute(TableState &table, const std::function<void()> &action, const Socket &so) {
     action();
 
     for (const auto &[key, value]: m_completion) {
-        table.set(key, value);
+        table.set(key, value, so);
     }
 
     m_status = DONE;

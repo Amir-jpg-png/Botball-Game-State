@@ -1,0 +1,13 @@
+[06:16:37.682]   info   [CLIENT]   successfully created TableState
+[06:16:37.683]   info   [CLIENT]   successfully created PhaseState
+[06:16:37.683]   info   [CLIENT]   successfully created config (GameState config)
+[06:16:37.683]  debug   [GS]       Received update: {"init_a":true}
+[06:16:37.694]   info   [GS]       get next best phase: bot_b
+[06:16:37.695]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[06:16:37.695]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[06:16:37.695]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[06:16:37.695]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[06:16:37.695]   info   [GS]       no more phases to execute
+[06:16:37.695]   info   [GS]       No more phases for bot_b. Exiting.
+[06:16:37.695]  debug   [GS]       Received update: {"dummy":true}
+[06:16:37.696]  error   [CLIENT]   error: connection lost

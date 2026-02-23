@@ -23,5 +23,9 @@ int main() {
         std::cout << "[ACTION] LONG_TASK\n";
     };
 
+    actions["WAIT_FOR_INIT"] = [&] {
+        std::cout << "[ACTION] WAIT_FOR_INIT\n";
+    };
+
     gs.run(actions);
 }

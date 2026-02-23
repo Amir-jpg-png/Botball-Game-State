@@ -29,13 +29,28 @@ std::vector<Phase> &PhaseState::get_open_phases() {
 }
 
 void PhaseState::remove_phase(const std::string &key) {
-    for (size_t i = 0; i < m_open_phases.size(); i++) {
-        if (m_open_phases[i].get_id() == key) {
-            m_open_phases.erase(m_open_phases.begin() + i);
-        }
-    }
+    std::erase_if(m_open_phases,
+                  [&](const Phase &p) { return p.get_id() == key; });
 }
 
 const std::vector<Phase> &PhaseState::get_open_phases_const() const {
     return m_open_phases;
+}
+
+Phase &PhaseState::get_phase(const std::string &phase_id) {
+    for (Phase &phase: m_open_phases) {
+        if (phase.get_id() == phase_id) {
+            return phase;
+        }
+    }
+    fatal("failed to find phase with id " + phase_id, m_log);
+}
+
+Phase *PhaseState::get_phase_ptr(const std::string &phase_id) {
+    for (Phase &phase: m_open_phases) {
+        if (phase.get_id() == phase_id) {
+            return &phase;
+        }
+    }
+    fatal("failed to find phase with id " + phase_id, m_log);
 }

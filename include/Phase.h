@@ -109,8 +109,9 @@ public:
      * Executes the phase action, mutates the table state to reflect the changes made by the action and sets the PhaseStatus to DONE
      * @param table a reference to the table state so that it may be changed on commpletion
      * @param action a void(void) function that will be executed by the phase
+     * @param so socket to pass to table state for sending updates over the network
      */
-    void execute(TableState &table, const std::function<void()> &action);
+    void execute(TableState &table, const std::function<void()> &action, const Socket &so);
 };
 
 #endif // TECH_GAME_STATE_PHASE_H

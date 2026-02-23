@@ -1,0 +1,37 @@
+[06:16:18.595]   info   [SERVER]   successfully created TableState
+[06:16:18.596]   info   [SERVER]   successfully created PhaseState
+[06:16:18.597]   info   [SERVER]   successfully created Config (GameState Config)
+[06:16:18.599]   info   [SERVER]   listening on: 172.17.0.3:3000
+[06:16:37.681]   info   [SERVER]   accepted connection from 172.17.0.2:52212
+[06:16:37.692]   info   [GS]       get next best phase: bot_a
+[06:16:37.692]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[06:16:37.692]  trace   [GS]       updating phase CLEAR_DECK...
+[06:16:37.692]  trace   [GS]       phase status CLEAR_DECK: 0
+[06:16:37.692]   info   [GS]       potential of phase CLEAR_DECK: 0
+[06:16:37.693]   info   [GS]       score of phase CLEAR_DECK: 48.5
+[06:16:37.694]  trace   [GS]       skipped phase INIT_B because agent is not allowed
+[06:16:37.694]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[06:16:37.694]  trace   [GS]       updating phase LONG_TASK...
+[06:16:37.694]  trace   [GS]       phase status LONG_TASK: 0
+[06:16:37.694]   info   [GS]       potential of phase LONG_TASK: 0
+[06:16:37.694]   info   [GS]       score of phase LONG_TASK: 50
+[06:16:37.694]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[06:16:37.694]  trace   [GS]       updating phase WAIT_FOR_INIT...
+[06:16:37.694]  trace   [GS]       phase status WAIT_FOR_INIT: 1
+[06:16:37.694]  trace   [GS]       skipped phase WAIT_FOR_INIT because it is not open
+[06:16:37.694]   info   [GS]       selected phase LONG_TASK as next phase
+[06:16:37.695]  debug   [GS]       Received update: {"init_b":true}
+[06:16:37.705]   info   [GS]       get next best phase: bot_a
+[06:16:37.705]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[06:16:37.705]  trace   [GS]       updating phase CLEAR_DECK...
+[06:16:37.705]  trace   [GS]       phase status CLEAR_DECK: 0
+[06:16:37.705]   info   [GS]       potential of phase CLEAR_DECK: 0
+[06:16:37.706]   info   [GS]       score of phase CLEAR_DECK: 48.5
+[06:16:37.707]  trace   [GS]       skipped phase INIT_B because agent is not allowed
+[06:16:37.707]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[06:16:37.707]  trace   [GS]       updating phase WAIT_FOR_INIT...
+[06:16:37.707]   info   [GS]       unlocked phase WAIT_FOR_INIT
+[06:16:37.708]  trace   [GS]       phase status WAIT_FOR_INIT: 0
+[06:16:37.708]   info   [GS]       potential of phase WAIT_FOR_INIT: 0
+[06:16:37.708]   info   [GS]       score of phase WAIT_FOR_INIT: 23.5
+[06:16:37.709]   info   [GS]       selected phase CLEAR_DECK as next phase

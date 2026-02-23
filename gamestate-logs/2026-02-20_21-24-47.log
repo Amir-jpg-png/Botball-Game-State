@@ -1,0 +1,4 @@
+[21:24:47.663]   info   [CLIENT]   successfully created TableState
+[21:24:47.664]   info   [CLIENT]   successfully created PhaseState
+[21:24:47.665]   info   [CLIENT]   successfully created config (GameState config)
+[21:24:47.666]   info   [GS]       phase 'INIT_B' done

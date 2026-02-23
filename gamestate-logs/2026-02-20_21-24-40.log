@@ -1,0 +1,24 @@
+[21:24:40.892]   info   [SERVER]   successfully created TableState
+[21:24:40.894]   info   [SERVER]   successfully created PhaseState
+[21:24:40.895]   info   [SERVER]   successfully created Config (GameState Config)
+[21:24:40.896]   info   [SERVER]   listening on: 172.17.0.3:3000
+[21:24:47.662]   info   [SERVER]   accepted connection from 172.17.0.2:45294
+[21:24:47.663]   info   [GS]       phase 'INIT_A' done
+[21:24:47.663]   info   [GS]       get next best phase: bot_a
+[21:24:47.664]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[21:24:47.664]  trace   [GS]       updating phase CLEAR_DECK...
+[21:24:47.664]  trace   [GS]       phase status CLEAR_DECK: 0
+[21:24:47.665]   info   [GS]       potential of phase CLEAR_DECK: 0
+[21:24:47.665]   info   [GS]       score of phase CLEAR_DECK: 48.5
+[21:24:47.668]  trace   [GS]       skipped phase INIT_B because agent is not allowed
+[21:24:47.668]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[21:24:47.668]  trace   [GS]       updating phase LONG_TASK...
+[21:24:47.668]  trace   [GS]       phase status LONG_TASK: 0
+[21:24:47.668]   info   [GS]       potential of phase LONG_TASK: 0
+[21:24:47.668]   info   [GS]       score of phase LONG_TASK: 50
+[21:24:47.669]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[21:24:47.669]  trace   [GS]       updating phase WAIT_FOR_INIT...
+[21:24:47.669]  trace   [GS]       phase status WAIT_FOR_INIT: 1
+[21:24:47.669]  trace   [GS]       skipped phase WAIT_FOR_INIT because it is not open
+[21:24:47.669]   info   [GS]       selected phase LONG_TASK as next phase
+[21:24:47.669]   info   [GS]       executing phase LONG_TASK
