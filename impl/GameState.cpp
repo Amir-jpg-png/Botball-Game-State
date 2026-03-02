@@ -9,6 +9,13 @@
 
 // Private
 
+void GameState::execute_init(const std::function<void()> &action) {
+    Phase *init = m_agent == "bot_a"
+                      ? m_phase_state.get_phase_ptr("INIT_A")
+                      : m_phase_state.get_phase_ptr("INIT_B");
+    init->execute(m_game_table_model, action, *m_socket);
+}
+
 static bool value_satisfies(const std::any &actual, const std::any &required) {
     if (actual.type() != required.type())
         return false;
@@ -28,7 +35,7 @@ static bool value_satisfies(const std::any &actual, const std::any &required) {
     throw std::runtime_error("Unsupported condition type in value_satisfies()");
 }
 
-bool GameState::has_phases() {
+bool GameState::has_phases() const {
     for (const auto &phase: m_phase_state.get_open_phases_const()) {
         if (phase.get_allowed_agent() == m_agent) {
             return true;
@@ -243,6 +250,13 @@ void GameState::listen() {
 void GameState::run(const std::unordered_map<std::string, std::function<void()> > &actions) {
     m_listening = true;
     listen();
+    std::function<void()> init_action;
+    try {
+        init_action = m_agent == "bot_a" ? actions.at("INIT_A") : actions.at("INIT_B");
+    } catch (const std::exception) {
+        fatal("action for init phase not found " + m_agent, m_log);
+    }
+    execute_init(init_action);
     m_game_start = std::chrono::steady_clock::now();
 
     while (m_listening) {
@@ -271,11 +285,8 @@ void GameState::run(const std::unordered_map<std::string, std::function<void()> 
             continue;
         }
 
-        // Execute action
         auto it = actions.find(active_id);
         if (it != actions.end()) {
-            // We need a local copy or a way to access the phase safely
-            // Phase::execute handles its own locking for the socket
             Phase *p = nullptr;
             {
                 std::lock_guard<std::mutex> lock(m_state_mutex);

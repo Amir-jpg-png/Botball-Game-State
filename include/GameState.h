@@ -32,7 +32,7 @@ class GameState {
     mutable std::mutex m_state_mutex;
     std::atomic<bool> m_listening{false};
 
-    [[nodiscard]] bool has_phases();
+    [[nodiscard]] bool has_phases() const;
 
     TableState m_game_table_model;
     PhaseState m_phase_state;
@@ -53,6 +53,8 @@ class GameState {
     [[nodiscard]] int time_remaining() const;
 
     void listen();
+
+    void execute_init(const std::function<void()> &action);
 
 public:
     GameState(TableState table_state, const Config &config, PhaseState phase_state);
