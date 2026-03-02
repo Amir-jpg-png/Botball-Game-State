@@ -6,7 +6,7 @@
 #include "PhaseState.h"
 #include <Socket.h>
 
-class Server : private Socket {
+class Server : public Socket {
     Config m_cfg = {};
     std::unique_ptr<PhaseState> m_phase_state;
     std::unique_ptr<TableState> m_table_state;

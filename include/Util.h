@@ -6,7 +6,6 @@
 #include <spdlog/sinks/dup_filter_sink.h>
 #include <spdlog/sinks/basic_file_sink.h>
 #include <spdlog/sinks/stdout_color_sinks.h>
-#include <spdlog/spdlog.h>
 #include <list>
 
 using json = nlohmann::json;
@@ -84,7 +83,7 @@ inline std::shared_ptr<spdlog::logger> create_logger(const std::string &logger_n
 
 inline std::shared_ptr<spdlog::logger> LOG = create_logger("LOG");
 
-inline void fatal(const std::string &msg, const std::shared_ptr<spdlog::logger> &log = LOG) {
+[[noreturn]] inline void fatal(const std::string &msg, const std::shared_ptr<spdlog::logger> &log = LOG) {
     log->error(msg);
     log->flush();
     exit(1);
@@ -134,5 +133,29 @@ inline std::unordered_map<std::string, std::any> get_key_value(const json &data)
     return result;
 }
 
+inline uint32_t calculate_checksum(const std::string &s) {
+    uint32_t hash = 0x811c9dc5;
+    for (const char c: s) {
+        hash ^= static_cast<uint8_t>(c);
+        hash *= 0x01000193;
+    }
+    return hash;
+}
+
+inline void validate_checksum(const json &data) {
+    if (!data.contains("payload") || !data.contains("checksum")) return;
+
+    // Get the payload as a raw string
+    std::string payload_str = data["payload"].is_string()
+                                  ? data["payload"].get<std::string>()
+                                  : data["payload"].dump();
+
+    uint32_t calculated = calculate_checksum(payload_str);
+    uint32_t provided = data["checksum"].get<uint32_t>();
+
+    if (calculated != provided) {
+        LOG->error("Checksum Mismatch! Calc: {} Provided: {}", calculated, provided);
+    }
+}
 
 #endif //TECH_GAME_STATE_INCLUDE_H

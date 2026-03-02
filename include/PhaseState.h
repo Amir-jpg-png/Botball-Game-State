@@ -5,8 +5,9 @@
 
 class PhaseState {
     std::vector<Phase> m_open_phases;
-    Phase m_phase_bot_a;
-    Phase m_phase_bot_b;
+    std::string m_phase_id_a;
+    std::string m_phase_id_b;
+    std::shared_ptr<spdlog::logger> m_log = create_logger("PS");
 
 public:
     explicit PhaseState(Phase phase_bot_a, Phase phase_bot_b);
@@ -15,25 +16,25 @@ public:
      * Returns a reference to the phase that is currently running on bot_a, this reference is mutable
      * @return a mutable reference to the phase running on bot_b
      */
-    [[nodiscard]] Phase &get_phase_bot_a();
+    [[nodiscard]] std::string get_phase_id_a();
 
     /**
      * Returns a reference to the phase that is currently running on bot_b, this reference is mutable
      * @return a mutable reference to the phase running on bot_a
      */
-    [[nodiscard]] Phase &get_phase_bot_b();
+    [[nodiscard]] std::string get_phase_id_b();
 
     /**
      * Sets the phase that bot_a is executing
      * @param phase_bot_a the phase that bot_a is to execute
      */
-    void set_phase_bot_a(Phase phase_bot_a);
+    void set_phase_id_a(const std::string& phase_id_a);
 
     /**
      * Sets the phase that bot_b is executing
      * @param phase_bot_b the phase that bot_b is to execute
      */
-    void set_phase_bot_b(Phase phase_bot_b);
+    void set_phase_id_b(const std::string& phase_id_b);
 
     /**
      * Returns a reference to a vector of all phases that are not DONE, this reference is mutable
@@ -43,7 +44,15 @@ public:
 
     const std::vector<Phase> &get_open_phases_const() const;
 
-    void remove_phase(const std::string &key);
+    void remove_phase(const std::string &phase_id);
+
+    Phase get_phase(const std::string &phase_id);
+
+    Phase *get_phase_ptr(const std::string &phase_id);
+
+    bool has_phase(const std::string &phase_id);
+
+    void clean();
 };
 
 

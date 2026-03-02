@@ -59,7 +59,7 @@ public:
     /**
      * @return the phase id
      */
-    [[nodiscard]] const std::string &get_id() const;
+    [[nodiscard]] const std::string get_id() const;
 
     /**
      * @return the amount of time it takes to complete the phase as an int
@@ -101,16 +101,26 @@ public:
 
     /**
      * Sets the PhaseStatus of a phase
-     * @param status status the phase should be in
+     * @param status the phase should be in
      */
     void set_status(PhaseStatus status);
+
+    /**
+     * Sets the PhaseStatus of a phase and sends it to the peer bot
+     * @param status the phase should be in
+     * @param socket used to send a request to the peer bot
+     */
+    void set_status(PhaseStatus status, const Socket &so);
 
     /**
      * Executes the phase action, mutates the table state to reflect the changes made by the action and sets the PhaseStatus to DONE
      * @param table a reference to the table state so that it may be changed on commpletion
      * @param action a void(void) function that will be executed by the phase
+     * @param so socket to pass to table state for sending updates over the network
      */
-    void execute(TableState &table, const std::function<void()> &action);
+    void execute(TableState &table, const std::function<void()> &action, const Socket &so);
+
+    std::string to_string() const;
 };
 
 #endif // TECH_GAME_STATE_PHASE_H

@@ -3,7 +3,7 @@
 #include <Socket.h>
 #include <GameState.h>
 
-class Client : Socket {
+class Client : public Socket {
 public:
     [[nodiscard]] GameState get_remote_state(const std::string &ip_address, uint16_t port);
 
