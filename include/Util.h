@@ -6,7 +6,6 @@
 #include <spdlog/sinks/dup_filter_sink.h>
 #include <spdlog/sinks/basic_file_sink.h>
 #include <spdlog/sinks/stdout_color_sinks.h>
-#include <spdlog/spdlog.h>
 #include <list>
 
 using json = nlohmann::json;
@@ -135,7 +134,6 @@ inline std::unordered_map<std::string, std::any> get_key_value(const json &data)
 }
 
 inline uint32_t calculate_checksum(const std::string &s) {
-    // Simple example using a basic hash (use zlib crc32 for production)
     uint32_t hash = 0x811c9dc5;
     for (const char c: s) {
         hash ^= static_cast<uint8_t>(c);

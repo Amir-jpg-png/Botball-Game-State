@@ -34,5 +34,8 @@ int main() {
         std::cout << "[ACTION] SOME_BOT_A\n";
     };
 
+    actions["STATE_ALTERING"] = [&] {
+    };
+
     gs.run(actions);
 }

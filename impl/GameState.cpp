@@ -72,6 +72,7 @@ void GameState::update_phase_status(Phase &phase) const {
         if (phase.get_status() == OPEN) {
             m_log->info("unlocked phase {}", phase.get_id());
         }
+        std::lock_guard lock(m_state_mutex);
         phase.set_status(phase.get_status(), *m_socket);
     }
     m_log->trace("phase status {}: {}", phase.get_id(), phase.get_status());
@@ -285,17 +286,19 @@ void GameState::run(const std::unordered_map<std::string, std::function<void()> 
             continue;
         }
 
-        auto it = actions.find(active_id);
-        if (it != actions.end()) {
-            Phase *p = nullptr;
-            {
-                std::lock_guard<std::mutex> lock(m_state_mutex);
-                if (m_phase_state.has_phase(active_id)) p = m_phase_state.get_phase_ptr(active_id);
-            }
-
-            if (p) {
-                p->execute(m_game_table_model, it->second, *m_socket);
-            }
+        std::function<void()> action;
+        try {
+            action = actions.at(active_id);
+        } catch (...) {
+            fatal("failed to get action for phase" + active_id, m_log);
+        }
+        Phase *phase = nullptr;
+        {
+            std::lock_guard lock(m_state_mutex);
+            if (m_phase_state.has_phase(active_id)) phase = m_phase_state.get_phase_ptr(active_id);
+        }
+        if (phase) {
+            phase->execute(m_game_table_model, action, *m_socket);
         }
     }
     while (true) {
