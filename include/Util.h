@@ -138,10 +138,26 @@ inline uint32_t calculate_checksum(const std::string &s) {
     // Simple example using a basic hash (use zlib crc32 for production)
     uint32_t hash = 0x811c9dc5;
     for (const char c: s) {
-        hash ^= static_cast<uint32_t>(c);
+        hash ^= static_cast<uint8_t>(c);
         hash *= 0x01000193;
     }
     return hash;
+}
+
+inline void validate_checksum(const json &data) {
+    if (!data.contains("payload") || !data.contains("checksum")) return;
+
+    // Get the payload as a raw string
+    std::string payload_str = data["payload"].is_string()
+                                  ? data["payload"].get<std::string>()
+                                  : data["payload"].dump();
+
+    uint32_t calculated = calculate_checksum(payload_str);
+    uint32_t provided = data["checksum"].get<uint32_t>();
+
+    if (calculated != provided) {
+        LOG->error("Checksum Mismatch! Calc: {} Provided: {}", calculated, provided);
+    }
 }
 
 #endif //TECH_GAME_STATE_INCLUDE_H

@@ -1,0 +1,1786 @@
+[13:47:16.876]   info   [SERVER]   successfully created TableState
+[13:47:16.877]   info   [SERVER]   successfully created PhaseState
+[13:47:16.878]   info   [SERVER]   successfully created Config (GameState Config)
+[13:47:16.878]   info   [SERVER]   listening on: 172.17.0.2:3000
+[13:47:44.232]   info   [SERVER]   accepted connection from 172.17.0.3:44254
+[13:47:44.233]   info   [GS]       get next best phase: bot_a
+[13:47:44.234]  trace   [GS]       updating phase CLEAR_DECK...
+[13:47:44.234]  trace   [GS]       phase status CLEAR_DECK: 0
+[13:47:44.234]   info   [GS]       potential of phase CLEAR_DECK: 0
+[13:47:44.234]   info   [GS]       score of phase CLEAR_DECK: 48.5
+[13:47:44.234]  trace   [GS]       skipped phase INIT_B because agent is not allowed
+[13:47:44.234]  trace   [GS]       updating phase LONG_TASK...
+[13:47:44.234]  trace   [GS]       phase status LONG_TASK: 0
+[13:47:44.234]   info   [GS]       potential of phase LONG_TASK: 0
+[13:47:44.235]   info   [GS]       score of phase LONG_TASK: 50
+[13:47:44.235]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:44.235]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:44.235]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:44.235]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:44.235]  trace   [GS]       updating phase WAIT_FOR_INIT...
+[13:47:44.235]  trace   [GS]       phase status WAIT_FOR_INIT: 1
+[13:47:44.235]  trace   [GS]       skipped phase WAIT_FOR_INIT because phase is not open
+[13:47:44.235]   info   [GS]       selected phase LONG_TASK as next phase
+[13:47:44.236]   info   [GS]       get next best phase: bot_a
+[13:47:44.236]  trace   [GS]       updating phase CLEAR_DECK...
+[13:47:44.236]  trace   [GS]       phase status CLEAR_DECK: 0
+[13:47:44.236]   info   [GS]       potential of phase CLEAR_DECK: 0
+[13:47:44.236]   info   [GS]       score of phase CLEAR_DECK: 48.5
+[13:47:44.236]  trace   [GS]       skipped phase INIT_B because agent is not allowed
+[13:47:44.236]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:44.236]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:44.236]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:44.236]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:44.236]  trace   [GS]       updating phase WAIT_FOR_INIT...
+[13:47:44.236]  trace   [GS]       phase status WAIT_FOR_INIT: 1
+[13:47:44.236]  trace   [GS]       skipped phase WAIT_FOR_INIT because phase is not open
+[13:47:44.236]   info   [GS]       selected phase CLEAR_DECK as next phase
+[13:47:44.235]   info   [GS]       Received update: {"init_b":true}
+[13:47:44.237]   info   [GS]       Received update phase [INIT_B]: DONE
+[13:47:44.237]   info   [GS]       get next best phase: bot_a
+[13:47:44.238]  trace   [GS]       skipped phase INIT_B because agent is not allowed
+[13:47:44.238]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:44.238]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:44.238]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:44.238]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:44.238]  trace   [GS]       updating phase WAIT_FOR_INIT...
+[13:47:44.238]   info   [GS]       unlocked phase {}
+[13:47:44.239]  trace   [GS]       phase status WAIT_FOR_INIT: 0
+[13:47:44.239]   info   [GS]       potential of phase WAIT_FOR_INIT: 0
+[13:47:44.239]   info   [GS]       score of phase WAIT_FOR_INIT: 23.5
+[13:47:44.239]   info   [GS]       selected phase WAIT_FOR_INIT as next phase
+[13:47:44.239]   info   [GS]       Received update: {"some_task_bot_b_done":true}
+[13:47:44.239]   info   [GS]       get next best phase: bot_a
+[13:47:44.240]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:44.240]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:44.240]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:44.240]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:44.240]   info   [GS]       no more phases to execute
+[13:47:44.347]   info   [GS]       get next best phase: bot_a
+[13:47:44.347]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:44.347]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:44.347]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:44.347]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:44.347]   info   [GS]       no more phases to execute
+[13:47:44.452]   info   [GS]       get next best phase: bot_a
+[13:47:44.452]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:44.452]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:44.452]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:44.452]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:44.452]   info   [GS]       no more phases to execute
+[13:47:44.558]   info   [GS]       get next best phase: bot_a
+[13:47:44.559]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:44.559]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:44.559]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:44.559]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:44.559]   info   [GS]       no more phases to execute
+[13:47:44.663]   info   [GS]       get next best phase: bot_a
+[13:47:44.663]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:44.663]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:44.663]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:44.663]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:44.663]   info   [GS]       no more phases to execute
+[13:47:44.769]   info   [GS]       get next best phase: bot_a
+[13:47:44.770]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:44.770]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:44.770]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:44.770]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:44.770]   info   [GS]       no more phases to execute
+[13:47:44.876]   info   [GS]       get next best phase: bot_a
+[13:47:44.876]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:44.876]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:44.876]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:44.876]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:44.876]   info   [GS]       no more phases to execute
+[13:47:44.982]   info   [GS]       get next best phase: bot_a
+[13:47:44.983]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:44.983]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:44.983]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:44.983]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:44.983]   info   [GS]       no more phases to execute
+[13:47:45.087]   info   [GS]       get next best phase: bot_a
+[13:47:45.087]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:45.087]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:45.087]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:45.087]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:45.087]   info   [GS]       no more phases to execute
+[13:47:45.193]   info   [GS]       get next best phase: bot_a
+[13:47:45.194]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:45.194]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:45.194]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:45.194]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:45.194]   info   [GS]       no more phases to execute
+[13:47:45.296]   info   [GS]       get next best phase: bot_a
+[13:47:45.296]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:45.296]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:45.296]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:45.296]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:45.296]   info   [GS]       no more phases to execute
+[13:47:45.401]   info   [GS]       get next best phase: bot_a
+[13:47:45.402]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:45.402]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:45.402]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:45.402]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:45.402]   info   [GS]       no more phases to execute
+[13:47:45.508]   info   [GS]       get next best phase: bot_a
+[13:47:45.509]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:45.509]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:45.509]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:45.509]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:45.509]   info   [GS]       no more phases to execute
+[13:47:45.614]   info   [GS]       get next best phase: bot_a
+[13:47:45.615]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:45.615]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:45.615]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:45.615]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:45.615]   info   [GS]       no more phases to execute
+[13:47:45.721]   info   [GS]       get next best phase: bot_a
+[13:47:45.721]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:45.721]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:45.721]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:45.721]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:45.721]   info   [GS]       no more phases to execute
+[13:47:45.825]   info   [GS]       get next best phase: bot_a
+[13:47:45.826]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:45.826]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:45.826]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:45.826]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:45.826]   info   [GS]       no more phases to execute
+[13:47:45.932]   info   [GS]       get next best phase: bot_a
+[13:47:45.932]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:45.932]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:45.932]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:45.932]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:45.932]   info   [GS]       no more phases to execute
+[13:47:46.038]   info   [GS]       get next best phase: bot_a
+[13:47:46.039]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:46.039]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:46.039]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:46.039]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:46.039]   info   [GS]       no more phases to execute
+[13:47:46.145]   info   [GS]       get next best phase: bot_a
+[13:47:46.145]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:46.145]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:46.145]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:46.145]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:46.145]   info   [GS]       no more phases to execute
+[13:47:46.246]   info   [GS]       get next best phase: bot_a
+[13:47:46.248]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:46.248]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:46.248]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:46.248]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:46.248]   info   [GS]       no more phases to execute
+[13:47:46.354]   info   [GS]       get next best phase: bot_a
+[13:47:46.355]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:46.355]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:46.355]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:46.355]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:46.355]   info   [GS]       no more phases to execute
+[13:47:46.462]   info   [GS]       get next best phase: bot_a
+[13:47:46.462]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:46.462]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:46.462]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:46.462]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:46.462]   info   [GS]       no more phases to execute
+[13:47:46.565]   info   [GS]       get next best phase: bot_a
+[13:47:46.566]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:46.566]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:46.566]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:46.566]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:46.566]   info   [GS]       no more phases to execute
+[13:47:46.671]   info   [GS]       get next best phase: bot_a
+[13:47:46.672]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:46.672]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:46.672]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:46.672]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:46.672]   info   [GS]       no more phases to execute
+[13:47:46.775]   info   [GS]       get next best phase: bot_a
+[13:47:46.775]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:46.775]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:46.775]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:46.775]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:46.775]   info   [GS]       no more phases to execute
+[13:47:46.877]   info   [GS]       get next best phase: bot_a
+[13:47:46.878]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:46.879]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:46.879]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:46.879]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:46.879]   info   [GS]       no more phases to execute
+[13:47:46.985]   info   [GS]       get next best phase: bot_a
+[13:47:46.985]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:46.985]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:46.985]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:46.985]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:46.985]   info   [GS]       no more phases to execute
+[13:47:47.091]   info   [GS]       get next best phase: bot_a
+[13:47:47.091]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:47.091]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:47.091]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:47.091]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:47.092]   info   [GS]       no more phases to execute
+[13:47:47.198]   info   [GS]       get next best phase: bot_a
+[13:47:47.198]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:47.198]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:47.198]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:47.198]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:47.198]   info   [GS]       no more phases to execute
+[13:47:47.300]   info   [GS]       get next best phase: bot_a
+[13:47:47.301]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:47.301]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:47.301]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:47.301]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:47.301]   info   [GS]       no more phases to execute
+[13:47:47.405]   info   [GS]       get next best phase: bot_a
+[13:47:47.405]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:47.405]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:47.405]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:47.405]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:47.405]   info   [GS]       no more phases to execute
+[13:47:47.509]   info   [GS]       get next best phase: bot_a
+[13:47:47.510]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:47.510]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:47.510]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:47.510]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:47.510]   info   [GS]       no more phases to execute
+[13:47:47.614]   info   [GS]       get next best phase: bot_a
+[13:47:47.615]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:47.615]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:47.615]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:47.615]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:47.615]   info   [GS]       no more phases to execute
+[13:47:47.720]   info   [GS]       get next best phase: bot_a
+[13:47:47.721]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:47.721]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:47.721]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:47.721]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:47.721]   info   [GS]       no more phases to execute
+[13:47:47.827]   info   [GS]       get next best phase: bot_a
+[13:47:47.827]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:47.827]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:47.827]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:47.827]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:47.827]   info   [GS]       no more phases to execute
+[13:47:47.933]   info   [GS]       get next best phase: bot_a
+[13:47:47.934]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:47.934]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:47.934]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:47.934]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:47.934]   info   [GS]       no more phases to execute
+[13:47:48.035]   info   [GS]       get next best phase: bot_a
+[13:47:48.035]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:48.035]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:48.035]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:48.035]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:48.035]   info   [GS]       no more phases to execute
+[13:47:48.142]   info   [GS]       get next best phase: bot_a
+[13:47:48.143]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:48.143]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:48.143]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:48.143]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:48.143]   info   [GS]       no more phases to execute
+[13:47:48.250]   info   [GS]       get next best phase: bot_a
+[13:47:48.250]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:48.250]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:48.250]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:48.250]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:48.250]   info   [GS]       no more phases to execute
+[13:47:48.355]   info   [GS]       get next best phase: bot_a
+[13:47:48.355]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:48.355]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:48.355]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:48.355]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:48.355]   info   [GS]       no more phases to execute
+[13:47:48.456]   info   [GS]       get next best phase: bot_a
+[13:47:48.456]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:48.456]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:48.456]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:48.456]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:48.456]   info   [GS]       no more phases to execute
+[13:47:48.559]   info   [GS]       get next best phase: bot_a
+[13:47:48.560]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:48.560]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:48.560]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:48.560]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:48.560]   info   [GS]       no more phases to execute
+[13:47:48.666]   info   [GS]       get next best phase: bot_a
+[13:47:48.668]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:48.668]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:48.668]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:48.668]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:48.668]   info   [GS]       no more phases to execute
+[13:47:48.774]   info   [GS]       get next best phase: bot_a
+[13:47:48.775]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:48.775]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:48.775]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:48.775]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:48.775]   info   [GS]       no more phases to execute
+[13:47:48.876]   info   [GS]       get next best phase: bot_a
+[13:47:48.877]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:48.877]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:48.877]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:48.877]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:48.877]   info   [GS]       no more phases to execute
+[13:47:48.981]   info   [GS]       get next best phase: bot_a
+[13:47:48.982]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:48.982]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:48.982]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:48.982]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:48.982]   info   [GS]       no more phases to execute
+[13:47:49.088]   info   [GS]       get next best phase: bot_a
+[13:47:49.088]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:49.088]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:49.088]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:49.088]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:49.088]   info   [GS]       no more phases to execute
+[13:47:49.196]   info   [GS]       get next best phase: bot_a
+[13:47:49.198]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:49.198]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:49.198]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:49.198]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:49.198]   info   [GS]       no more phases to execute
+[13:47:49.304]   info   [GS]       get next best phase: bot_a
+[13:47:49.305]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:49.305]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:49.305]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:49.305]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:49.305]   info   [GS]       no more phases to execute
+[13:47:49.408]   info   [GS]       get next best phase: bot_a
+[13:47:49.409]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:49.409]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:49.409]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:49.409]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:49.409]   info   [GS]       no more phases to execute
+[13:47:49.514]   info   [GS]       get next best phase: bot_a
+[13:47:49.515]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:49.515]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:49.515]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:49.515]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:49.515]   info   [GS]       no more phases to execute
+[13:47:49.620]   info   [GS]       get next best phase: bot_a
+[13:47:49.621]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:49.621]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:49.621]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:49.621]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:49.621]   info   [GS]       no more phases to execute
+[13:47:49.724]   info   [GS]       get next best phase: bot_a
+[13:47:49.725]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:49.725]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:49.725]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:49.725]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:49.725]   info   [GS]       no more phases to execute
+[13:47:49.830]   info   [GS]       get next best phase: bot_a
+[13:47:49.830]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:49.830]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:49.830]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:49.830]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:49.830]   info   [GS]       no more phases to execute
+[13:47:49.936]   info   [GS]       get next best phase: bot_a
+[13:47:49.937]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:49.937]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:49.937]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:49.937]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:49.937]   info   [GS]       no more phases to execute
+[13:47:50.042]   info   [GS]       get next best phase: bot_a
+[13:47:50.043]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:50.043]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:50.043]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:50.043]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:50.043]   info   [GS]       no more phases to execute
+[13:47:50.147]   info   [GS]       get next best phase: bot_a
+[13:47:50.147]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:50.147]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:50.147]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:50.147]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:50.147]   info   [GS]       no more phases to execute
+[13:47:50.253]   info   [GS]       get next best phase: bot_a
+[13:47:50.254]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:50.254]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:50.254]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:50.254]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:50.254]   info   [GS]       no more phases to execute
+[13:47:50.359]   info   [GS]       get next best phase: bot_a
+[13:47:50.360]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:50.360]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:50.360]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:50.360]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:50.360]   info   [GS]       no more phases to execute
+[13:47:50.466]   info   [GS]       get next best phase: bot_a
+[13:47:50.467]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:50.467]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:50.467]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:50.467]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:50.467]   info   [GS]       no more phases to execute
+[13:47:50.572]   info   [GS]       get next best phase: bot_a
+[13:47:50.573]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:50.573]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:50.573]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:50.573]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:50.573]   info   [GS]       no more phases to execute
+[13:47:50.676]   info   [GS]       get next best phase: bot_a
+[13:47:50.677]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:50.677]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:50.677]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:50.677]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:50.677]   info   [GS]       no more phases to execute
+[13:47:50.783]   info   [GS]       get next best phase: bot_a
+[13:47:50.783]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:50.783]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:50.783]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:50.783]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:50.783]   info   [GS]       no more phases to execute
+[13:47:50.887]   info   [GS]       get next best phase: bot_a
+[13:47:50.888]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:50.888]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:50.888]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:50.888]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:50.888]   info   [GS]       no more phases to execute
+[13:47:50.993]   info   [GS]       get next best phase: bot_a
+[13:47:50.996]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:50.996]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:50.996]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:50.996]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:50.996]   info   [GS]       no more phases to execute
+[13:47:51.101]   info   [GS]       get next best phase: bot_a
+[13:47:51.102]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:51.102]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:51.102]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:51.102]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:51.102]   info   [GS]       no more phases to execute
+[13:47:51.210]   info   [GS]       get next best phase: bot_a
+[13:47:51.210]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:51.210]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:51.210]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:51.210]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:51.210]   info   [GS]       no more phases to execute
+[13:47:51.316]   info   [GS]       get next best phase: bot_a
+[13:47:51.316]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:51.316]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:51.316]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:51.316]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:51.316]   info   [GS]       no more phases to execute
+[13:47:51.422]   info   [GS]       get next best phase: bot_a
+[13:47:51.422]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:51.422]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:51.422]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:51.422]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:51.422]   info   [GS]       no more phases to execute
+[13:47:51.524]   info   [GS]       get next best phase: bot_a
+[13:47:51.524]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:51.524]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:51.524]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:51.524]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:51.524]   info   [GS]       no more phases to execute
+[13:47:51.630]   info   [GS]       get next best phase: bot_a
+[13:47:51.631]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:51.631]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:51.631]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:51.631]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:51.631]   info   [GS]       no more phases to execute
+[13:47:51.735]   info   [GS]       get next best phase: bot_a
+[13:47:51.736]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:51.736]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:51.736]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:51.736]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:51.736]   info   [GS]       no more phases to execute
+[13:47:51.838]   info   [GS]       get next best phase: bot_a
+[13:47:51.838]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:51.838]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:51.838]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:51.838]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:51.838]   info   [GS]       no more phases to execute
+[13:47:51.942]   info   [GS]       get next best phase: bot_a
+[13:47:51.943]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:51.943]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:51.943]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:51.943]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:51.943]   info   [GS]       no more phases to execute
+[13:47:52.046]   info   [GS]       get next best phase: bot_a
+[13:47:52.047]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:52.047]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:52.047]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:52.047]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:52.047]   info   [GS]       no more phases to execute
+[13:47:52.152]   info   [GS]       get next best phase: bot_a
+[13:47:52.153]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:52.153]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:52.153]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:52.153]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:52.153]   info   [GS]       no more phases to execute
+[13:47:52.255]   info   [GS]       get next best phase: bot_a
+[13:47:52.256]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:52.256]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:52.256]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:52.256]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:52.256]   info   [GS]       no more phases to execute
+[13:47:52.362]   info   [GS]       get next best phase: bot_a
+[13:47:52.362]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:52.362]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:52.362]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:52.362]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:52.362]   info   [GS]       no more phases to execute
+[13:47:52.469]   info   [GS]       get next best phase: bot_a
+[13:47:52.470]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:52.470]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:52.470]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:52.470]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:52.470]   info   [GS]       no more phases to execute
+[13:47:52.576]   info   [GS]       get next best phase: bot_a
+[13:47:52.576]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:52.576]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:52.576]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:52.576]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:52.576]   info   [GS]       no more phases to execute
+[13:47:52.682]   info   [GS]       get next best phase: bot_a
+[13:47:52.682]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:52.682]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:52.682]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:52.682]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:52.682]   info   [GS]       no more phases to execute
+[13:47:52.784]   info   [GS]       get next best phase: bot_a
+[13:47:52.785]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:52.785]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:52.785]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:52.785]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:52.785]   info   [GS]       no more phases to execute
+[13:47:52.887]   info   [GS]       get next best phase: bot_a
+[13:47:52.887]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:52.887]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:52.887]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:52.887]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:52.887]   info   [GS]       no more phases to execute
+[13:47:52.989]   info   [GS]       get next best phase: bot_a
+[13:47:52.990]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:52.990]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:52.990]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:52.990]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:52.990]   info   [GS]       no more phases to execute
+[13:47:53.095]   info   [GS]       get next best phase: bot_a
+[13:47:53.095]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:53.095]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:53.095]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:53.095]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:53.095]   info   [GS]       no more phases to execute
+[13:47:53.199]   info   [GS]       get next best phase: bot_a
+[13:47:53.200]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:53.200]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:53.200]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:53.200]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:53.200]   info   [GS]       no more phases to execute
+[13:47:53.306]   info   [GS]       get next best phase: bot_a
+[13:47:53.306]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:53.306]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:53.306]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:53.306]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:53.306]   info   [GS]       no more phases to execute
+[13:47:53.412]   info   [GS]       get next best phase: bot_a
+[13:47:53.413]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:53.413]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:53.413]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:53.413]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:53.413]   info   [GS]       no more phases to execute
+[13:47:53.516]   info   [GS]       get next best phase: bot_a
+[13:47:53.516]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:53.516]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:53.516]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:53.516]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:53.516]   info   [GS]       no more phases to execute
+[13:47:53.618]   info   [GS]       get next best phase: bot_a
+[13:47:53.619]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:53.619]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:53.619]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:53.619]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:53.619]   info   [GS]       no more phases to execute
+[13:47:53.723]   info   [GS]       get next best phase: bot_a
+[13:47:53.724]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:53.724]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:53.724]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:53.724]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:53.724]   info   [GS]       no more phases to execute
+[13:47:53.827]   info   [GS]       get next best phase: bot_a
+[13:47:53.828]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:53.828]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:53.828]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:53.828]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:53.828]   info   [GS]       no more phases to execute
+[13:47:53.934]   info   [GS]       get next best phase: bot_a
+[13:47:53.934]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:53.934]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:53.934]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:53.934]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:53.934]   info   [GS]       no more phases to execute
+[13:47:54.040]   info   [GS]       get next best phase: bot_a
+[13:47:54.040]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:54.040]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:54.040]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:54.040]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:54.040]   info   [GS]       no more phases to execute
+[13:47:54.146]   info   [GS]       get next best phase: bot_a
+[13:47:54.147]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:54.147]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:54.147]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:54.147]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:54.147]   info   [GS]       no more phases to execute
+[13:47:54.252]   info   [GS]       get next best phase: bot_a
+[13:47:54.253]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:54.253]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:54.253]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:54.253]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:54.253]   info   [GS]       no more phases to execute
+[13:47:54.358]   info   [GS]       get next best phase: bot_a
+[13:47:54.360]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:54.360]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:54.360]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:54.360]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:54.360]   info   [GS]       no more phases to execute
+[13:47:54.463]   info   [GS]       get next best phase: bot_a
+[13:47:54.464]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:54.464]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:54.464]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:54.464]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:54.464]   info   [GS]       no more phases to execute
+[13:47:54.567]   info   [GS]       get next best phase: bot_a
+[13:47:54.567]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:54.567]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:54.567]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:54.567]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:54.567]   info   [GS]       no more phases to execute
+[13:47:54.673]   info   [GS]       get next best phase: bot_a
+[13:47:54.674]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:54.674]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:54.674]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:54.674]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:54.674]   info   [GS]       no more phases to execute
+[13:47:54.778]   info   [GS]       get next best phase: bot_a
+[13:47:54.778]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:54.778]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:54.778]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:54.778]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:54.778]   info   [GS]       no more phases to execute
+[13:47:54.881]   info   [GS]       get next best phase: bot_a
+[13:47:54.881]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:54.881]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:54.881]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:54.881]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:54.881]   info   [GS]       no more phases to execute
+[13:47:54.985]   info   [GS]       get next best phase: bot_a
+[13:47:54.987]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:54.987]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:54.987]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:54.987]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:54.987]   info   [GS]       no more phases to execute
+[13:47:55.089]   info   [GS]       get next best phase: bot_a
+[13:47:55.089]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:55.089]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:55.090]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:55.090]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:55.090]   info   [GS]       no more phases to execute
+[13:47:55.192]   info   [GS]       get next best phase: bot_a
+[13:47:55.194]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:55.194]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:55.194]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:55.194]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:55.194]   info   [GS]       no more phases to execute
+[13:47:55.301]   info   [GS]       get next best phase: bot_a
+[13:47:55.302]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:55.302]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:55.302]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:55.302]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:55.302]   info   [GS]       no more phases to execute
+[13:47:55.409]   info   [GS]       get next best phase: bot_a
+[13:47:55.410]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:55.410]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:55.410]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:55.410]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:55.410]   info   [GS]       no more phases to execute
+[13:47:55.515]   info   [GS]       get next best phase: bot_a
+[13:47:55.518]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:55.518]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:55.518]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:55.518]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:55.518]   info   [GS]       no more phases to execute
+[13:47:55.620]   info   [GS]       get next best phase: bot_a
+[13:47:55.621]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:55.621]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:55.621]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:55.621]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:55.621]   info   [GS]       no more phases to execute
+[13:47:55.727]   info   [GS]       get next best phase: bot_a
+[13:47:55.727]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:55.727]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:55.727]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:55.727]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:55.727]   info   [GS]       no more phases to execute
+[13:47:55.831]   info   [GS]       get next best phase: bot_a
+[13:47:55.832]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:55.832]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:55.832]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:55.832]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:55.832]   info   [GS]       no more phases to execute
+[13:47:55.935]   info   [GS]       get next best phase: bot_a
+[13:47:55.936]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:55.936]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:55.936]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:55.936]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:55.936]   info   [GS]       no more phases to execute
+[13:47:56.040]   info   [GS]       get next best phase: bot_a
+[13:47:56.041]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:56.041]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:56.041]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:56.041]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:56.041]   info   [GS]       no more phases to execute
+[13:47:56.144]   info   [GS]       get next best phase: bot_a
+[13:47:56.145]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:56.145]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:56.145]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:56.145]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:56.145]   info   [GS]       no more phases to execute
+[13:47:56.250]   info   [GS]       get next best phase: bot_a
+[13:47:56.251]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:56.251]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:56.251]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:56.251]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:56.251]   info   [GS]       no more phases to execute
+[13:47:56.356]   info   [GS]       get next best phase: bot_a
+[13:47:56.357]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:56.357]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:56.357]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:56.357]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:56.357]   info   [GS]       no more phases to execute
+[13:47:56.462]   info   [GS]       get next best phase: bot_a
+[13:47:56.462]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:56.462]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:56.462]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:56.462]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:56.462]   info   [GS]       no more phases to execute
+[13:47:56.568]   info   [GS]       get next best phase: bot_a
+[13:47:56.569]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:56.569]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:56.569]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:56.569]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:56.569]   info   [GS]       no more phases to execute
+[13:47:56.671]   info   [GS]       get next best phase: bot_a
+[13:47:56.672]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:56.672]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:56.672]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:56.672]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:56.672]   info   [GS]       no more phases to execute
+[13:47:56.775]   info   [GS]       get next best phase: bot_a
+[13:47:56.775]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:56.775]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:56.775]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:56.775]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:56.775]   info   [GS]       no more phases to execute
+[13:47:56.878]   info   [GS]       get next best phase: bot_a
+[13:47:56.880]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:56.880]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:56.880]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:56.880]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:56.880]   info   [GS]       no more phases to execute
+[13:47:56.983]   info   [GS]       get next best phase: bot_a
+[13:47:56.983]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:56.983]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:56.983]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:56.983]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:56.983]   info   [GS]       no more phases to execute
+[13:47:57.089]   info   [GS]       get next best phase: bot_a
+[13:47:57.089]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:57.089]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:57.089]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:57.089]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:57.089]   info   [GS]       no more phases to execute
+[13:47:57.191]   info   [GS]       get next best phase: bot_a
+[13:47:57.192]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:57.192]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:57.192]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:57.192]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:57.192]   info   [GS]       no more phases to execute
+[13:47:57.297]   info   [GS]       get next best phase: bot_a
+[13:47:57.298]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:57.298]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:57.298]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:57.298]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:57.298]   info   [GS]       no more phases to execute
+[13:47:57.401]   info   [GS]       get next best phase: bot_a
+[13:47:57.404]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:57.404]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:57.404]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:57.404]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:57.404]   info   [GS]       no more phases to execute
+[13:47:57.509]   info   [GS]       get next best phase: bot_a
+[13:47:57.510]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:57.510]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:57.510]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:57.510]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:57.510]   info   [GS]       no more phases to execute
+[13:47:57.616]   info   [GS]       get next best phase: bot_a
+[13:47:57.616]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:57.616]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:57.616]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:57.616]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:57.616]   info   [GS]       no more phases to execute
+[13:47:57.722]   info   [GS]       get next best phase: bot_a
+[13:47:57.723]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:57.723]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:57.723]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:57.723]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:57.723]   info   [GS]       no more phases to execute
+[13:47:57.829]   info   [GS]       get next best phase: bot_a
+[13:47:57.830]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:57.830]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:57.830]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:57.830]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:57.830]   info   [GS]       no more phases to execute
+[13:47:57.934]   info   [GS]       get next best phase: bot_a
+[13:47:57.934]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:57.934]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:57.934]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:57.934]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:57.934]   info   [GS]       no more phases to execute
+[13:47:58.039]   info   [GS]       get next best phase: bot_a
+[13:47:58.040]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:58.040]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:58.040]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:58.040]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:58.040]   info   [GS]       no more phases to execute
+[13:47:58.147]   info   [GS]       get next best phase: bot_a
+[13:47:58.148]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:58.148]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:58.148]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:58.148]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:58.148]   info   [GS]       no more phases to execute
+[13:47:58.255]   info   [GS]       get next best phase: bot_a
+[13:47:58.256]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:58.256]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:58.256]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:58.256]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:58.256]   info   [GS]       no more phases to execute
+[13:47:58.362]   info   [GS]       get next best phase: bot_a
+[13:47:58.363]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:58.363]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:58.363]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:58.363]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:58.363]   info   [GS]       no more phases to execute
+[13:47:58.469]   info   [GS]       get next best phase: bot_a
+[13:47:58.470]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:58.470]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:58.470]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:58.470]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:58.470]   info   [GS]       no more phases to execute
+[13:47:58.575]   info   [GS]       get next best phase: bot_a
+[13:47:58.575]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:58.575]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:58.575]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:58.575]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:58.575]   info   [GS]       no more phases to execute
+[13:47:58.679]   info   [GS]       get next best phase: bot_a
+[13:47:58.680]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:58.680]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:58.680]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:58.680]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:58.680]   info   [GS]       no more phases to execute
+[13:47:58.786]   info   [GS]       get next best phase: bot_a
+[13:47:58.786]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:58.786]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:58.786]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:58.786]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:58.786]   info   [GS]       no more phases to execute
+[13:47:58.892]   info   [GS]       get next best phase: bot_a
+[13:47:58.893]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:58.893]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:58.893]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:58.893]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:58.893]   info   [GS]       no more phases to execute
+[13:47:58.999]   info   [GS]       get next best phase: bot_a
+[13:47:59.000]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:59.000]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:59.000]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:59.000]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:59.000]   info   [GS]       no more phases to execute
+[13:47:59.101]   info   [GS]       get next best phase: bot_a
+[13:47:59.102]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:59.102]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:59.102]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:59.102]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:59.102]   info   [GS]       no more phases to execute
+[13:47:59.204]   info   [GS]       get next best phase: bot_a
+[13:47:59.205]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:59.205]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:59.205]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:59.205]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:59.205]   info   [GS]       no more phases to execute
+[13:47:59.309]   info   [GS]       get next best phase: bot_a
+[13:47:59.310]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:59.310]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:59.310]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:59.310]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:59.310]   info   [GS]       no more phases to execute
+[13:47:59.416]   info   [GS]       get next best phase: bot_a
+[13:47:59.417]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:59.417]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:59.417]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:59.417]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:59.417]   info   [GS]       no more phases to execute
+[13:47:59.523]   info   [GS]       get next best phase: bot_a
+[13:47:59.523]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:59.523]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:59.523]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:59.523]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:59.523]   info   [GS]       no more phases to execute
+[13:47:59.628]   info   [GS]       get next best phase: bot_a
+[13:47:59.629]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:59.629]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:59.629]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:59.629]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:59.629]   info   [GS]       no more phases to execute
+[13:47:59.731]   info   [GS]       get next best phase: bot_a
+[13:47:59.732]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:59.732]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:59.732]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:59.732]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:59.732]   info   [GS]       no more phases to execute
+[13:47:59.838]   info   [GS]       get next best phase: bot_a
+[13:47:59.839]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:59.839]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:59.839]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:59.839]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:59.839]   info   [GS]       no more phases to execute
+[13:47:59.942]   info   [GS]       get next best phase: bot_a
+[13:47:59.943]  trace   [GS]       updating phase SOME_BOT_A...
+[13:47:59.943]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:47:59.943]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:47:59.943]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:47:59.943]   info   [GS]       no more phases to execute
+[13:48:00.046]   info   [GS]       get next best phase: bot_a
+[13:48:00.047]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:00.047]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:00.047]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:00.047]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:00.047]   info   [GS]       no more phases to execute
+[13:48:00.153]   info   [GS]       get next best phase: bot_a
+[13:48:00.153]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:00.153]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:00.153]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:00.153]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:00.153]   info   [GS]       no more phases to execute
+[13:48:00.260]   info   [GS]       get next best phase: bot_a
+[13:48:00.261]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:00.261]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:00.261]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:00.261]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:00.261]   info   [GS]       no more phases to execute
+[13:48:00.367]   info   [GS]       get next best phase: bot_a
+[13:48:00.367]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:00.367]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:00.367]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:00.367]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:00.367]   info   [GS]       no more phases to execute
+[13:48:00.470]   info   [GS]       get next best phase: bot_a
+[13:48:00.470]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:00.470]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:00.470]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:00.470]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:00.470]   info   [GS]       no more phases to execute
+[13:48:00.571]   info   [GS]       get next best phase: bot_a
+[13:48:00.572]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:00.572]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:00.572]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:00.572]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:00.572]   info   [GS]       no more phases to execute
+[13:48:00.676]   info   [GS]       get next best phase: bot_a
+[13:48:00.677]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:00.677]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:00.677]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:00.677]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:00.677]   info   [GS]       no more phases to execute
+[13:48:00.782]   info   [GS]       get next best phase: bot_a
+[13:48:00.783]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:00.783]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:00.783]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:00.783]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:00.783]   info   [GS]       no more phases to execute
+[13:48:00.890]   info   [GS]       get next best phase: bot_a
+[13:48:00.891]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:00.891]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:00.891]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:00.891]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:00.891]   info   [GS]       no more phases to execute
+[13:48:00.997]   info   [GS]       get next best phase: bot_a
+[13:48:00.998]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:00.998]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:00.998]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:00.998]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:00.998]   info   [GS]       no more phases to execute
+[13:48:01.103]   info   [GS]       get next best phase: bot_a
+[13:48:01.104]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:01.104]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:01.104]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:01.104]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:01.104]   info   [GS]       no more phases to execute
+[13:48:01.208]   info   [GS]       get next best phase: bot_a
+[13:48:01.210]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:01.210]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:01.210]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:01.210]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:01.210]   info   [GS]       no more phases to execute
+[13:48:01.313]   info   [GS]       get next best phase: bot_a
+[13:48:01.314]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:01.314]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:01.314]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:01.314]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:01.314]   info   [GS]       no more phases to execute
+[13:48:01.415]   info   [GS]       get next best phase: bot_a
+[13:48:01.416]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:01.416]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:01.416]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:01.416]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:01.416]   info   [GS]       no more phases to execute
+[13:48:01.520]   info   [GS]       get next best phase: bot_a
+[13:48:01.520]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:01.520]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:01.520]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:01.520]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:01.520]   info   [GS]       no more phases to execute
+[13:48:01.626]   info   [GS]       get next best phase: bot_a
+[13:48:01.627]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:01.627]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:01.627]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:01.627]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:01.627]   info   [GS]       no more phases to execute
+[13:48:01.730]   info   [GS]       get next best phase: bot_a
+[13:48:01.731]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:01.731]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:01.731]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:01.731]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:01.731]   info   [GS]       no more phases to execute
+[13:48:01.837]   info   [GS]       get next best phase: bot_a
+[13:48:01.838]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:01.838]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:01.838]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:01.838]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:01.838]   info   [GS]       no more phases to execute
+[13:48:01.942]   info   [GS]       get next best phase: bot_a
+[13:48:01.943]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:01.943]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:01.943]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:01.943]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:01.943]   info   [GS]       no more phases to execute
+[13:48:02.045]   info   [GS]       get next best phase: bot_a
+[13:48:02.045]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:02.045]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:02.045]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:02.045]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:02.045]   info   [GS]       no more phases to execute
+[13:48:02.150]   info   [GS]       get next best phase: bot_a
+[13:48:02.150]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:02.150]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:02.150]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:02.150]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:02.150]   info   [GS]       no more phases to execute
+[13:48:02.256]   info   [GS]       get next best phase: bot_a
+[13:48:02.257]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:02.257]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:02.257]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:02.257]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:02.257]   info   [GS]       no more phases to execute
+[13:48:02.361]   info   [GS]       get next best phase: bot_a
+[13:48:02.362]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:02.362]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:02.362]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:02.362]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:02.362]   info   [GS]       no more phases to execute
+[13:48:02.467]   info   [GS]       get next best phase: bot_a
+[13:48:02.467]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:02.467]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:02.467]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:02.467]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:02.467]   info   [GS]       no more phases to execute
+[13:48:02.571]   info   [GS]       get next best phase: bot_a
+[13:48:02.572]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:02.572]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:02.572]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:02.572]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:02.572]   info   [GS]       no more phases to execute
+[13:48:02.675]   info   [GS]       get next best phase: bot_a
+[13:48:02.676]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:02.676]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:02.676]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:02.676]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:02.676]   info   [GS]       no more phases to execute
+[13:48:02.782]   info   [GS]       get next best phase: bot_a
+[13:48:02.783]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:02.783]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:02.783]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:02.783]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:02.783]   info   [GS]       no more phases to execute
+[13:48:02.887]   info   [GS]       get next best phase: bot_a
+[13:48:02.888]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:02.888]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:02.888]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:02.888]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:02.888]   info   [GS]       no more phases to execute
+[13:48:02.994]   info   [GS]       get next best phase: bot_a
+[13:48:02.995]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:02.995]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:02.995]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:02.995]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:02.995]   info   [GS]       no more phases to execute
+[13:48:03.100]   info   [GS]       get next best phase: bot_a
+[13:48:03.101]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:03.101]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:03.101]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:03.101]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:03.101]   info   [GS]       no more phases to execute
+[13:48:03.208]   info   [GS]       get next best phase: bot_a
+[13:48:03.209]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:03.209]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:03.209]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:03.209]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:03.209]   info   [GS]       no more phases to execute
+[13:48:03.316]   info   [GS]       get next best phase: bot_a
+[13:48:03.316]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:03.316]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:03.316]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:03.316]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:03.316]   info   [GS]       no more phases to execute
+[13:48:03.421]   info   [GS]       get next best phase: bot_a
+[13:48:03.422]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:03.422]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:03.422]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:03.422]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:03.422]   info   [GS]       no more phases to execute
+[13:48:03.524]   info   [GS]       get next best phase: bot_a
+[13:48:03.524]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:03.524]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:03.524]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:03.524]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:03.524]   info   [GS]       no more phases to execute
+[13:48:03.629]   info   [GS]       get next best phase: bot_a
+[13:48:03.630]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:03.630]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:03.630]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:03.630]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:03.630]   info   [GS]       no more phases to execute
+[13:48:03.735]   info   [GS]       get next best phase: bot_a
+[13:48:03.736]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:03.736]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:03.736]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:03.736]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:03.736]   info   [GS]       no more phases to execute
+[13:48:03.838]   info   [GS]       get next best phase: bot_a
+[13:48:03.838]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:03.838]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:03.838]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:03.838]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:03.838]   info   [GS]       no more phases to execute
+[13:48:03.942]   info   [GS]       get next best phase: bot_a
+[13:48:03.943]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:03.943]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:03.943]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:03.943]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:03.943]   info   [GS]       no more phases to execute
+[13:48:04.048]   info   [GS]       get next best phase: bot_a
+[13:48:04.049]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:04.049]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:04.049]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:04.049]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:04.049]   info   [GS]       no more phases to execute
+[13:48:04.150]   info   [GS]       get next best phase: bot_a
+[13:48:04.152]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:04.152]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:04.152]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:04.152]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:04.152]   info   [GS]       no more phases to execute
+[13:48:04.258]   info   [GS]       get next best phase: bot_a
+[13:48:04.259]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:04.259]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:04.259]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:04.259]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:04.259]   info   [GS]       no more phases to execute
+[13:48:04.361]   info   [GS]       get next best phase: bot_a
+[13:48:04.362]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:04.362]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:04.362]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:04.362]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:04.362]   info   [GS]       no more phases to execute
+[13:48:04.469]   info   [GS]       get next best phase: bot_a
+[13:48:04.470]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:04.470]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:04.470]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:04.470]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:04.470]   info   [GS]       no more phases to execute
+[13:48:04.573]   info   [GS]       get next best phase: bot_a
+[13:48:04.574]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:04.574]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:04.574]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:04.574]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:04.574]   info   [GS]       no more phases to execute
+[13:48:04.675]   info   [GS]       get next best phase: bot_a
+[13:48:04.676]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:04.676]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:04.676]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:04.676]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:04.676]   info   [GS]       no more phases to execute
+[13:48:04.781]   info   [GS]       get next best phase: bot_a
+[13:48:04.782]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:04.782]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:04.782]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:04.782]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:04.782]   info   [GS]       no more phases to execute
+[13:48:04.884]   info   [GS]       get next best phase: bot_a
+[13:48:04.885]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:04.885]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:04.885]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:04.885]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:04.885]   info   [GS]       no more phases to execute
+[13:48:04.989]   info   [GS]       get next best phase: bot_a
+[13:48:04.990]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:04.990]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:04.990]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:04.990]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:04.990]   info   [GS]       no more phases to execute
+[13:48:05.095]   info   [GS]       get next best phase: bot_a
+[13:48:05.096]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:05.096]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:05.096]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:05.096]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:05.096]   info   [GS]       no more phases to execute
+[13:48:05.201]   info   [GS]       get next best phase: bot_a
+[13:48:05.202]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:05.202]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:05.202]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:05.202]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:05.202]   info   [GS]       no more phases to execute
+[13:48:05.308]   info   [GS]       get next best phase: bot_a
+[13:48:05.308]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:05.308]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:05.308]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:05.308]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:05.308]   info   [GS]       no more phases to execute
+[13:48:05.415]   info   [GS]       get next best phase: bot_a
+[13:48:05.415]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:05.415]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:05.415]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:05.415]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:05.415]   info   [GS]       no more phases to execute
+[13:48:05.517]   info   [GS]       get next best phase: bot_a
+[13:48:05.517]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:05.517]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:05.517]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:05.517]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:05.517]   info   [GS]       no more phases to execute
+[13:48:05.619]   info   [GS]       get next best phase: bot_a
+[13:48:05.619]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:05.619]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:05.619]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:05.619]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:05.619]   info   [GS]       no more phases to execute
+[13:48:05.721]   info   [GS]       get next best phase: bot_a
+[13:48:05.722]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:05.722]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:05.722]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:05.722]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:05.722]   info   [GS]       no more phases to execute
+[13:48:05.825]   info   [GS]       get next best phase: bot_a
+[13:48:05.825]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:05.825]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:05.825]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:05.825]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:05.825]   info   [GS]       no more phases to execute
+[13:48:05.930]   info   [GS]       get next best phase: bot_a
+[13:48:05.930]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:05.930]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:05.930]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:05.930]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:05.930]   info   [GS]       no more phases to execute
+[13:48:06.036]   info   [GS]       get next best phase: bot_a
+[13:48:06.037]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:06.037]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:06.037]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:06.037]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:06.037]   info   [GS]       no more phases to execute
+[13:48:06.139]   info   [GS]       get next best phase: bot_a
+[13:48:06.140]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:06.140]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:06.140]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:06.140]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:06.140]   info   [GS]       no more phases to execute
+[13:48:06.246]   info   [GS]       get next best phase: bot_a
+[13:48:06.246]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:06.246]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:06.246]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:06.246]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:06.246]   info   [GS]       no more phases to execute
+[13:48:06.351]   info   [GS]       get next best phase: bot_a
+[13:48:06.352]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:06.352]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:06.352]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:06.352]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:06.352]   info   [GS]       no more phases to execute
+[13:48:06.454]   info   [GS]       get next best phase: bot_a
+[13:48:06.455]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:06.455]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:06.455]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:06.455]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:06.455]   info   [GS]       no more phases to execute
+[13:48:06.560]   info   [GS]       get next best phase: bot_a
+[13:48:06.560]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:06.560]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:06.560]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:06.560]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:06.560]   info   [GS]       no more phases to execute
+[13:48:06.666]   info   [GS]       get next best phase: bot_a
+[13:48:06.666]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:06.666]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:06.666]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:06.666]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:06.666]   info   [GS]       no more phases to execute
+[13:48:06.770]   info   [GS]       get next best phase: bot_a
+[13:48:06.771]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:06.771]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:06.771]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:06.771]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:06.771]   info   [GS]       no more phases to execute
+[13:48:06.873]   info   [GS]       get next best phase: bot_a
+[13:48:06.873]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:06.873]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:06.873]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:06.873]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:06.873]   info   [GS]       no more phases to execute
+[13:48:06.979]   info   [GS]       get next best phase: bot_a
+[13:48:06.980]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:06.980]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:06.980]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:06.980]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:06.980]   info   [GS]       no more phases to execute
+[13:48:07.083]   info   [GS]       get next best phase: bot_a
+[13:48:07.084]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:07.084]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:07.084]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:07.084]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:07.084]   info   [GS]       no more phases to execute
+[13:48:07.187]   info   [GS]       get next best phase: bot_a
+[13:48:07.188]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:07.188]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:07.188]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:07.188]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:07.188]   info   [GS]       no more phases to execute
+[13:48:07.293]   info   [GS]       get next best phase: bot_a
+[13:48:07.294]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:07.294]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:07.294]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:07.294]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:07.294]   info   [GS]       no more phases to execute
+[13:48:07.398]   info   [GS]       get next best phase: bot_a
+[13:48:07.399]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:07.399]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:07.399]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:07.399]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:07.399]   info   [GS]       no more phases to execute
+[13:48:07.504]   info   [GS]       get next best phase: bot_a
+[13:48:07.505]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:07.505]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:07.505]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:07.505]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:07.505]   info   [GS]       no more phases to execute
+[13:48:07.607]   info   [GS]       get next best phase: bot_a
+[13:48:07.607]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:07.607]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:07.607]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:07.607]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:07.607]   info   [GS]       no more phases to execute
+[13:48:07.712]   info   [GS]       get next best phase: bot_a
+[13:48:07.714]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:07.714]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:07.714]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:07.714]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:07.714]   info   [GS]       no more phases to execute
+[13:48:07.819]   info   [GS]       get next best phase: bot_a
+[13:48:07.819]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:07.819]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:07.819]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:07.819]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:07.819]   info   [GS]       no more phases to execute
+[13:48:07.924]   info   [GS]       get next best phase: bot_a
+[13:48:07.925]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:07.925]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:07.925]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:07.925]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:07.925]   info   [GS]       no more phases to execute
+[13:48:08.031]   info   [GS]       get next best phase: bot_a
+[13:48:08.031]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:08.031]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:08.031]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:08.031]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:08.031]   info   [GS]       no more phases to execute
+[13:48:08.136]   info   [GS]       get next best phase: bot_a
+[13:48:08.136]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:08.136]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:08.136]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:08.136]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:08.136]   info   [GS]       no more phases to execute
+[13:48:08.242]   info   [GS]       get next best phase: bot_a
+[13:48:08.242]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:08.242]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:08.242]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:08.242]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:08.242]   info   [GS]       no more phases to execute
+[13:48:08.345]   info   [GS]       get next best phase: bot_a
+[13:48:08.346]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:08.346]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:08.346]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:08.346]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:08.346]   info   [GS]       no more phases to execute
+[13:48:08.450]   info   [GS]       get next best phase: bot_a
+[13:48:08.451]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:08.451]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:08.451]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:08.451]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:08.451]   info   [GS]       no more phases to execute
+[13:48:08.555]   info   [GS]       get next best phase: bot_a
+[13:48:08.556]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:08.556]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:08.556]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:08.556]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:08.556]   info   [GS]       no more phases to execute
+[13:48:08.657]   info   [GS]       get next best phase: bot_a
+[13:48:08.659]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:08.659]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:08.659]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:08.659]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:08.659]   info   [GS]       no more phases to execute
+[13:48:08.764]   info   [GS]       get next best phase: bot_a
+[13:48:08.764]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:08.764]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:08.764]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:08.764]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:08.764]   info   [GS]       no more phases to execute
+[13:48:08.867]   info   [GS]       get next best phase: bot_a
+[13:48:08.869]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:08.869]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:08.869]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:08.869]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:08.869]   info   [GS]       no more phases to execute
+[13:48:08.976]   info   [GS]       get next best phase: bot_a
+[13:48:08.977]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:08.977]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:08.977]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:08.977]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:08.977]   info   [GS]       no more phases to execute
+[13:48:09.084]   info   [GS]       get next best phase: bot_a
+[13:48:09.085]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:09.085]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:09.085]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:09.085]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:09.085]   info   [GS]       no more phases to execute
+[13:48:09.191]   info   [GS]       get next best phase: bot_a
+[13:48:09.191]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:09.191]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:09.191]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:09.191]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:09.191]   info   [GS]       no more phases to execute
+[13:48:09.298]   info   [GS]       get next best phase: bot_a
+[13:48:09.299]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:09.299]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:09.299]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:09.299]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:09.299]   info   [GS]       no more phases to execute
+[13:48:09.405]   info   [GS]       get next best phase: bot_a
+[13:48:09.405]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:09.405]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:09.405]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:09.405]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:09.405]   info   [GS]       no more phases to execute
+[13:48:09.512]   info   [GS]       get next best phase: bot_a
+[13:48:09.513]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:09.513]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:09.513]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:09.513]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:09.513]   info   [GS]       no more phases to execute
+[13:48:09.615]   info   [GS]       get next best phase: bot_a
+[13:48:09.615]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:09.615]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:09.615]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:09.615]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:09.615]   info   [GS]       no more phases to execute
+[13:48:09.720]   info   [GS]       get next best phase: bot_a
+[13:48:09.721]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:09.721]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:09.721]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:09.721]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:09.721]   info   [GS]       no more phases to execute
+[13:48:09.828]   info   [GS]       get next best phase: bot_a
+[13:48:09.829]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:09.829]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:09.829]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:09.829]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:09.829]   info   [GS]       no more phases to execute
+[13:48:09.934]   info   [GS]       get next best phase: bot_a
+[13:48:09.935]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:09.935]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:09.935]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:09.935]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:09.935]   info   [GS]       no more phases to execute
+[13:48:10.037]   info   [GS]       get next best phase: bot_a
+[13:48:10.038]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:10.038]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:10.038]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:10.038]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:10.038]   info   [GS]       no more phases to execute
+[13:48:10.142]   info   [GS]       get next best phase: bot_a
+[13:48:10.144]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:10.144]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:10.144]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:10.144]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:10.144]   info   [GS]       no more phases to execute
+[13:48:10.248]   info   [GS]       get next best phase: bot_a
+[13:48:10.249]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:10.249]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:10.249]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:10.249]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:10.249]   info   [GS]       no more phases to execute
+[13:48:10.352]   info   [GS]       get next best phase: bot_a
+[13:48:10.353]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:10.353]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:10.353]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:10.353]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:10.353]   info   [GS]       no more phases to execute
+[13:48:10.458]   info   [GS]       get next best phase: bot_a
+[13:48:10.460]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:10.460]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:10.460]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:10.460]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:10.460]   info   [GS]       no more phases to execute
+[13:48:10.566]   info   [GS]       get next best phase: bot_a
+[13:48:10.567]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:10.567]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:10.567]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:10.567]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:10.567]   info   [GS]       no more phases to execute
+[13:48:10.671]   info   [GS]       get next best phase: bot_a
+[13:48:10.672]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:10.672]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:10.672]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:10.672]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:10.672]   info   [GS]       no more phases to execute
+[13:48:10.775]   info   [GS]       get next best phase: bot_a
+[13:48:10.776]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:10.776]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:10.776]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:10.776]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:10.776]   info   [GS]       no more phases to execute
+[13:48:10.878]   info   [GS]       get next best phase: bot_a
+[13:48:10.879]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:10.879]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:10.879]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:10.879]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:10.879]   info   [GS]       no more phases to execute
+[13:48:10.984]   info   [GS]       get next best phase: bot_a
+[13:48:10.985]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:10.985]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:10.985]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:10.985]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:10.985]   info   [GS]       no more phases to execute
+[13:48:11.087]   info   [GS]       get next best phase: bot_a
+[13:48:11.088]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:11.088]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:11.088]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:11.088]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:11.088]   info   [GS]       no more phases to execute
+[13:48:11.195]   info   [GS]       get next best phase: bot_a
+[13:48:11.197]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:11.197]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:11.197]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:11.197]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:11.197]   info   [GS]       no more phases to execute
+[13:48:11.299]   info   [GS]       get next best phase: bot_a
+[13:48:11.300]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:11.300]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:11.300]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:11.300]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:11.300]   info   [GS]       no more phases to execute
+[13:48:11.407]   info   [GS]       get next best phase: bot_a
+[13:48:11.408]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:11.408]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:11.408]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:11.408]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:11.408]   info   [GS]       no more phases to execute
+[13:48:11.513]   info   [GS]       get next best phase: bot_a
+[13:48:11.514]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:11.514]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:11.514]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:11.514]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:11.514]   info   [GS]       no more phases to execute
+[13:48:11.615]   info   [GS]       get next best phase: bot_a
+[13:48:11.616]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:11.616]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:11.616]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:11.616]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:11.616]   info   [GS]       no more phases to execute
+[13:48:11.721]   info   [GS]       get next best phase: bot_a
+[13:48:11.723]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:11.723]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:11.723]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:11.723]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:11.723]   info   [GS]       no more phases to execute
+[13:48:11.825]   info   [GS]       get next best phase: bot_a
+[13:48:11.827]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:11.827]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:11.827]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:11.827]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:11.827]   info   [GS]       no more phases to execute
+[13:48:11.934]   info   [GS]       get next best phase: bot_a
+[13:48:11.934]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:11.934]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:11.934]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:11.934]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:11.934]   info   [GS]       no more phases to execute
+[13:48:12.041]   info   [GS]       get next best phase: bot_a
+[13:48:12.042]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:12.042]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:12.042]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:12.042]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:12.042]   info   [GS]       no more phases to execute
+[13:48:12.149]   info   [GS]       get next best phase: bot_a
+[13:48:12.150]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:12.150]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:12.150]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:12.150]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:12.150]   info   [GS]       no more phases to execute
+[13:48:12.257]   info   [GS]       get next best phase: bot_a
+[13:48:12.258]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:12.258]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:12.258]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:12.258]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:12.258]   info   [GS]       no more phases to execute
+[13:48:12.366]   info   [GS]       get next best phase: bot_a
+[13:48:12.366]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:12.366]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:12.366]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:12.366]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:12.366]   info   [GS]       no more phases to execute
+[13:48:12.473]   info   [GS]       get next best phase: bot_a
+[13:48:12.474]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:12.474]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:12.474]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:12.474]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:12.474]   info   [GS]       no more phases to execute
+[13:48:12.575]   info   [GS]       get next best phase: bot_a
+[13:48:12.576]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:12.576]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:12.576]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:12.576]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:12.576]   info   [GS]       no more phases to execute
+[13:48:12.681]   info   [GS]       get next best phase: bot_a
+[13:48:12.682]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:12.682]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:12.682]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:12.682]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:12.682]   info   [GS]       no more phases to execute
+[13:48:12.788]   info   [GS]       get next best phase: bot_a
+[13:48:12.788]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:12.788]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:12.788]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:12.788]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:12.788]   info   [GS]       no more phases to execute
+[13:48:12.894]   info   [GS]       get next best phase: bot_a
+[13:48:12.895]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:12.895]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:12.895]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:12.895]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:12.895]   info   [GS]       no more phases to execute
+[13:48:12.999]   info   [GS]       get next best phase: bot_a
+[13:48:12.999]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:12.999]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:12.999]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:12.999]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:12.999]   info   [GS]       no more phases to execute
+[13:48:13.103]   info   [GS]       get next best phase: bot_a
+[13:48:13.104]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:13.104]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:13.104]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:13.104]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:13.104]   info   [GS]       no more phases to execute
+[13:48:13.210]   info   [GS]       get next best phase: bot_a
+[13:48:13.211]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:13.211]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:13.211]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:13.211]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:13.211]   info   [GS]       no more phases to execute
+[13:48:13.313]   info   [GS]       get next best phase: bot_a
+[13:48:13.314]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:13.314]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:13.314]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:13.314]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:13.314]   info   [GS]       no more phases to execute
+[13:48:13.420]   info   [GS]       get next best phase: bot_a
+[13:48:13.422]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:13.422]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:13.422]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:13.422]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:13.422]   info   [GS]       no more phases to execute
+[13:48:13.528]   info   [GS]       get next best phase: bot_a
+[13:48:13.530]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:13.530]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:13.530]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:13.530]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:13.530]   info   [GS]       no more phases to execute
+[13:48:13.633]   info   [GS]       get next best phase: bot_a
+[13:48:13.633]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:13.633]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:13.633]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:13.633]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:13.633]   info   [GS]       no more phases to execute
+[13:48:13.738]   info   [GS]       get next best phase: bot_a
+[13:48:13.739]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:13.739]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:13.739]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:13.739]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:13.739]   info   [GS]       no more phases to execute
+[13:48:13.845]   info   [GS]       get next best phase: bot_a
+[13:48:13.846]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:13.846]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:13.846]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:13.846]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:13.846]   info   [GS]       no more phases to execute
+[13:48:13.952]   info   [GS]       get next best phase: bot_a
+[13:48:13.954]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:13.954]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:13.954]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:13.954]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:13.954]   info   [GS]       no more phases to execute
+[13:48:14.058]   info   [GS]       get next best phase: bot_a
+[13:48:14.060]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:14.060]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:14.060]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:14.060]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:14.060]   info   [GS]       no more phases to execute
+[13:48:14.164]   info   [GS]       get next best phase: bot_a
+[13:48:14.164]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:14.164]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:14.164]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:14.164]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:14.164]   info   [GS]       no more phases to execute
+[13:48:14.266]   info   [GS]       get next best phase: bot_a
+[13:48:14.266]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:14.266]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:14.266]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:14.266]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:14.266]   info   [GS]       no more phases to execute
+[13:48:14.371]   info   [GS]       get next best phase: bot_a
+[13:48:14.371]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:14.371]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:14.371]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:14.371]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:14.371]   info   [GS]       no more phases to execute
+[13:48:14.474]   info   [GS]       get next best phase: bot_a
+[13:48:14.475]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:14.475]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:14.475]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:14.475]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:14.475]   info   [GS]       no more phases to execute
+[13:48:14.581]   info   [GS]       get next best phase: bot_a
+[13:48:14.582]  trace   [GS]       updating phase SOME_BOT_A...
+[13:48:14.582]  trace   [GS]       phase status SOME_BOT_A: 1
+[13:48:14.582]  trace   [GS]       skipped phase SOME_BOT_A because phase is not open
+[13:48:14.582]  trace   [GS]       skipped phase SOME_BOT_B because agent is not allowed
+[13:48:14.582]   info   [GS]       no more phases to execute

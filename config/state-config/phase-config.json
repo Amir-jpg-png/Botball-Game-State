@@ -14,7 +14,7 @@
     "completion": {
       "init_b": true
     },
-    "timeout": 2,
+    "timeout": 120,
     "points": 0
   },
   "CLEAR_DECK": {
@@ -38,6 +38,26 @@
     },
     "timeout": 5,
     "points": 50
+  },
+  "SOME_BOT_A": {
+    "allowed_agents": "bot_a",
+    "conditions": {
+      "some_task_bot_b_done": true
+    },
+    "completion": {},
+    "timeout": 30,
+    "points": 99
+  },
+  "SOME_BOT_B": {
+    "allowed_agents": "bot_b",
+    "conditions": {
+      "init_b": true
+    },
+    "completion": {
+      "some_task_bot_b_done": true
+    },
+    "timeout": 20,
+    "points": 230
   },
   "LONG_TASK": {
     "allowed_agents": "bot_a",

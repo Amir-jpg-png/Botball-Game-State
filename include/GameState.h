@@ -32,6 +32,8 @@ class GameState {
     mutable std::mutex m_state_mutex;
     std::atomic<bool> m_listening{false};
 
+    [[nodiscard]] bool has_phases();
+
     TableState m_game_table_model;
     PhaseState m_phase_state;
     std::string m_agent;

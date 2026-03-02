@@ -40,7 +40,7 @@ public:
      * @param buf buffer that bytes get loaded into
      * @param len length of the buffer
      */
-    void recv_all(void *buf, size_t len) const;
+    void recv_all(void *buf, size_t len);
 
     /**
      * sends data to a remote socket and keeps sending bytes until all bytes are sent
@@ -51,7 +51,7 @@ public:
 
     void send_json(const json &data) const;
 
-    [[nodiscard]] json recv_json() const;
+    [[nodiscard]] std::optional<json> recv_json();
 
     void close_socket();
 

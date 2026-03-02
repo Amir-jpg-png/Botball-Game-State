@@ -1,0 +1,34 @@
+[13:54:38.277]   info   [CLIENT]   successfully created TableState
+[13:54:38.277]   info   [CLIENT]   successfully created PhaseState
+[13:54:38.278]   info   [CLIENT]   successfully created config (GameState config)
+[13:54:38.279]   info   [GS]       Received update: {"init_a":true}
+[13:54:38.279]   info   [GS]       get next best phase: bot_b
+[13:54:38.280]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:54:38.280]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:54:38.280]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:54:38.280]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:54:38.280]  trace   [GS]       updating phase SOME_BOT_B...
+[13:54:38.280]  trace   [GS]       phase status SOME_BOT_B: 0
+[13:54:38.280]   info   [GS]       potential of phase SOME_BOT_B: 99
+[13:54:38.281]   info   [GS]       score of phase SOME_BOT_B: 138.7
+[13:54:38.281]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:54:38.281]   info   [GS]       selected phase SOME_BOT_B as next phase
+[13:54:38.282]   info   [GS]       Received update phase [INIT_A]: DONE
+[13:54:38.282]   info   [GS]       get next best phase: bot_b
+[13:54:38.283]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:54:38.283]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:54:38.283]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:54:38.283]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:54:38.283]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:54:38.283]   info   [GS]       no more phases to execute
+[13:54:38.285]   info   [GS]       Received update phase [SOME_BOT_A]: BLOCKED
+[13:54:38.285]   info   [GS]       Received update phase [WAIT_FOR_INIT]: BLOCKED
+[13:54:38.286]   info   [GS]       Received update: {"dummy":true}
+[13:54:38.286]   info   [GS]       Received update phase [LONG_TASK]: DONE
+[13:54:38.287]   info   [GS]       Received update: {"deck_cleared":true}
+[13:54:38.327]   info   [GS]       Received update phase [CLEAR_DECK]: DONE
+[13:54:38.328]   info   [GS]       Received update phase [WAIT_FOR_INIT]: OPEN
+[13:54:38.328]   info   [GS]       Received update: {"dummy":true}
+[13:54:38.329]   info   [GS]       Received update phase [WAIT_FOR_INIT]: DONE
+[13:54:38.338]   info   [GS]       Received update phase [SOME_BOT_A]: OPEN
+[13:54:38.339]   info   [GS]       Received update phase [SOME_BOT_A]: DONE

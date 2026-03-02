@@ -1,0 +1,1565 @@
+[13:22:49.338]   info   [CLIENT]   successfully created TableState
+[13:22:49.338]   info   [CLIENT]   successfully created PhaseState
+[13:22:49.339]   info   [CLIENT]   successfully created config (GameState config)
+[13:22:49.340]   info   [GS]       get next best phase: bot_b
+[13:22:49.341]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.341]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.341]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.341]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.341]  trace   [GS]       updating phase SOME_BOT_B...
+[13:22:49.341]  trace   [GS]       phase status SOME_BOT_B: 0
+[13:22:49.341]   info   [GS]       potential of phase SOME_BOT_B: 99
+[13:22:49.341]   info   [GS]       score of phase SOME_BOT_B: 138.7
+[13:22:49.342]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.342]   info   [GS]       selected phase SOME_BOT_B as next phase
+[13:22:49.344]   info   [GS]       get next best phase: bot_b
+[13:22:49.345]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.345]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.345]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.345]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.345]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.345]   info   [GS]       no more phases to execute
+[13:22:49.340]   info   [GS]       Received update: {"init_a":true}
+[13:22:49.346]   info   [GS]       get next best phase: bot_b
+[13:22:49.347]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.347]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.347]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.347]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.347]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.347]   info   [GS]       no more phases to execute
+[13:22:49.349]   info   [GS]       get next best phase: bot_b
+[13:22:49.350]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.350]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.350]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.350]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.350]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.350]   info   [GS]       no more phases to execute
+[13:22:49.352]   info   [GS]       get next best phase: bot_b
+[13:22:49.352]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.352]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.352]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.352]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.352]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.352]   info   [GS]       no more phases to execute
+[13:22:49.353]   info   [GS]       get next best phase: bot_b
+[13:22:49.354]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.354]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.354]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.354]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.354]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.354]   info   [GS]       no more phases to execute
+[13:22:49.357]   info   [GS]       get next best phase: bot_b
+[13:22:49.357]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.357]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.357]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.357]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.357]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.357]   info   [GS]       no more phases to execute
+[13:22:49.359]   info   [GS]       get next best phase: bot_b
+[13:22:49.359]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.359]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.359]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.359]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.359]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.359]   info   [GS]       no more phases to execute
+[13:22:49.360]   info   [GS]       get next best phase: bot_b
+[13:22:49.361]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.361]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.361]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.361]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.361]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.361]   info   [GS]       no more phases to execute
+[13:22:49.361]   info   [GS]       get next best phase: bot_b
+[13:22:49.362]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.362]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.362]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.362]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.362]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.362]   info   [GS]       no more phases to execute
+[13:22:49.362]   info   [GS]       get next best phase: bot_b
+[13:22:49.363]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.363]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.363]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.363]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.363]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.363]   info   [GS]       no more phases to execute
+[13:22:49.364]   info   [GS]       get next best phase: bot_b
+[13:22:49.365]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.365]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.365]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.365]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.365]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.365]   info   [GS]       no more phases to execute
+[13:22:49.365]   info   [GS]       get next best phase: bot_b
+[13:22:49.365]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.365]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.365]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.365]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.365]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.365]   info   [GS]       no more phases to execute
+[13:22:49.366]   info   [GS]       get next best phase: bot_b
+[13:22:49.366]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.366]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.366]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.366]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.366]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.366]   info   [GS]       no more phases to execute
+[13:22:49.368]   info   [GS]       get next best phase: bot_b
+[13:22:49.368]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.368]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.368]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.368]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.368]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.368]   info   [GS]       no more phases to execute
+[13:22:49.369]   info   [GS]       get next best phase: bot_b
+[13:22:49.369]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.369]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.369]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.369]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.369]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.369]   info   [GS]       no more phases to execute
+[13:22:49.370]   info   [GS]       get next best phase: bot_b
+[13:22:49.371]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.371]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.371]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.371]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.371]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.371]   info   [GS]       no more phases to execute
+[13:22:49.371]   info   [GS]       get next best phase: bot_b
+[13:22:49.371]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.371]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.371]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.371]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.371]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.371]   info   [GS]       no more phases to execute
+[13:22:49.372]   info   [GS]       get next best phase: bot_b
+[13:22:49.372]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.372]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.372]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.372]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.372]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.372]   info   [GS]       no more phases to execute
+[13:22:49.373]   info   [GS]       get next best phase: bot_b
+[13:22:49.373]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.373]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.373]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.373]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.373]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.373]   info   [GS]       no more phases to execute
+[13:22:49.374]   info   [GS]       get next best phase: bot_b
+[13:22:49.374]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.374]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.374]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.374]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.374]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.374]   info   [GS]       no more phases to execute
+[13:22:49.374]   info   [GS]       get next best phase: bot_b
+[13:22:49.375]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.375]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.375]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.375]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.375]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.375]   info   [GS]       no more phases to execute
+[13:22:49.375]   info   [GS]       get next best phase: bot_b
+[13:22:49.376]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.376]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.376]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.376]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.376]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.376]   info   [GS]       no more phases to execute
+[13:22:49.377]   info   [GS]       get next best phase: bot_b
+[13:22:49.377]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.377]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.377]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.377]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.377]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.377]   info   [GS]       no more phases to execute
+[13:22:49.376]   info   [GS]       Received update phase [INIT_A]: DONE
+[13:22:49.377]   info   [GS]       get next best phase: bot_b
+[13:22:49.379]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.379]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.379]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.379]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.379]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.379]   info   [GS]       no more phases to execute
+[13:22:49.379]   info   [GS]       get next best phase: bot_b
+[13:22:49.380]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.380]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.380]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.380]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.380]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.380]   info   [GS]       no more phases to execute
+[13:22:49.381]   info   [GS]       get next best phase: bot_b
+[13:22:49.381]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.381]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.381]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.381]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.381]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.381]   info   [GS]       no more phases to execute
+[13:22:49.382]   info   [GS]       get next best phase: bot_b
+[13:22:49.382]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.382]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.382]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.382]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.382]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.382]   info   [GS]       no more phases to execute
+[13:22:49.383]   info   [GS]       get next best phase: bot_b
+[13:22:49.384]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.384]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.384]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.384]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.384]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.384]   info   [GS]       no more phases to execute
+[13:22:49.385]   info   [GS]       get next best phase: bot_b
+[13:22:49.385]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.385]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.385]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.385]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.385]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.385]   info   [GS]       no more phases to execute
+[13:22:49.385]   info   [GS]       get next best phase: bot_b
+[13:22:49.386]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.386]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.386]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.386]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.386]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.386]   info   [GS]       no more phases to execute
+[13:22:49.387]   info   [GS]       get next best phase: bot_b
+[13:22:49.387]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.387]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.387]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.387]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.387]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.387]   info   [GS]       no more phases to execute
+[13:22:49.388]   info   [GS]       get next best phase: bot_b
+[13:22:49.388]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.388]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.388]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.388]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.388]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.388]   info   [GS]       no more phases to execute
+[13:22:49.388]   info   [GS]       get next best phase: bot_b
+[13:22:49.389]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.389]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.389]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.389]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.389]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.389]   info   [GS]       no more phases to execute
+[13:22:49.390]   info   [GS]       get next best phase: bot_b
+[13:22:49.390]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.390]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.390]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.390]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.390]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.390]   info   [GS]       no more phases to execute
+[13:22:49.390]   info   [GS]       get next best phase: bot_b
+[13:22:49.391]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.391]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.391]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.391]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.391]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.391]   info   [GS]       no more phases to execute
+[13:22:49.391]   info   [GS]       get next best phase: bot_b
+[13:22:49.391]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.391]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.391]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.391]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.391]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.391]   info   [GS]       no more phases to execute
+[13:22:49.392]   info   [GS]       get next best phase: bot_b
+[13:22:49.393]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.393]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.393]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.393]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.393]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.393]   info   [GS]       no more phases to execute
+[13:22:49.393]   info   [GS]       get next best phase: bot_b
+[13:22:49.393]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.393]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.393]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.393]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.393]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.393]   info   [GS]       no more phases to execute
+[13:22:49.394]   info   [GS]       get next best phase: bot_b
+[13:22:49.394]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.394]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.394]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.394]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.394]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.394]   info   [GS]       no more phases to execute
+[13:22:49.394]   info   [GS]       get next best phase: bot_b
+[13:22:49.394]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.394]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.394]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.394]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.394]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.394]   info   [GS]       no more phases to execute
+[13:22:49.395]   info   [GS]       get next best phase: bot_b
+[13:22:49.395]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.395]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.395]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.395]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.395]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.395]   info   [GS]       no more phases to execute
+[13:22:49.395]   info   [GS]       get next best phase: bot_b
+[13:22:49.396]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.396]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.396]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.396]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.396]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.396]   info   [GS]       no more phases to execute
+[13:22:49.396]   info   [GS]       get next best phase: bot_b
+[13:22:49.396]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.396]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.396]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.396]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.396]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.396]   info   [GS]       no more phases to execute
+[13:22:49.397]   info   [GS]       get next best phase: bot_b
+[13:22:49.397]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.397]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.397]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.397]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.397]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.397]   info   [GS]       no more phases to execute
+[13:22:49.397]   info   [GS]       get next best phase: bot_b
+[13:22:49.398]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.398]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.398]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.398]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.398]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.398]   info   [GS]       no more phases to execute
+[13:22:49.398]   info   [GS]       get next best phase: bot_b
+[13:22:49.399]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.399]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.399]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.399]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.399]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.399]   info   [GS]       no more phases to execute
+[13:22:49.399]   info   [GS]       get next best phase: bot_b
+[13:22:49.399]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.399]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.399]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.399]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.399]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.399]   info   [GS]       no more phases to execute
+[13:22:49.399]   info   [GS]       get next best phase: bot_b
+[13:22:49.399]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.399]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.399]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.399]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.399]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.399]   info   [GS]       no more phases to execute
+[13:22:49.399]   info   [GS]       get next best phase: bot_b
+[13:22:49.400]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.400]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.400]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.400]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.400]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.400]   info   [GS]       no more phases to execute
+[13:22:49.400]   info   [GS]       get next best phase: bot_b
+[13:22:49.400]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.400]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.400]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.400]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.400]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.400]   info   [GS]       no more phases to execute
+[13:22:49.400]   info   [GS]       get next best phase: bot_b
+[13:22:49.400]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.400]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.400]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.400]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.400]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.400]   info   [GS]       no more phases to execute
+[13:22:49.401]   info   [GS]       get next best phase: bot_b
+[13:22:49.401]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.401]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.401]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.401]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.401]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.401]   info   [GS]       no more phases to execute
+[13:22:49.402]   info   [GS]       get next best phase: bot_b
+[13:22:49.402]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.402]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.402]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.402]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.402]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.402]   info   [GS]       no more phases to execute
+[13:22:49.403]   info   [GS]       get next best phase: bot_b
+[13:22:49.403]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.403]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.403]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.403]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.403]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.403]   info   [GS]       no more phases to execute
+[13:22:49.403]   info   [GS]       get next best phase: bot_b
+[13:22:49.403]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.403]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.403]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.403]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.403]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.403]   info   [GS]       no more phases to execute
+[13:22:49.404]   info   [GS]       get next best phase: bot_b
+[13:22:49.404]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.404]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.404]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.404]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.404]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.404]   info   [GS]       no more phases to execute
+[13:22:49.404]   info   [GS]       get next best phase: bot_b
+[13:22:49.405]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.405]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.405]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.405]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.405]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.405]   info   [GS]       no more phases to execute
+[13:22:49.405]   info   [GS]       get next best phase: bot_b
+[13:22:49.405]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.405]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.405]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.405]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.405]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.405]   info   [GS]       no more phases to execute
+[13:22:49.405]   info   [GS]       get next best phase: bot_b
+[13:22:49.405]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.405]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.405]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.405]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.405]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.405]   info   [GS]       no more phases to execute
+[13:22:49.405]   info   [GS]       get next best phase: bot_b
+[13:22:49.406]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.406]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.406]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.406]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.406]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.406]   info   [GS]       no more phases to execute
+[13:22:49.406]   info   [GS]       get next best phase: bot_b
+[13:22:49.406]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.406]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.406]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.406]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.406]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.406]   info   [GS]       no more phases to execute
+[13:22:49.406]   info   [GS]       get next best phase: bot_b
+[13:22:49.407]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.407]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.407]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.407]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.407]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.407]   info   [GS]       no more phases to execute
+[13:22:49.407]   info   [GS]       get next best phase: bot_b
+[13:22:49.407]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.407]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.407]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.407]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.407]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.407]   info   [GS]       no more phases to execute
+[13:22:49.407]   info   [GS]       get next best phase: bot_b
+[13:22:49.407]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.407]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.407]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.407]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.407]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.407]   info   [GS]       no more phases to execute
+[13:22:49.407]   info   [GS]       get next best phase: bot_b
+[13:22:49.407]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.407]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.407]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.407]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.407]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.407]   info   [GS]       no more phases to execute
+[13:22:49.408]   info   [GS]       get next best phase: bot_b
+[13:22:49.408]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.408]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.408]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.408]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.408]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.408]   info   [GS]       no more phases to execute
+[13:22:49.408]   info   [GS]       get next best phase: bot_b
+[13:22:49.409]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.409]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.409]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.409]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.409]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.409]   info   [GS]       no more phases to execute
+[13:22:49.409]   info   [GS]       get next best phase: bot_b
+[13:22:49.409]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.409]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.409]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.409]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.409]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.409]   info   [GS]       no more phases to execute
+[13:22:49.409]   info   [GS]       get next best phase: bot_b
+[13:22:49.409]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.409]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.409]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.409]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.409]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.409]   info   [GS]       no more phases to execute
+[13:22:49.410]   info   [GS]       get next best phase: bot_b
+[13:22:49.410]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.410]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.410]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.410]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.410]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.410]   info   [GS]       no more phases to execute
+[13:22:49.410]   info   [GS]       get next best phase: bot_b
+[13:22:49.410]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.410]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.410]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.410]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.410]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.410]   info   [GS]       no more phases to execute
+[13:22:49.410]   info   [GS]       get next best phase: bot_b
+[13:22:49.410]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.410]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.410]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.410]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.410]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.410]   info   [GS]       no more phases to execute
+[13:22:49.410]   info   [GS]       get next best phase: bot_b
+[13:22:49.410]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.410]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.410]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.410]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.410]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.410]   info   [GS]       no more phases to execute
+[13:22:49.411]   info   [GS]       get next best phase: bot_b
+[13:22:49.411]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.411]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.411]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.411]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.411]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.411]   info   [GS]       no more phases to execute
+[13:22:49.411]   info   [GS]       get next best phase: bot_b
+[13:22:49.412]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.412]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.412]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.412]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.412]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.412]   info   [GS]       no more phases to execute
+[13:22:49.412]   info   [GS]       get next best phase: bot_b
+[13:22:49.412]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.412]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.412]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.412]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.412]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.412]   info   [GS]       no more phases to execute
+[13:22:49.412]   info   [GS]       get next best phase: bot_b
+[13:22:49.413]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.413]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.413]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.413]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.413]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.413]   info   [GS]       no more phases to execute
+[13:22:49.413]   info   [GS]       get next best phase: bot_b
+[13:22:49.413]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.413]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.413]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.413]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.413]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.413]   info   [GS]       no more phases to execute
+[13:22:49.414]   info   [GS]       get next best phase: bot_b
+[13:22:49.414]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.414]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.414]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.414]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.414]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.414]   info   [GS]       no more phases to execute
+[13:22:49.414]   info   [GS]       get next best phase: bot_b
+[13:22:49.415]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.415]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.415]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.415]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.415]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.415]   info   [GS]       no more phases to execute
+[13:22:49.415]   info   [GS]       get next best phase: bot_b
+[13:22:49.415]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.415]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.415]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.415]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.415]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.415]   info   [GS]       no more phases to execute
+[13:22:49.416]   info   [GS]       get next best phase: bot_b
+[13:22:49.417]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.417]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.417]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.417]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.417]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.417]   info   [GS]       no more phases to execute
+[13:22:49.417]   info   [GS]       get next best phase: bot_b
+[13:22:49.417]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.417]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.417]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.417]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.417]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.417]   info   [GS]       no more phases to execute
+[13:22:49.417]   info   [GS]       get next best phase: bot_b
+[13:22:49.418]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.418]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.418]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.418]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.418]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.418]   info   [GS]       no more phases to execute
+[13:22:49.418]   info   [GS]       get next best phase: bot_b
+[13:22:49.418]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.418]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.418]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.418]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.418]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.418]   info   [GS]       no more phases to execute
+[13:22:49.419]   info   [GS]       get next best phase: bot_b
+[13:22:49.419]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.419]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.419]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.419]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.419]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.419]   info   [GS]       no more phases to execute
+[13:22:49.419]   info   [GS]       get next best phase: bot_b
+[13:22:49.420]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.420]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.420]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.420]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.420]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.420]   info   [GS]       no more phases to execute
+[13:22:49.420]   info   [GS]       get next best phase: bot_b
+[13:22:49.420]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.420]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.420]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.420]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.420]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.420]   info   [GS]       no more phases to execute
+[13:22:49.420]   info   [GS]       get next best phase: bot_b
+[13:22:49.421]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.421]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.421]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.421]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.421]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.421]   info   [GS]       no more phases to execute
+[13:22:49.421]   info   [GS]       get next best phase: bot_b
+[13:22:49.421]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.421]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.421]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.421]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.421]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.421]   info   [GS]       no more phases to execute
+[13:22:49.422]   info   [GS]       get next best phase: bot_b
+[13:22:49.422]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.422]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.422]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.422]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.422]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.422]   info   [GS]       no more phases to execute
+[13:22:49.422]   info   [GS]       get next best phase: bot_b
+[13:22:49.422]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.422]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.422]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.422]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.422]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.422]   info   [GS]       no more phases to execute
+[13:22:49.423]   info   [GS]       get next best phase: bot_b
+[13:22:49.423]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.423]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[13:22:49.423]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.423]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.423]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.423]   info   [GS]       no more phases to execute
+[13:22:49.423]   info   [GS]       get next best phase: bot_b
+[13:22:49.424]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.424]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.424]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.424]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.424]   info   [GS]       no more phases to execute
+[13:22:49.424]   info   [GS]       get next best phase: bot_b
+[13:22:49.424]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.424]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.424]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.424]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.424]   info   [GS]       no more phases to execute
+[13:22:49.423]   info   [GS]       Received update phase [SOME_BOT_A]: BLOCKED
+[13:22:49.425]   info   [GS]       get next best phase: bot_b
+[13:22:49.425]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.425]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.425]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.425]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.425]   info   [GS]       no more phases to execute
+[13:22:49.425]   info   [GS]       get next best phase: bot_b
+[13:22:49.425]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.425]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.425]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.425]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.425]   info   [GS]       no more phases to execute
+[13:22:49.425]   info   [GS]       get next best phase: bot_b
+[13:22:49.425]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.425]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.425]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.425]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.425]   info   [GS]       no more phases to execute
+[13:22:49.426]   info   [GS]       get next best phase: bot_b
+[13:22:49.426]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.426]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.426]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.426]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.426]   info   [GS]       no more phases to execute
+[13:22:49.426]   info   [GS]       get next best phase: bot_b
+[13:22:49.427]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.427]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.427]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.427]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.427]   info   [GS]       no more phases to execute
+[13:22:49.427]   info   [GS]       get next best phase: bot_b
+[13:22:49.427]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.427]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.427]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.427]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.427]   info   [GS]       no more phases to execute
+[13:22:49.427]   info   [GS]       get next best phase: bot_b
+[13:22:49.428]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.428]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.428]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.428]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.428]   info   [GS]       no more phases to execute
+[13:22:49.428]   info   [GS]       get next best phase: bot_b
+[13:22:49.428]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.428]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.428]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.428]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.428]   info   [GS]       no more phases to execute
+[13:22:49.429]   info   [GS]       get next best phase: bot_b
+[13:22:49.429]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.429]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.429]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.429]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.429]   info   [GS]       no more phases to execute
+[13:22:49.429]   info   [GS]       get next best phase: bot_b
+[13:22:49.430]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.430]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.430]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.430]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.430]   info   [GS]       no more phases to execute
+[13:22:49.430]   info   [GS]       get next best phase: bot_b
+[13:22:49.430]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.430]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.430]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.430]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.430]   info   [GS]       no more phases to execute
+[13:22:49.431]   info   [GS]       get next best phase: bot_b
+[13:22:49.431]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.431]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.431]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.431]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.431]   info   [GS]       no more phases to execute
+[13:22:49.431]   info   [GS]       Received update phase [WAIT_FOR_INIT]: BLOCKED
+[13:22:49.431]   info   [GS]       get next best phase: bot_b
+[13:22:49.432]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.432]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.432]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.432]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.432]   info   [GS]       no more phases to execute
+[13:22:49.432]   info   [GS]       get next best phase: bot_b
+[13:22:49.432]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.432]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.432]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.432]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.432]   info   [GS]       no more phases to execute
+[13:22:49.432]   info   [GS]       get next best phase: bot_b
+[13:22:49.433]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.433]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.433]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.433]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.433]   info   [GS]       no more phases to execute
+[13:22:49.433]   info   [GS]       get next best phase: bot_b
+[13:22:49.433]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.433]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.433]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.433]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.433]   info   [GS]       no more phases to execute
+[13:22:49.433]   info   [GS]       get next best phase: bot_b
+[13:22:49.433]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.433]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.433]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.433]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.433]   info   [GS]       no more phases to execute
+[13:22:49.434]   info   [GS]       get next best phase: bot_b
+[13:22:49.434]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.434]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.434]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.434]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.434]   info   [GS]       no more phases to execute
+[13:22:49.434]   info   [GS]       Received update: {"dummy":true}
+[13:22:49.434]   info   [GS]       get next best phase: bot_b
+[13:22:49.434]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.434]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.434]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.434]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.434]   info   [GS]       no more phases to execute
+[13:22:49.435]   info   [GS]       get next best phase: bot_b
+[13:22:49.435]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.435]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.435]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.435]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.435]   info   [GS]       no more phases to execute
+[13:22:49.435]   info   [GS]       get next best phase: bot_b
+[13:22:49.435]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.435]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.435]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.435]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.435]   info   [GS]       no more phases to execute
+[13:22:49.435]   info   [GS]       get next best phase: bot_b
+[13:22:49.435]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.435]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.435]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.435]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.435]   info   [GS]       no more phases to execute
+[13:22:49.435]   info   [GS]       get next best phase: bot_b
+[13:22:49.435]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.435]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.435]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.435]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.435]   info   [GS]       no more phases to execute
+[13:22:49.435]   info   [GS]       get next best phase: bot_b
+[13:22:49.436]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.436]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.436]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.436]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.436]   info   [GS]       no more phases to execute
+[13:22:49.436]   info   [GS]       get next best phase: bot_b
+[13:22:49.436]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.436]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.436]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.436]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.436]   info   [GS]       no more phases to execute
+[13:22:49.436]   info   [GS]       get next best phase: bot_b
+[13:22:49.436]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.436]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.436]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.436]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.436]   info   [GS]       no more phases to execute
+[13:22:49.437]   info   [GS]       get next best phase: bot_b
+[13:22:49.437]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.437]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.437]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.437]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.437]   info   [GS]       no more phases to execute
+[13:22:49.437]   info   [GS]       get next best phase: bot_b
+[13:22:49.437]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.437]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.437]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.437]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.437]   info   [GS]       no more phases to execute
+[13:22:49.437]   info   [GS]       get next best phase: bot_b
+[13:22:49.437]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.437]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.437]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.437]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.437]   info   [GS]       no more phases to execute
+[13:22:49.437]   info   [GS]       get next best phase: bot_b
+[13:22:49.435]   info   [GS]       Received update phase [LONG_TASK]: DONE
+[13:22:49.438]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.438]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.438]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.438]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.438]   info   [GS]       no more phases to execute
+[13:22:49.438]   info   [GS]       get next best phase: bot_b
+[13:22:49.438]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.438]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.438]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.438]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.438]   info   [GS]       no more phases to execute
+[13:22:49.438]   info   [GS]       get next best phase: bot_b
+[13:22:49.438]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.438]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.438]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.438]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.438]   info   [GS]       no more phases to execute
+[13:22:49.439]   info   [GS]       get next best phase: bot_b
+[13:22:49.439]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.439]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.439]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.439]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.439]   info   [GS]       no more phases to execute
+[13:22:49.439]   info   [GS]       get next best phase: bot_b
+[13:22:49.439]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.439]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.439]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.439]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.439]   info   [GS]       no more phases to execute
+[13:22:49.440]   info   [GS]       get next best phase: bot_b
+[13:22:49.440]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.440]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.440]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.440]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.440]   info   [GS]       no more phases to execute
+[13:22:49.440]   info   [GS]       get next best phase: bot_b
+[13:22:49.440]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.440]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.440]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.440]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.440]   info   [GS]       no more phases to execute
+[13:22:49.440]   info   [GS]       get next best phase: bot_b
+[13:22:49.440]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.440]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.440]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.440]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.440]   info   [GS]       no more phases to execute
+[13:22:49.441]   info   [GS]       get next best phase: bot_b
+[13:22:49.441]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.441]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.441]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.441]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.441]   info   [GS]       no more phases to execute
+[13:22:49.441]   info   [GS]       get next best phase: bot_b
+[13:22:49.441]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.441]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.441]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.441]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.441]   info   [GS]       no more phases to execute
+[13:22:49.441]   info   [GS]       get next best phase: bot_b
+[13:22:49.441]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.441]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[13:22:49.441]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.441]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.441]   info   [GS]       no more phases to execute
+[13:22:49.442]   info   [GS]       get next best phase: bot_b
+[13:22:49.442]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.442]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.442]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.442]   info   [GS]       no more phases to execute
+[13:22:49.442]   info   [GS]       get next best phase: bot_b
+[13:22:49.442]   info   [GS]       Received update: {"deck_cleared":true}
+[13:22:49.442]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.442]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.442]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.442]   info   [GS]       no more phases to execute
+[13:22:49.442]   info   [GS]       get next best phase: bot_b
+[13:22:49.442]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.442]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.442]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.442]   info   [GS]       no more phases to execute
+[13:22:49.443]   info   [GS]       get next best phase: bot_b
+[13:22:49.443]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.443]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.443]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.443]   info   [GS]       no more phases to execute
+[13:22:49.443]   info   [GS]       Received update phase [CLEAR_DECK]: DONE
+[13:22:49.443]   info   [GS]       get next best phase: bot_b
+[13:22:49.443]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.443]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.443]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.443]   info   [GS]       no more phases to execute
+[13:22:49.443]   info   [GS]       get next best phase: bot_b
+[13:22:49.443]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.443]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.443]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.443]   info   [GS]       no more phases to execute
+[13:22:49.443]   info   [GS]       get next best phase: bot_b
+[13:22:49.443]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.443]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.443]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.443]   info   [GS]       no more phases to execute
+[13:22:49.444]   info   [GS]       get next best phase: bot_b
+[13:22:49.444]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.444]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.444]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.444]   info   [GS]       no more phases to execute
+[13:22:49.444]   info   [GS]       get next best phase: bot_b
+[13:22:49.444]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.444]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.444]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.444]   info   [GS]       no more phases to execute
+[13:22:49.444]   info   [GS]       get next best phase: bot_b
+[13:22:49.445]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.445]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.445]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.445]   info   [GS]       no more phases to execute
+[13:22:49.445]   info   [GS]       get next best phase: bot_b
+[13:22:49.445]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.445]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.445]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.445]   info   [GS]       no more phases to execute
+[13:22:49.445]   info   [GS]       get next best phase: bot_b
+[13:22:49.445]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.445]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.445]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.445]   info   [GS]       no more phases to execute
+[13:22:49.445]   info   [GS]       get next best phase: bot_b
+[13:22:49.445]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.445]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.445]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.445]   info   [GS]       no more phases to execute
+[13:22:49.445]   info   [GS]       get next best phase: bot_b
+[13:22:49.445]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.445]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.445]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.445]   info   [GS]       no more phases to execute
+[13:22:49.445]   info   [GS]       get next best phase: bot_b
+[13:22:49.445]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.445]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.445]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.445]   info   [GS]       no more phases to execute
+[13:22:49.446]   info   [GS]       get next best phase: bot_b
+[13:22:49.446]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.446]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.446]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.446]   info   [GS]       no more phases to execute
+[13:22:49.446]   info   [GS]       get next best phase: bot_b
+[13:22:49.446]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.446]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.446]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.446]   info   [GS]       no more phases to execute
+[13:22:49.446]   info   [GS]       get next best phase: bot_b
+[13:22:49.446]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.446]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.446]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.446]   info   [GS]       no more phases to execute
+[13:22:49.446]   info   [GS]       get next best phase: bot_b
+[13:22:49.447]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.447]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.447]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.447]   info   [GS]       no more phases to execute
+[13:22:49.447]   info   [GS]       get next best phase: bot_b
+[13:22:49.447]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.447]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.447]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.447]   info   [GS]       no more phases to execute
+[13:22:49.447]   info   [GS]       get next best phase: bot_b
+[13:22:49.447]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.447]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.447]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.447]   info   [GS]       no more phases to execute
+[13:22:49.448]   info   [GS]       get next best phase: bot_b
+[13:22:49.448]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.448]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.448]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.448]   info   [GS]       no more phases to execute
+[13:22:49.448]   info   [GS]       get next best phase: bot_b
+[13:22:49.448]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.448]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.448]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.448]   info   [GS]       no more phases to execute
+[13:22:49.448]   info   [GS]       get next best phase: bot_b
+[13:22:49.449]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.449]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.449]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.449]   info   [GS]       no more phases to execute
+[13:22:49.449]   info   [GS]       get next best phase: bot_b
+[13:22:49.449]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.449]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.449]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.449]   info   [GS]       no more phases to execute
+[13:22:49.449]   info   [GS]       get next best phase: bot_b
+[13:22:49.449]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.449]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.449]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.449]   info   [GS]       no more phases to execute
+[13:22:49.449]   info   [GS]       get next best phase: bot_b
+[13:22:49.450]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.450]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.450]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.450]   info   [GS]       no more phases to execute
+[13:22:49.450]   info   [GS]       get next best phase: bot_b
+[13:22:49.450]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.450]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.450]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.450]   info   [GS]       no more phases to execute
+[13:22:49.450]   info   [GS]       get next best phase: bot_b
+[13:22:49.450]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.450]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.450]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.450]   info   [GS]       no more phases to execute
+[13:22:49.450]   info   [GS]       get next best phase: bot_b
+[13:22:49.450]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.450]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.450]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.450]   info   [GS]       no more phases to execute
+[13:22:49.451]   info   [GS]       get next best phase: bot_b
+[13:22:49.451]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.451]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.451]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.451]   info   [GS]       no more phases to execute
+[13:22:49.451]   info   [GS]       get next best phase: bot_b
+[13:22:49.451]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.451]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.451]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.451]   info   [GS]       no more phases to execute
+[13:22:49.451]   info   [GS]       get next best phase: bot_b
+[13:22:49.451]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[13:22:49.451]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.451]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.451]   info   [GS]       no more phases to execute
+[13:22:49.451]   info   [GS]       get next best phase: bot_b
+[13:22:49.452]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.452]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.452]   info   [GS]       no more phases to execute
+[13:22:49.452]   info   [GS]       get next best phase: bot_b
+[13:22:49.452]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.452]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.452]   info   [GS]       no more phases to execute
+[13:22:49.452]   info   [GS]       get next best phase: bot_b
+[13:22:49.452]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.452]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.452]   info   [GS]       no more phases to execute
+[13:22:49.453]   info   [GS]       get next best phase: bot_b
+[13:22:49.453]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.453]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.453]   info   [GS]       no more phases to execute
+[13:22:49.453]   info   [GS]       get next best phase: bot_b
+[13:22:49.453]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.453]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.453]   info   [GS]       no more phases to execute
+[13:22:49.453]   info   [GS]       get next best phase: bot_b
+[13:22:49.453]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.453]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.453]   info   [GS]       no more phases to execute
+[13:22:49.453]   info   [GS]       get next best phase: bot_b
+[13:22:49.454]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.454]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.454]   info   [GS]       no more phases to execute
+[13:22:49.454]   info   [GS]       get next best phase: bot_b
+[13:22:49.454]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.454]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.454]   info   [GS]       no more phases to execute
+[13:22:49.454]   info   [GS]       get next best phase: bot_b
+[13:22:49.455]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.455]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.455]   info   [GS]       no more phases to execute
+[13:22:49.455]   info   [GS]       get next best phase: bot_b
+[13:22:49.455]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.455]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.455]   info   [GS]       no more phases to execute
+[13:22:49.455]   info   [GS]       get next best phase: bot_b
+[13:22:49.455]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.455]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.455]   info   [GS]       no more phases to execute
+[13:22:49.455]   info   [GS]       get next best phase: bot_b
+[13:22:49.456]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.456]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.456]   info   [GS]       no more phases to execute
+[13:22:49.456]   info   [GS]       get next best phase: bot_b
+[13:22:49.456]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.456]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.456]   info   [GS]       no more phases to execute
+[13:22:49.456]   info   [GS]       get next best phase: bot_b
+[13:22:49.456]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.456]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.456]   info   [GS]       no more phases to execute
+[13:22:49.451]   info   [GS]       Received update phase [WAIT_FOR_INIT]: OPEN
+[13:22:49.456]   info   [GS]       get next best phase: bot_b
+[13:22:49.456]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.456]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.456]   info   [GS]       no more phases to execute
+[13:22:49.456]   info   [GS]       get next best phase: bot_b
+[13:22:49.456]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.456]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.456]   info   [GS]       no more phases to execute
+[13:22:49.456]   info   [GS]       get next best phase: bot_b
+[13:22:49.456]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.456]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.456]   info   [GS]       no more phases to execute
+[13:22:49.457]   info   [GS]       get next best phase: bot_b
+[13:22:49.457]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.457]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.457]   info   [GS]       no more phases to execute
+[13:22:49.457]   info   [GS]       get next best phase: bot_b
+[13:22:49.457]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.457]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.457]   info   [GS]       no more phases to execute
+[13:22:49.457]   info   [GS]       get next best phase: bot_b
+[13:22:49.457]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.457]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.457]   info   [GS]       no more phases to execute
+[13:22:49.458]   info   [GS]       get next best phase: bot_b
+[13:22:49.458]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.458]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.458]   info   [GS]       no more phases to execute
+[13:22:49.458]   info   [GS]       get next best phase: bot_b
+[13:22:49.458]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.458]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.458]   info   [GS]       no more phases to execute
+[13:22:49.458]   info   [GS]       get next best phase: bot_b
+[13:22:49.458]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.458]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.458]   info   [GS]       no more phases to execute
+[13:22:49.459]   info   [GS]       get next best phase: bot_b
+[13:22:49.459]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.459]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.459]   info   [GS]       no more phases to execute
+[13:22:49.459]   info   [GS]       get next best phase: bot_b
+[13:22:49.459]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.459]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.459]   info   [GS]       no more phases to execute
+[13:22:49.459]   info   [GS]       Received update: {"dummy":true}
+[13:22:49.459]   info   [GS]       get next best phase: bot_b
+[13:22:49.459]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.459]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.459]   info   [GS]       no more phases to execute
+[13:22:49.460]   info   [GS]       get next best phase: bot_b
+[13:22:49.460]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.460]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.460]   info   [GS]       no more phases to execute
+[13:22:49.460]   info   [GS]       get next best phase: bot_b
+[13:22:49.460]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.460]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.460]   info   [GS]       no more phases to execute
+[13:22:49.460]   info   [GS]       get next best phase: bot_b
+[13:22:49.461]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.461]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.461]   info   [GS]       no more phases to execute
+[13:22:49.461]   info   [GS]       get next best phase: bot_b
+[13:22:49.461]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.461]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.461]   info   [GS]       no more phases to execute
+[13:22:49.461]   info   [GS]       get next best phase: bot_b
+[13:22:49.461]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.461]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.461]   info   [GS]       no more phases to execute
+[13:22:49.461]   info   [GS]       get next best phase: bot_b
+[13:22:49.461]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.461]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.461]   info   [GS]       no more phases to execute
+[13:22:49.462]   info   [GS]       get next best phase: bot_b
+[13:22:49.462]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.462]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.462]   info   [GS]       no more phases to execute
+[13:22:49.462]   info   [GS]       get next best phase: bot_b
+[13:22:49.462]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.462]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.462]   info   [GS]       no more phases to execute
+[13:22:49.462]   info   [GS]       get next best phase: bot_b
+[13:22:49.462]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.462]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.462]   info   [GS]       no more phases to execute
+[13:22:49.462]   info   [GS]       get next best phase: bot_b
+[13:22:49.462]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.462]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.462]   info   [GS]       no more phases to execute
+[13:22:49.462]   info   [GS]       get next best phase: bot_b
+[13:22:49.463]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.463]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.463]   info   [GS]       no more phases to execute
+[13:22:49.463]   info   [GS]       get next best phase: bot_b
+[13:22:49.463]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.463]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.463]   info   [GS]       no more phases to execute
+[13:22:49.463]   info   [GS]       get next best phase: bot_b
+[13:22:49.463]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.463]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.463]   info   [GS]       no more phases to execute
+[13:22:49.464]   info   [GS]       get next best phase: bot_b
+[13:22:49.464]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.464]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.464]   info   [GS]       no more phases to execute
+[13:22:49.464]   info   [GS]       get next best phase: bot_b
+[13:22:49.464]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.464]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.464]   info   [GS]       no more phases to execute
+[13:22:49.464]   info   [GS]       get next best phase: bot_b
+[13:22:49.464]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.464]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.464]   info   [GS]       no more phases to execute
+[13:22:49.464]   info   [GS]       get next best phase: bot_b
+[13:22:49.465]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.465]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.465]   info   [GS]       no more phases to execute
+[13:22:49.465]   info   [GS]       get next best phase: bot_b
+[13:22:49.465]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.465]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.465]   info   [GS]       no more phases to execute
+[13:22:49.465]   info   [GS]       get next best phase: bot_b
+[13:22:49.465]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.465]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.465]   info   [GS]       no more phases to execute
+[13:22:49.465]   info   [GS]       get next best phase: bot_b
+[13:22:49.466]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.466]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.466]   info   [GS]       no more phases to execute
+[13:22:49.466]   info   [GS]       get next best phase: bot_b
+[13:22:49.466]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.466]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.466]   info   [GS]       no more phases to execute
+[13:22:49.466]   info   [GS]       get next best phase: bot_b
+[13:22:49.466]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.466]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.466]   info   [GS]       no more phases to execute
+[13:22:49.466]   info   [GS]       get next best phase: bot_b
+[13:22:49.466]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.466]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.466]   info   [GS]       no more phases to execute
+[13:22:49.467]   info   [GS]       get next best phase: bot_b
+[13:22:49.467]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.467]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.467]   info   [GS]       no more phases to execute
+[13:22:49.467]   info   [GS]       get next best phase: bot_b
+[13:22:49.467]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.467]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.467]   info   [GS]       no more phases to execute
+[13:22:49.467]   info   [GS]       get next best phase: bot_b
+[13:22:49.467]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.467]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.467]   info   [GS]       no more phases to execute
+[13:22:49.468]   info   [GS]       get next best phase: bot_b
+[13:22:49.468]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.468]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.468]   info   [GS]       no more phases to execute
+[13:22:49.468]   info   [GS]       get next best phase: bot_b
+[13:22:49.468]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.468]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.468]   info   [GS]       no more phases to execute
+[13:22:49.469]   info   [GS]       get next best phase: bot_b
+[13:22:49.469]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.469]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.469]   info   [GS]       no more phases to execute
+[13:22:49.469]   info   [GS]       get next best phase: bot_b
+[13:22:49.469]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.469]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.469]   info   [GS]       no more phases to execute
+[13:22:49.469]   info   [GS]       get next best phase: bot_b
+[13:22:49.470]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.470]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.470]   info   [GS]       no more phases to execute
+[13:22:49.470]   info   [GS]       get next best phase: bot_b
+[13:22:49.470]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.470]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.470]   info   [GS]       no more phases to execute
+[13:22:49.470]   info   [GS]       get next best phase: bot_b
+[13:22:49.470]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.470]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.470]   info   [GS]       no more phases to execute
+[13:22:49.471]   info   [GS]       get next best phase: bot_b
+[13:22:49.471]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.471]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.471]   info   [GS]       no more phases to execute
+[13:22:49.471]   info   [GS]       get next best phase: bot_b
+[13:22:49.471]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.471]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.471]   info   [GS]       no more phases to execute
+[13:22:49.471]   info   [GS]       get next best phase: bot_b
+[13:22:49.471]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.471]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.471]   info   [GS]       no more phases to execute
+[13:22:49.471]   info   [GS]       get next best phase: bot_b
+[13:22:49.472]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.472]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.472]   info   [GS]       no more phases to execute
+[13:22:49.472]   info   [GS]       get next best phase: bot_b
+[13:22:49.472]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.472]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.472]   info   [GS]       no more phases to execute
+[13:22:49.472]   info   [GS]       get next best phase: bot_b
+[13:22:49.473]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.473]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.473]   info   [GS]       no more phases to execute
+[13:22:49.473]   info   [GS]       get next best phase: bot_b
+[13:22:49.473]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.473]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.473]   info   [GS]       no more phases to execute
+[13:22:49.473]   info   [GS]       get next best phase: bot_b
+[13:22:49.473]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.473]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.473]   info   [GS]       no more phases to execute
+[13:22:49.473]   info   [GS]       get next best phase: bot_b
+[13:22:49.474]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.474]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.474]   info   [GS]       no more phases to execute
+[13:22:49.474]   info   [GS]       get next best phase: bot_b
+[13:22:49.475]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.475]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.475]   info   [GS]       no more phases to execute
+[13:22:49.476]   info   [GS]       Received update phase [WAIT_FOR_INIT]: DONE
+[13:22:49.476]   info   [GS]       get next best phase: bot_b
+[13:22:49.476]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.476]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.476]   info   [GS]       no more phases to execute
+[13:22:49.476]   info   [GS]       get next best phase: bot_b
+[13:22:49.476]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.476]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.476]   info   [GS]       no more phases to execute
+[13:22:49.477]   info   [GS]       get next best phase: bot_b
+[13:22:49.477]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.477]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.477]   info   [GS]       no more phases to execute
+[13:22:49.477]   info   [GS]       get next best phase: bot_b
+[13:22:49.477]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.477]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.477]   info   [GS]       no more phases to execute
+[13:22:49.477]   info   [GS]       get next best phase: bot_b
+[13:22:49.477]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.477]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.477]   info   [GS]       no more phases to execute
+[13:22:49.477]   info   [GS]       get next best phase: bot_b
+[13:22:49.477]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.477]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.477]   info   [GS]       no more phases to execute
+[13:22:49.477]   info   [GS]       get next best phase: bot_b
+[13:22:49.477]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.477]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.477]   info   [GS]       no more phases to execute
+[13:22:49.478]   info   [GS]       get next best phase: bot_b
+[13:22:49.478]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.478]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.478]   info   [GS]       no more phases to execute
+[13:22:49.478]   info   [GS]       get next best phase: bot_b
+[13:22:49.478]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.478]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.478]   info   [GS]       no more phases to execute
+[13:22:49.478]   info   [GS]       get next best phase: bot_b
+[13:22:49.479]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.479]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.479]   info   [GS]       no more phases to execute
+[13:22:49.479]   info   [GS]       get next best phase: bot_b
+[13:22:49.479]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.479]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.479]   info   [GS]       no more phases to execute
+[13:22:49.479]   info   [GS]       get next best phase: bot_b
+[13:22:49.479]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.479]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[13:22:49.479]   info   [GS]       no more phases to execute
+[13:22:49.480]   info   [GS]       Received update phase [SOME_BOT_A]: OPEN
+[13:22:49.480]   info   [GS]       get next best phase: bot_b
+[13:22:49.481]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.481]   info   [GS]       no more phases to execute
+[13:22:49.481]   info   [GS]       get next best phase: bot_b
+[13:22:49.482]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.482]   info   [GS]       no more phases to execute
+[13:22:49.482]   info   [GS]       get next best phase: bot_b
+[13:22:49.482]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.482]   info   [GS]       no more phases to execute
+[13:22:49.482]   info   [GS]       get next best phase: bot_b
+[13:22:49.482]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.482]   info   [GS]       no more phases to execute
+[13:22:49.483]   info   [GS]       get next best phase: bot_b
+[13:22:49.483]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.483]   info   [GS]       no more phases to execute
+[13:22:49.484]   info   [GS]       get next best phase: bot_b
+[13:22:49.484]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.484]   info   [GS]       no more phases to execute
+[13:22:49.484]   info   [GS]       get next best phase: bot_b
+[13:22:49.486]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.486]   info   [GS]       no more phases to execute
+[13:22:49.486]   info   [GS]       get next best phase: bot_b
+[13:22:49.487]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.487]   info   [GS]       no more phases to execute
+[13:22:49.487]   info   [GS]       get next best phase: bot_b
+[13:22:49.487]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.487]   info   [GS]       no more phases to execute
+[13:22:49.488]   info   [GS]       get next best phase: bot_b
+[13:22:49.488]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.488]   info   [GS]       no more phases to execute
+[13:22:49.489]   info   [GS]       get next best phase: bot_b
+[13:22:49.489]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.489]   info   [GS]       no more phases to execute
+[13:22:49.490]   info   [GS]       get next best phase: bot_b
+[13:22:49.490]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.490]   info   [GS]       no more phases to execute
+[13:22:49.490]   info   [GS]       get next best phase: bot_b
+[13:22:49.491]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.491]   info   [GS]       no more phases to execute
+[13:22:49.491]   info   [GS]       get next best phase: bot_b
+[13:22:49.491]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.491]   info   [GS]       no more phases to execute
+[13:22:49.491]   info   [GS]       get next best phase: bot_b
+[13:22:49.492]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.492]   info   [GS]       no more phases to execute
+[13:22:49.492]   info   [GS]       get next best phase: bot_b
+[13:22:49.492]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.492]   info   [GS]       no more phases to execute
+[13:22:49.493]   info   [GS]       get next best phase: bot_b
+[13:22:49.493]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.493]   info   [GS]       no more phases to execute
+[13:22:49.493]   info   [GS]       get next best phase: bot_b
+[13:22:49.493]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.493]   info   [GS]       no more phases to execute
+[13:22:49.494]   info   [GS]       get next best phase: bot_b
+[13:22:49.494]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.494]   info   [GS]       no more phases to execute
+[13:22:49.494]   info   [GS]       get next best phase: bot_b
+[13:22:49.488]   info   [GS]       Received update phase [SOME_BOT_A]: DONE
+[13:22:49.494]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.495]   info   [GS]       no more phases to execute
+[13:22:49.495]   info   [GS]       get next best phase: bot_b
+[13:22:49.495]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.495]   info   [GS]       no more phases to execute
+[13:22:49.495]   info   [GS]       get next best phase: bot_b
+[13:22:49.496]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.496]   info   [GS]       no more phases to execute
+[13:22:49.496]   info   [GS]       get next best phase: bot_b
+[13:22:49.496]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.496]   info   [GS]       no more phases to execute
+[13:22:49.496]   info   [GS]       get next best phase: bot_b
+[13:22:49.496]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.496]   info   [GS]       no more phases to execute
+[13:22:49.496]   info   [GS]       get next best phase: bot_b
+[13:22:49.496]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.496]   info   [GS]       no more phases to execute
+[13:22:49.497]   info   [GS]       get next best phase: bot_b
+[13:22:49.497]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.497]   info   [GS]       no more phases to execute
+[13:22:49.497]   info   [GS]       get next best phase: bot_b
+[13:22:49.497]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.497]   info   [GS]       no more phases to execute
+[13:22:49.497]   info   [GS]       get next best phase: bot_b
+[13:22:49.498]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.498]   info   [GS]       no more phases to execute
+[13:22:49.498]   info   [GS]       get next best phase: bot_b
+[13:22:49.498]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.498]   info   [GS]       no more phases to execute
+[13:22:49.498]   info   [GS]       get next best phase: bot_b
+[13:22:49.498]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.498]   info   [GS]       no more phases to execute
+[13:22:49.499]   info   [GS]       get next best phase: bot_b
+[13:22:49.499]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.499]   info   [GS]       no more phases to execute
+[13:22:49.499]   info   [GS]       get next best phase: bot_b
+[13:22:49.499]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.499]   info   [GS]       no more phases to execute
+[13:22:49.499]   info   [GS]       get next best phase: bot_b
+[13:22:49.499]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.499]   info   [GS]       no more phases to execute
+[13:22:49.499]   info   [GS]       get next best phase: bot_b
+[13:22:49.500]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.500]   info   [GS]       no more phases to execute
+[13:22:49.500]   info   [GS]       get next best phase: bot_b
+[13:22:49.500]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.500]   info   [GS]       no more phases to execute
+[13:22:49.500]   info   [GS]       get next best phase: bot_b
+[13:22:49.501]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.501]   info   [GS]       no more phases to execute
+[13:22:49.501]   info   [GS]       get next best phase: bot_b
+[13:22:49.501]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.501]   info   [GS]       no more phases to execute
+[13:22:49.502]   info   [GS]       get next best phase: bot_b
+[13:22:49.502]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.502]   info   [GS]       no more phases to execute
+[13:22:49.502]   info   [GS]       get next best phase: bot_b
+[13:22:49.502]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.502]   info   [GS]       no more phases to execute
+[13:22:49.503]   info   [GS]       get next best phase: bot_b
+[13:22:49.503]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.503]   info   [GS]       no more phases to execute
+[13:22:49.504]   info   [GS]       get next best phase: bot_b
+[13:22:49.505]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.505]   info   [GS]       no more phases to execute
+[13:22:49.506]   info   [GS]       get next best phase: bot_b
+[13:22:49.507]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.507]   info   [GS]       no more phases to execute
+[13:22:49.507]   info   [GS]       get next best phase: bot_b
+[13:22:49.507]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.507]   info   [GS]       no more phases to execute
+[13:22:49.508]   info   [GS]       get next best phase: bot_b
+[13:22:49.508]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.508]   info   [GS]       no more phases to execute
+[13:22:49.508]   info   [GS]       get next best phase: bot_b
+[13:22:49.509]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.509]   info   [GS]       no more phases to execute
+[13:22:49.509]   info   [GS]       get next best phase: bot_b
+[13:22:49.509]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.509]   info   [GS]       no more phases to execute
+[13:22:49.509]   info   [GS]       get next best phase: bot_b
+[13:22:49.509]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.509]   info   [GS]       no more phases to execute
+[13:22:49.510]   info   [GS]       get next best phase: bot_b
+[13:22:49.510]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[13:22:49.510]   info   [GS]       no more phases to execute
+[13:22:49.510]   info   [GS]       get next best phase: bot_b
+[13:22:49.511]   info   [GS]       no more phases to execute
