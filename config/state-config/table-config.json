@@ -4,5 +4,6 @@
   "deck_cleared": false,
   "x": false,
   "dummy": false,
-  "some_task_bot_b_done": false
+  "some_task_bot_b_done": false,
+  "data_collected": false
 }

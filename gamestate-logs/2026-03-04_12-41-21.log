@@ -1,0 +1,55 @@
+[12:41:21.094]   info   [CLIENT]   successfully created TableState
+[12:41:21.095]   info   [CLIENT]   successfully created PhaseState
+[12:41:21.096]   info   [CLIENT]   successfully created config (GameState config)
+[12:41:21.096]   info   [GS]       get next best phase: bot_b
+[12:41:21.097]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[12:41:21.097]  trace   [GS]       updating phase COLLECT_DATA...
+[12:41:21.097]  trace   [GS]       phase status COLLECT_DATA: 0
+[12:41:21.097]   info   [GS]       potential of phase COLLECT_DATA: 200
+[12:41:21.097]   info   [GS]       score of phase COLLECT_DATA: 104
+[12:41:21.098]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[12:41:21.098]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[12:41:21.098]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[12:41:21.098]  trace   [GS]       updating phase SOME_BOT_B...
+[12:41:21.098]  trace   [GS]       phase status SOME_BOT_B: 0
+[12:41:21.098]   info   [GS]       potential of phase SOME_BOT_B: 99
+[12:41:21.099]   info   [GS]       score of phase SOME_BOT_B: 138.7
+[12:41:21.099]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[12:41:21.099]  trace   [GS]       skipped phase WORK_WITH_COLLECTED_DATA because agent is not allowed
+[12:41:21.099]   info   [GS]       selected phase SOME_BOT_B as next phase
+[12:41:21.097]   info   [GS]       Received update: {"init_a":true}
+[12:41:21.100]   info   [GS]       get next best phase: bot_b
+[12:41:21.101]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[12:41:21.101]  trace   [GS]       updating phase COLLECT_DATA...
+[12:41:21.101]  trace   [GS]       phase status COLLECT_DATA: 0
+[12:41:21.101]   info   [GS]       potential of phase COLLECT_DATA: 200
+[12:41:21.102]   info   [GS]       score of phase COLLECT_DATA: 104
+[12:41:21.103]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[12:41:21.103]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[12:41:21.103]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[12:41:21.103]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[12:41:21.103]  trace   [GS]       skipped phase WORK_WITH_COLLECTED_DATA because agent is not allowed
+[12:41:21.103]   info   [GS]       selected phase COLLECT_DATA as next phase
+[12:41:21.105]   info   [GS]       Received update phase [INIT_A]: DONE
+[12:41:21.105]   info   [GS]       get next best phase: bot_b
+[12:41:21.106]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[12:41:21.106]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[12:41:21.106]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[12:41:21.106]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[12:41:21.106]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[12:41:21.106]  trace   [GS]       skipped phase WORK_WITH_COLLECTED_DATA because agent is not allowed
+[12:41:21.106]   info   [GS]       no more phases to execute
+[12:41:21.107]   info   [GS]       Received update phase [SOME_BOT_A]: BLOCKED
+[12:41:21.107]   info   [GS]       Received update phase [WAIT_FOR_INIT]: BLOCKED
+[12:41:21.108]   info   [GS]       Received update phase [WORK_WITH_COLLECTED_DATA]: BLOCKED
+[12:41:21.108]   info   [GS]       Received update: {"dummy":true}
+[12:41:21.109]   info   [GS]       Received update phase [LONG_TASK]: DONE
+[12:41:21.111]   info   [GS]       Received update: {"deck_cleared":true}
+[12:41:21.112]   info   [GS]       Received update phase [CLEAR_DECK]: DONE
+[12:41:21.112]   info   [GS]       Received update phase [WAIT_FOR_INIT]: OPEN
+[12:41:21.146]   info   [GS]       Received update: {"dummy":true}
+[12:41:21.146]   info   [GS]       Received update phase [WAIT_FOR_INIT]: DONE
+[12:41:21.147]   info   [GS]       Received update phase [SOME_BOT_A]: OPEN
+[12:41:21.147]   info   [GS]       Received update phase [SOME_BOT_A]: DONE
+[12:41:21.148]   info   [GS]       Received update phase [WORK_WITH_COLLECTED_DATA]: OPEN
+[12:41:21.148]   info   [GS]       Received update phase [WORK_WITH_COLLECTED_DATA]: DONE

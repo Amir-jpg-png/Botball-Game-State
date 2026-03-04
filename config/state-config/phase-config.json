@@ -59,6 +59,27 @@
     "timeout": 20,
     "points": 230
   },
+  "COLLECT_DATA": {
+    "allowed_agents": "bot_b",
+    "conditions": {
+      "init_b": true
+    },
+    "completion": {
+      "data_collected": true
+    },
+    "timeout": 20,
+    "points": 100
+  },
+  "WORK_WITH_COLLECTED_DATA": {
+    "allowed_agents": "bot_a",
+    "conditions": {
+      "data_collected": true
+    },
+    "completion": {
+    },
+    "timeout": 20,
+    "points": 200
+  },
   "LONG_TASK": {
     "allowed_agents": "bot_a",
     "conditions": {},

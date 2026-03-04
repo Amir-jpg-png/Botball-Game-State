@@ -72,7 +72,6 @@ void GameState::update_phase_status(Phase &phase) const {
         if (phase.get_status() == OPEN) {
             m_log->info("unlocked phase {}", phase.get_id());
         }
-        std::lock_guard lock(m_state_mutex);
         phase.set_status(phase.get_status(), *m_socket);
     }
     m_log->trace("phase status {}: {}", phase.get_id(), phase.get_status());
@@ -204,6 +203,63 @@ GameState GameState::connect_client(const std::string &ip, const uint16_t port) 
     return gs;
 }
 
+void GameState::mutate_shared_state(const std::string &key, std::any value) {
+    m_game_table_model.set(key, std::move(value), *m_socket);
+}
+
+template<typename T>
+T GameState::read_shared_state(const std::string &key) const {
+    static_assert(sizeof(T) == 0, "Unsupported type in read_shared_state");
+}
+
+template<>
+int GameState::read_shared_state<int>(const std::string &key) const {
+    std::lock_guard lock(m_state_mutex);
+    return std::any_cast<int>(m_game_table_model.get(key));
+}
+
+template<>
+double GameState::read_shared_state<double>(const std::string &key) const {
+    std::lock_guard lock(m_state_mutex);
+    return std::any_cast<double>(m_game_table_model.get(key));
+}
+
+template<>
+bool GameState::read_shared_state<bool>(const std::string &key) const {
+    std::lock_guard lock(m_state_mutex);
+    return std::any_cast<bool>(m_game_table_model.get(key));
+}
+
+template<>
+std::string GameState::read_shared_state<std::string>(const std::string &key) const {
+    std::lock_guard lock(m_state_mutex);
+    return std::any_cast<std::string>(m_game_table_model.get(key));
+}
+
+template<>
+std::vector<int> GameState::read_shared_state<std::vector<int> >(const std::string &key) const {
+    std::lock_guard lock(m_state_mutex);
+    return std::any_cast<std::vector<int> >(m_game_table_model.get(key));
+}
+
+template<>
+std::vector<double> GameState::read_shared_state<std::vector<double> >(const std::string &key) const {
+    std::lock_guard lock(m_state_mutex);
+    return std::any_cast<std::vector<double> >(m_game_table_model.get(key));
+}
+
+template<>
+std::vector<bool> GameState::read_shared_state<std::vector<bool> >(const std::string &key) const {
+    std::lock_guard lock(m_state_mutex);
+    return std::any_cast<std::vector<bool> >(m_game_table_model.get(key));
+}
+
+template<>
+std::vector<std::string> GameState::read_shared_state<std::vector<std::string> >(const std::string &key) const {
+    std::lock_guard lock(m_state_mutex);
+    return std::any_cast<std::vector<std::string> >(m_game_table_model.get(key));
+}
+
 void GameState::listen() {
     m_listen_thread = std::thread([this]() {
         while (m_listening) {
@@ -254,7 +310,7 @@ void GameState::run(const std::unordered_map<std::string, std::function<void()> 
     std::function<void()> init_action;
     try {
         init_action = m_agent == "bot_a" ? actions.at("INIT_A") : actions.at("INIT_B");
-    } catch (const std::exception) {
+    } catch (...) {
         fatal("action for init phase not found " + m_agent, m_log);
     }
     execute_init(init_action);
@@ -304,6 +360,7 @@ void GameState::run(const std::unordered_map<std::string, std::function<void()> 
     while (true) {
         {
             std::lock_guard lock(m_state_mutex);
+            m_phase_state.clean();
             if (m_phase_state.get_open_phases_const().empty()) {
                 m_socket->shutdown_socket();
                 m_socket->close_socket();

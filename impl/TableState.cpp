@@ -32,6 +32,16 @@ void TableState::set(const std::string &key, std::any value, const Socket &so) {
         payload[key] = std::any_cast<double>(value);
     } else if (value.type() == typeid(int)) {
         payload[key] = std::any_cast<int>(value);
+    } else if (value.type() == typeid(std::vector<std::string>)) {
+        payload[key] = std::any_cast<std::vector<std::string> >(value);
+    } else if (value.type() == typeid(std::vector<bool>)) {
+        payload[key] = std::any_cast<std::vector<bool> >(value);
+    } else if (value.type() == typeid(std::vector<double>)) {
+        payload[key] = std::any_cast<std::vector<double> >(value);
+    } else if (value.type() == typeid(std::vector<int>)) {
+        payload[key] = std::any_cast<std::vector<int> >(value);
+    } else {
+        throw std::runtime_error("Unsupported type in payload");
     }
 
     // 3. Wrap in the protocol message

@@ -1,0 +1,41 @@
+[19:37:27.100]   info   [CLIENT]   successfully created TableState
+[19:37:27.101]   info   [CLIENT]   successfully created PhaseState
+[19:37:27.101]   info   [CLIENT]   successfully created config (GameState config)
+[19:37:27.102]   info   [GS]       get next best phase: bot_b
+[19:37:27.103]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[19:37:27.103]  trace   [GS]       updating phase COLLECT_DATA...
+[19:37:27.103]  trace   [GS]       phase status COLLECT_DATA: 0
+[19:37:27.103]   info   [GS]       potential of phase COLLECT_DATA: 200
+[19:37:27.103]   info   [GS]       score of phase COLLECT_DATA: 104
+[19:37:27.104]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[19:37:27.104]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[19:37:27.104]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[19:37:27.104]  trace   [GS]       updating phase SOME_BOT_B...
+[19:37:27.104]  trace   [GS]       phase status SOME_BOT_B: 0
+[19:37:27.104]   info   [GS]       potential of phase SOME_BOT_B: 99
+[19:37:27.104]   info   [GS]       score of phase SOME_BOT_B: 138.7
+[19:37:27.104]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[19:37:27.104]  trace   [GS]       skipped phase WORK_WITH_COLLECTED_DATA because agent is not allowed
+[19:37:27.104]   info   [GS]       selected phase SOME_BOT_B as next phase
+[19:37:27.102]   info   [GS]       Received update: {"init_a":true}
+[19:37:27.104]   info   [GS]       get next best phase: bot_b
+[19:37:27.104]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[19:37:27.104]  trace   [GS]       updating phase COLLECT_DATA...
+[19:37:27.104]  trace   [GS]       phase status COLLECT_DATA: 0
+[19:37:27.104]   info   [GS]       potential of phase COLLECT_DATA: 200
+[19:37:27.105]   info   [GS]       score of phase COLLECT_DATA: 104
+[19:37:27.105]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[19:37:27.105]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[19:37:27.105]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[19:37:27.105]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[19:37:27.105]  trace   [GS]       skipped phase WORK_WITH_COLLECTED_DATA because agent is not allowed
+[19:37:27.105]   info   [GS]       selected phase COLLECT_DATA as next phase
+[19:37:27.105]   info   [GS]       Received update phase [INIT_A]: DONE
+[19:37:27.105]   info   [GS]       get next best phase: bot_b
+[19:37:27.105]  trace   [GS]       skipped phase CLEAR_DECK because agent is not allowed
+[19:37:27.105]  trace   [GS]       skipped phase INIT_A because agent is not allowed
+[19:37:27.105]  trace   [GS]       skipped phase LONG_TASK because agent is not allowed
+[19:37:27.105]  trace   [GS]       skipped phase SOME_BOT_A because agent is not allowed
+[19:37:27.105]  trace   [GS]       skipped phase WAIT_FOR_INIT because agent is not allowed
+[19:37:27.105]  trace   [GS]       skipped phase WORK_WITH_COLLECTED_DATA because agent is not allowed
+[19:37:27.105]   info   [GS]       no more phases to execute

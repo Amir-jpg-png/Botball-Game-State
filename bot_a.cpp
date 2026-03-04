@@ -34,7 +34,13 @@ int main() {
         std::cout << "[ACTION] SOME_BOT_A\n";
     };
 
-    actions["STATE_ALTERING"] = [&] {
+    actions["WORK_WITH_COLLECTED_DATA"] = [&] {
+        std::cout << "[ACTION] WORK_WITH_COLLECTED_DATA\n";
+        auto data = gs.read_shared_state<std::vector<int> >("collected_data");
+        for (int i = 0; i < data.size(); i++) {
+            printf("collected data (%d): %d\n", i + 1, data[i]);
+        }
+        std::cout << "\n[END] WORK_WITH_COLLECTED_DATA\n";
     };
 
     gs.run(actions);

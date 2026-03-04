@@ -85,6 +85,11 @@ public:
      * @param actions a registry of all functions, each phase needs to have a corresponding function
      */
     void run(const std::unordered_map<std::string, std::function<void()> > &actions);
+
+    void mutate_shared_state(const std::string &key, std::any value);
+
+    template<typename T>
+    T read_shared_state(const std::string &key) const;
 };
 
 #endif // GAME_STATE_GAMESTATE_H

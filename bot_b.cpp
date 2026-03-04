@@ -9,6 +9,12 @@ int main() {
     actions["SOME_BOT_B"] = [&] {
         std::cout << "[ACTION] SOME_BOT_B" << std::endl;
     };
+    actions["COLLECT_DATA"] = [&] {
+        std::cout << "[ACTION] COLLECT_DATA" << std::endl;
+        std::vector arr = {7, 4, 6};
+        gs.mutate_shared_state("collected_data", arr);
+        std::cout << "[END ACTION] COLLECT_DATA" << std::endl;
+    };
     gs.run(actions);
 
     return 0;
