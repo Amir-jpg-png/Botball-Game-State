@@ -1,0 +1,11 @@
+Source: botball-gamestate
+Section: libdevel
+Priority: optional
+Maintainer: Your Name <you@example.com>
+Build-Depends: debhelper-compat (= 13), meson, ninja-build, libspdlog-dev, libfmt-dev
+Standards-Version: 4.5.0
+
+Package: botball-gamestate
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libspdlog-dev, libfmt-dev
+Description: Botball gamestate management library.

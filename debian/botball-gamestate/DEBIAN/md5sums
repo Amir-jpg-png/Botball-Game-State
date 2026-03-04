@@ -1,0 +1,13 @@
+78aa3834ba2bcda0f6355d8842f2f731  usr/bin/bot_a
+b6071ff1183b1c5a4ec42a47b5817a2f  usr/bin/bot_b
+e221cc574e7de5ca5cbcf365a277a7b3  usr/include/botball/Client.h
+1212e17642f9a090518d7c0e193dfe19  usr/include/botball/GameState.h
+675c45b0a9981eb6357d2636a56b0bdc  usr/include/botball/Phase.h
+751e33ab8c49d8623b048f4882f6b019  usr/include/botball/PhaseState.h
+1ce6f0b577397c8404a7ba13af1281b0  usr/include/botball/Server.h
+1861864869784a7640260ad91073cf5c  usr/include/botball/Socket.h
+dcb1d7bd94d8d0501a208db7991d87bd  usr/include/botball/TableState.h
+ab743dceee3ead5ec2c1a1e4a1844a34  usr/include/botball/Util.h
+b39675e7e144aad87ac0a79844f43096  usr/lib/aarch64-linux-gnu/libbotball-gamestate.a
+151286adec04767eeceb51244f9ae097  usr/lib/aarch64-linux-gnu/pkgconfig/botball-gamestate.pc
+0493906eadb0e43c4c5399cc181da62c  usr/share/doc/botball-gamestate/changelog.Debian.gz

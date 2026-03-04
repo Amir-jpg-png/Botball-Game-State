@@ -1,0 +1,9 @@
+Package: botball-gamestate
+Version: 1.0.0-1
+Architecture: arm64
+Maintainer: Your Name <you@example.com>
+Installed-Size: 8162
+Depends: libc6 (>= 2.34), libfmt9 (>= 9.1.0+ds1), libgcc-s1 (>= 4.5), libstdc++6 (>= 12), libspdlog-dev, libfmt-dev
+Section: libdevel
+Priority: optional
+Description: Botball gamestate management library.

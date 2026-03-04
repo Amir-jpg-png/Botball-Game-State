@@ -1,0 +1,12 @@
+Package: botball-gamestate-dbgsym
+Source: botball-gamestate
+Version: 1.0.0-1
+Auto-Built-Package: debug-symbols
+Architecture: arm64
+Maintainer: Your Name <you@example.com>
+Installed-Size: 18020
+Depends: botball-gamestate (= 1.0.0-1)
+Section: debug
+Priority: optional
+Description: debug symbols for botball-gamestate
+Build-Ids: 7e1077b6dd20399248ea7e8468751b0d3dc79c1c b27f2bca47e5be576dfbb7f90729c82a5e9c29bb

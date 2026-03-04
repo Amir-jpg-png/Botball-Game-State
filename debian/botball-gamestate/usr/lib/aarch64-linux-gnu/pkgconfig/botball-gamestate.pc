@@ -1,0 +1,9 @@
+prefix=/usr
+includedir=${prefix}/include
+libdir=${prefix}/lib/aarch64-linux-gnu
+
+Name: botball-gamestate
+Description: Botball GameState Library
+Version: 1.0.0
+Libs: -L${libdir} -lbotball-gamestate -lspdlog -lfmt
+Cflags: -I${includedir}/botball
