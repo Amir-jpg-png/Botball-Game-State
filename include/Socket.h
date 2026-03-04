@@ -3,6 +3,7 @@
 #include <netinet/in.h>
 #include <spdlog/spdlog.h>
 #include "Util.h"
+using namespace Util;
 
 class Socket {
 protected:

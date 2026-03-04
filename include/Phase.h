@@ -1,18 +1,27 @@
 #pragma once
 #include <string>
 #include "TableState.h"
+using namespace Util;
 
 /**
- * Shows the status of a phase\n\n\n
- * OPEN -> Not done yet and schedulable\n\n
- * BLOCKED -> Conditions not met (can transition to OPEN or TIMEOUT)\n\n
- * TIMEOUT -> Not enough time left to complete the phase\n\n
- * DONE -> Phase completed successfully\n\n
+ * Shows the status of a phase
  */
 enum PhaseStatus {
+    /**
+     * Not done yet and schedulable\n\n
+     */
     OPEN,
+    /**
+     * Conditions not met (can transition to OPEN or TIMEOUT)
+     */
     BLOCKED,
+    /**
+     * Not enough time left to complete the phase
+     */
     TIMEOUT,
+    /**
+     * Phase completed successfully
+     */
     DONE
 };
 

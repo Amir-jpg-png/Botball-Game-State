@@ -72,3 +72,10 @@ TableState::TableState(const json &data) {
 std::unordered_map<std::string, std::any> TableState::getAll() const {
     return m_environment;
 }
+
+bool TableState::has(const std::string &key) const {
+    if (!m_environment.contains(key)) {
+        return false;
+    }
+    return true;
+}

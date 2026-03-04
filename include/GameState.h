@@ -1,18 +1,26 @@
 #pragma once
 #include <thread>
-
 #include "Util.h"
 #include "PhaseState.h"
 #include "Socket.h"
 #include "TableState.h"
-#include <condition_variable>
+using namespace Util;
 
 /**
  * Various configuration options for the GameStates phase choosing algorithm
  */
 struct Config {
+    /**
+     * coefficient for the points, how much the points contribute to the phase score
+     */
     double Kp;
+    /**
+     * coefficient for the time, how much time contributes to the phase score (affects the score negatively)
+     */
     double Kt;
+    /**
+     * coefficient for the potential, how much the potential contributes to the phase score
+     */
     double Kpt;
 };
 

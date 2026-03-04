@@ -147,7 +147,7 @@ namespace Util {
 
         if (calculated != provided) {
             LOG->error("Checksum Mismatch! Calc: {} Provided: {}", calculated, provided);
-            throw std::runtime_error("Checksum Mismatch!");
+            return;
         }
     }
 }

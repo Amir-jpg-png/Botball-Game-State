@@ -1,6 +1,7 @@
 #pragma once
 #include "Socket.h"
 #include "Util.h"
+using namespace Util;
 
 class TableState {
     std::unordered_map<std::string, std::any> m_environment;
@@ -8,6 +9,13 @@ class TableState {
 
 public:
     explicit TableState(const json &data);
+
+    /**
+     * Determines whether a key exists in the TableState if yet return true, else return false
+     * @param key to know which value exists or not
+     * @return a bool determining whether a value exists or not
+     */
+    bool has(const std::string &key) const;
 
     /**
      * Change a value in the TableState
