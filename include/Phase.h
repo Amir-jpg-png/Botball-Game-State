@@ -1,5 +1,4 @@
-#ifndef TECH_GAME_STATE_PHASE_H
-#define TECH_GAME_STATE_PHASE_H
+#pragma once
 #include <string>
 #include "TableState.h"
 
@@ -47,7 +46,6 @@ class Phase {
     std::string m_id;
     // Determines which bot "bot_a" or "bot_b" is allowed to execute this phase
     std::string m_allowed_agent;
-
     // key value pairs of strings to primitive datatypes representing if the phases conditions are met
     std::unordered_map<std::string, std::any> m_conditions;
     // key value pairs of strings to primitive datatypes which will be set in the table state after completion of the phase
@@ -95,7 +93,7 @@ public:
 
     /**
      *
-     * @return the PhaseStatus of a phase)
+     * @return the PhaseStatus of a phase
      */
     [[nodiscard]] PhaseStatus get_status() const;
 
@@ -108,7 +106,7 @@ public:
     /**
      * Sets the PhaseStatus of a phase and sends it to the peer bot
      * @param status the phase should be in
-     * @param socket used to send a request to the peer bot
+     * @param so used to send a request to the peer bot
      */
     void set_status(PhaseStatus status, const Socket &so);
 
@@ -122,5 +120,3 @@ public:
 
     std::string to_string() const;
 };
-
-#endif // TECH_GAME_STATE_PHASE_H

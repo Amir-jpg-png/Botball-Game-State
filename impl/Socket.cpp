@@ -96,7 +96,3 @@ void Socket::shutdown_socket() {
     shutdown(m_fd, SHUT_RD);
     m_closed = true;
 }
-
-[[nodiscard]] bool Socket::get_closed() const {
-    return m_closed;
-}

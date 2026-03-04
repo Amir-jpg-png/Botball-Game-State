@@ -1,5 +1,4 @@
-#ifndef TECH_GAME_STATE_SERVER_H
-#define TECH_GAME_STATE_SERVER_H
+#pragma once
 #include <string>
 
 #include "GameState.h"
@@ -42,5 +41,3 @@ public:
      */
     [[nodiscard]] GameState serve(int port);
 };
-
-#endif //TECH_GAME_STATE_SERVER_H

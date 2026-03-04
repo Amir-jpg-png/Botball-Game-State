@@ -13,7 +13,7 @@ void GameState::execute_init(const std::function<void()> &action) {
     Phase *init = m_agent == "bot_a"
                       ? m_phase_state.get_phase_ptr("INIT_A")
                       : m_phase_state.get_phase_ptr("INIT_B");
-    init->execute(m_game_table_model, action, *m_socket);
+    init->execute(m_game_table, action, *m_socket);
 }
 
 static bool value_satisfies(const std::any &actual, const std::any &required) {
@@ -59,7 +59,7 @@ void GameState::update_phase_status(Phase &phase) const {
     phase.set_status(OPEN);
 
     for (const auto &[key, required]: phase.get_conditions()) {
-        if (!value_satisfies(m_game_table_model.get(key), required)) {
+        if (!value_satisfies(m_game_table.get(key), required)) {
             phase.set_status(BLOCKED);
         }
     }
@@ -81,7 +81,7 @@ double GameState::compute_potential(const Phase &phase_candidate) const {
     double total_points = 0.0;
     int unlocked_count = 0;
 
-    auto projected = m_game_table_model.getAll();
+    auto projected = m_game_table.getAll();
 
     for (const auto &[key, value]: phase_candidate.get_completion()) {
         projected[key] = value;
@@ -99,7 +99,7 @@ double GameState::compute_potential(const Phase &phase_candidate) const {
         // Skip phases already unlocked before candidate
         bool already_unlocked = true;
         for (const auto &[key, value]: conditions) {
-            if (!value_satisfies(m_game_table_model.get(key), value)) {
+            if (!value_satisfies(m_game_table.get(key), value)) {
                 already_unlocked = false;
                 break;
             }
@@ -173,7 +173,7 @@ std::optional<std::string> GameState::get_next_best_phase() {
 
 GameState::GameState(TableState table_state, const Config &config, PhaseState phase_state)
     : m_config(config),
-      m_game_table_model(std::move(table_state)),
+      m_game_table(std::move(table_state)),
       m_phase_state(std::move(phase_state)) {
 }
 
@@ -204,7 +204,7 @@ GameState GameState::connect_client(const std::string &ip, const uint16_t port) 
 }
 
 void GameState::mutate_shared_state(const std::string &key, std::any value) {
-    m_game_table_model.set(key, std::move(value), *m_socket);
+    m_game_table.set(key, std::move(value), *m_socket);
 }
 
 template<typename T>
@@ -215,49 +215,49 @@ T GameState::read_shared_state(const std::string &key) const {
 template<>
 int GameState::read_shared_state<int>(const std::string &key) const {
     std::lock_guard lock(m_state_mutex);
-    return std::any_cast<int>(m_game_table_model.get(key));
+    return std::any_cast<int>(m_game_table.get(key));
 }
 
 template<>
 double GameState::read_shared_state<double>(const std::string &key) const {
     std::lock_guard lock(m_state_mutex);
-    return std::any_cast<double>(m_game_table_model.get(key));
+    return std::any_cast<double>(m_game_table.get(key));
 }
 
 template<>
 bool GameState::read_shared_state<bool>(const std::string &key) const {
     std::lock_guard lock(m_state_mutex);
-    return std::any_cast<bool>(m_game_table_model.get(key));
+    return std::any_cast<bool>(m_game_table.get(key));
 }
 
 template<>
 std::string GameState::read_shared_state<std::string>(const std::string &key) const {
     std::lock_guard lock(m_state_mutex);
-    return std::any_cast<std::string>(m_game_table_model.get(key));
+    return std::any_cast<std::string>(m_game_table.get(key));
 }
 
 template<>
 std::vector<int> GameState::read_shared_state<std::vector<int> >(const std::string &key) const {
     std::lock_guard lock(m_state_mutex);
-    return std::any_cast<std::vector<int> >(m_game_table_model.get(key));
+    return std::any_cast<std::vector<int> >(m_game_table.get(key));
 }
 
 template<>
 std::vector<double> GameState::read_shared_state<std::vector<double> >(const std::string &key) const {
     std::lock_guard lock(m_state_mutex);
-    return std::any_cast<std::vector<double> >(m_game_table_model.get(key));
+    return std::any_cast<std::vector<double> >(m_game_table.get(key));
 }
 
 template<>
 std::vector<bool> GameState::read_shared_state<std::vector<bool> >(const std::string &key) const {
     std::lock_guard lock(m_state_mutex);
-    return std::any_cast<std::vector<bool> >(m_game_table_model.get(key));
+    return std::any_cast<std::vector<bool> >(m_game_table.get(key));
 }
 
 template<>
 std::vector<std::string> GameState::read_shared_state<std::vector<std::string> >(const std::string &key) const {
     std::lock_guard lock(m_state_mutex);
-    return std::any_cast<std::vector<std::string> >(m_game_table_model.get(key));
+    return std::any_cast<std::vector<std::string> >(m_game_table.get(key));
 }
 
 void GameState::listen() {
@@ -277,7 +277,7 @@ void GameState::listen() {
 
                     auto updates = get_key_value(data["payload"]);
                     for (const auto &[key, val]: updates) {
-                        m_game_table_model.set(key, val);
+                        m_game_table.set(key, val);
                     }
                 }
                 if (data["type"] == "UPDATE_PHASE") {
@@ -354,7 +354,7 @@ void GameState::run(const std::unordered_map<std::string, std::function<void()> 
             if (m_phase_state.has_phase(active_id)) phase = m_phase_state.get_phase_ptr(active_id);
         }
         if (phase) {
-            phase->execute(m_game_table_model, action, *m_socket);
+            phase->execute(m_game_table, action, *m_socket);
         }
     }
     while (true) {

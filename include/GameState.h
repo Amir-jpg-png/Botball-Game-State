@@ -1,5 +1,4 @@
-#ifndef GAME_STATE_GAMESTATE_H
-#define GAME_STATE_GAMESTATE_H
+#pragma once
 #include <thread>
 
 #include "Util.h"
@@ -29,36 +28,72 @@ class GameState {
     std::unique_ptr<Socket> m_socket = nullptr;
     Config m_config{};
     std::thread m_listen_thread;
-    mutable std::mutex m_state_mutex;
-    std::atomic<bool> m_listening{false};
-
-    [[nodiscard]] bool has_phases() const;
-
-    TableState m_game_table_model;
+    TableState m_game_table;
     PhaseState m_phase_state;
     std::string m_agent;
     std::shared_ptr<spdlog::logger> m_log;
+    mutable std::mutex m_state_mutex;
+    std::atomic<bool> m_listening{false};
+    std::chrono::steady_clock::time_point m_game_start;
+
+    /**
+     * Determines whether a bot has any phases left by iterating over all open phases. A bot has phases left if a phase with the same agent exists in the open phases.
+     * @return a bool representing if the bot has any phases left
+     */
+    [[nodiscard]] bool has_phases() const;
+
 
     [[nodiscard]] std::optional<std::string> get_next_best_phase();
 
-    // computes the potential of a phase by adding the points of all phases that would be OPEN after the completion of the phase and dividing them by the amount of phases that get unlocked
+    /**
+     * Gets a phase reference as a parameter and calculates a score by
+     * 1. determining how many phases will be unlocked by this phase
+     * 2. adding their points together
+     * 3. calculating the median
+     * @param phase_candidate the phase reference of which the potential needs to be computed
+     * @return a double score determining the potential of a phase
+     */
     [[nodiscard]] double compute_potential(const Phase &phase_candidate) const;
 
-    // Runs once every time a phase finishes, updates the status of a phase
+    /**
+     * Updates the status of a phase by
+     * 1. Determining whether enough time is left if not -> TIMEOUT
+     * 2. Determining if all conditions are met if not -> BLOCKED
+     * 3. If the above conditions are met -> OPEN
+     * @param phase reference to update the status of
+     */
     void update_phase_status(Phase &phase) const;
 
-    std::chrono::steady_clock::time_point m_game_start;
-
-    // Returns the time remaining for the game (Will probably be replaced by techlib functionality)
+    /**
+     * @return the time remaining until game end as an int
+     */
     [[nodiscard]] int time_remaining() const;
 
+    /**
+     * starts a thread and listens for incoming requests,
+     * does checksum validations and updates the state of the local bot according to the updates sent over the network
+     */
     void listen();
 
+    /**
+     * Executes the init function of a bot, INIT_A or INIT_B depending on the agent.
+     * @param action the function of the bots init phase e.g, the function mapping to INIT_A
+     */
     void execute_init(const std::function<void()> &action);
 
 public:
+    /**
+     *
+     * @param table_state
+     * @param config
+     * @param phase_state
+     */
     GameState(TableState table_state, const Config &config, PhaseState phase_state);
 
+    /**
+     * Not implemented, declaration necessary so the class can hold a mutex
+     * @param other
+     */
     GameState(GameState &&other) noexcept;
 
     /**
@@ -81,15 +116,37 @@ public:
     [[nodiscard]] static GameState connect_client(const std::string &ip, uint16_t port);
 
     /**
-     * Starts by executing INIT_A and INIT_B and starts calculating, executing and transitioning between phases afterward.
+     * Starts by executing the bots init phases then calculates, executes and transitions between phases until all phases are done or timed out.
      * @param actions a registry of all functions, each phase needs to have a corresponding function
      */
     void run(const std::unordered_map<std::string, std::function<void()> > &actions);
 
+    /**
+     * Updates a value in the shared game state and synchronizes it with the remote agent.
+     * * This method performs a thread-safe update of the local GameTableModel and
+     * immediately broadcasts the change to the connected peer via the network socket.
+     * * @note This method acquires a lock on m_state_mutex to ensure consistency between
+     * the local model and the data sent over the wire.
+     * * @param key   The unique string identifier for the state variable (e.g., "collected_data").
+     * @param value The data to store, wrapped in a std::any. Ensure the type matches
+     * the expected type in the TableState configuration.
+     */
     void mutate_shared_state(const std::string &key, std::any value);
 
+    /**
+     * Gets a value from the table state for the bot to use, has to be
+     * - double
+     * - int
+     * - bool
+     * - std::string
+     * - std::vector<double>
+     * - std::vector<int>
+     * - std::vector<bool>
+     * - std::vector<string>
+     * @tparam T type of the desired value
+     * @param key key holding the desired value
+     * @return desired value
+     */
     template<typename T>
     T read_shared_state(const std::string &key) const;
 };
-
-#endif // GAME_STATE_GAMESTATE_H

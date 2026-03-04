@@ -1,5 +1,4 @@
-#ifndef TECH_GAME_STATE_SOCKET_H
-#define TECH_GAME_STATE_SOCKET_H
+#pragma once
 #include <memory>
 #include <netinet/in.h>
 #include <spdlog/spdlog.h>
@@ -49,15 +48,29 @@ public:
      */
     void send_all(const void *buf, size_t len) const;
 
+    /**
+     * Sends JSON data to the remote client by following protocol orders
+     * 1. send 4 byte containing the size of the JSON data, so the receiver can prepare a big enough buffer
+     * 2. send the JSON data
+     * @param data to be sent over the socket
+     */
     void send_json(const json &data) const;
 
+    /**
+     * Receives JSON data from the remote client.
+     * 1. Reads in 4 byte determining the size of the JSON data
+     * 2. Prepares a buffer and reads in size bytes into the buffer (reads in the JSON data)
+     * @return the received JSON data or a nullptr if nothing was sent
+     */
     [[nodiscard]] std::optional<json> recv_json();
 
-    void close_socket();
-
+    /**
+     * Shuts the connection down effectively letting the other client know that the connection should be closed now.
+     */
     void shutdown_socket();
 
-    bool get_closed() const;
+    /**
+     * closes the socket locally
+     */
+    void close_socket();
 };
-
-#endif //TECH_GAME_STATE_SOCKET_H

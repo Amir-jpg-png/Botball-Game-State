@@ -1,5 +1,4 @@
-#ifndef TECH_GAME_STATE_TABLE_STATE_H
-#define TECH_GAME_STATE_TABLE_STATE_H
+#pragma once
 #include "Socket.h"
 #include "Util.h"
 
@@ -10,11 +9,19 @@ class TableState {
 public:
     explicit TableState(const json &data);
 
-    void set(const std::string &key, std::any value, const Socket &so);
-
+    /**
+     * Change a value in the TableState
+     * @param key of the value to be changed
+     * @param value new value
+     */
     void set(const std::string &key, std::any value);
 
-    bool has(const std::string &key) const;
+    /**
+     * Change a value in the TableState and send the change over the network
+     * @param key of the value to be changed
+     * @param value new value
+     */
+    void set(const std::string &key, std::any value, const Socket &so);
 
     /**
      * Gets a value from the table state
@@ -29,8 +36,9 @@ public:
      */
     [[nodiscard]] std::unordered_map<std::string, std::any> getAll() const;
 
+    /**
+     *
+     * @param path
+     */
     explicit TableState(const std::string &path);
 };
-
-
-#endif //TECH_GAME_STATE_TABLE_STATE_H

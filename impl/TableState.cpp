@@ -10,14 +10,6 @@ std::any TableState::get(const std::string &key) const {
     return it->second;
 }
 
-bool TableState::has(const std::string &key) const {
-    if (!m_environment.contains(key)) {
-        return false;
-    }
-    return true;
-}
-
-
 void TableState::set(const std::string &key, std::any value, const Socket &so) {
     // 1. Update local state
     m_environment[key] = value;
@@ -41,7 +33,7 @@ void TableState::set(const std::string &key, std::any value, const Socket &so) {
     } else if (value.type() == typeid(std::vector<int>)) {
         payload[key] = std::any_cast<std::vector<int> >(value);
     } else {
-        throw std::runtime_error("Unsupported type in payload");
+        fatal("Unsupported type, failed to update table state", m_log);
     }
 
     // 3. Wrap in the protocol message
