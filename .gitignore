@@ -20,3 +20,4 @@ CMakeUserPresets.json
 .idea/
 .vscode/
 .tasks.json
+gamestate-logs/
