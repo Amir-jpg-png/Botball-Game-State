@@ -62,6 +62,7 @@ void Phase::set_status(const PhaseStatus status, const Socket &so) {
 }
 
 void Phase::execute(TableState &table, const std::function<void()> &action, const Socket &so) {
+    set_status(RUNNING, so);
     action();
 
     for (const auto &[key, value]: m_completion) {

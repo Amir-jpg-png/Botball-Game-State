@@ -20,6 +20,10 @@ enum PhaseStatus {
      */
     TIMEOUT,
     /**
+     * Currently executing
+     */
+    RUNNING,
+    /**
      * Phase completed successfully
      */
     DONE
