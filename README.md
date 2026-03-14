@@ -127,7 +127,7 @@ Each phase maps to a function you register at runtime. The library handles sched
 | `id` | Unique identifier — must match a key in your actions map |
 | `allowed_agent` | Which robot runs this phase (`bot_a` or `bot_b`) |
 | `points` | Max points this phase earns (used in the scoring algorithm) |
-| `time_to_completion` | Estimated seconds — used for timeout checking |
+| `timeout` | Estimated seconds — used for timeout checking |
 | `conditions` | Key-value pairs that must match the current Table State before this phase can run |
 | `completion` | Table State updates applied automatically when the phase finishes |
 
