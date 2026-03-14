@@ -40,8 +40,9 @@ class GameState {
     PhaseState m_phase_state;
     std::string m_agent;
     std::shared_ptr<spdlog::logger> m_log;
-    mutable std::mutex m_state_mutex;
+    mutable std::recursive_mutex m_state_mutex;
     std::atomic<bool> m_listening{false};
+    std::atomic<bool> m_state_changed{false};
     std::chrono::steady_clock::time_point m_game_start;
 
     /**
@@ -98,11 +99,10 @@ public:
      */
     GameState(TableState table_state, const Config &config, PhaseState phase_state);
 
-    /**
-     * Not implemented, declaration necessary so the class can hold a mutex
-     * @param other
-     */
-    GameState(GameState &&other) noexcept;
+    GameState(const GameState&) = delete;
+    GameState& operator=(const GameState&) = delete;
+    GameState(GameState&&) = delete;
+    GameState& operator=(GameState&&) = delete;
 
     /**
      * bot_a calls this function, listens for a request from bot_b and sends the (verified) game state as config file to bot_b\n\n
@@ -111,7 +111,7 @@ public:
      * @param phase_state_config_path path to phase_state_config_path on bot_a (server)
      * @return the game state parsed from the config files
      */
-    [[nodiscard]] static GameState connect_server(const std::string &game_state_config_path,
+    [[nodiscard]] static std::unique_ptr<GameState> connect_server(const std::string &game_state_config_path,
                                                   const std::string &table_state_config_path,
                                                   const std::string &phase_state_config_path);
 
@@ -121,7 +121,7 @@ public:
      * @param port specifies port of bot_a (only for client)
      * @return the reconstructed game state
      */
-    [[nodiscard]] static GameState connect_client(const std::string &ip, uint16_t port);
+    [[nodiscard]] static std::unique_ptr<GameState> connect_client(const std::string &ip, uint16_t port);
 
     /**
      * Starts by executing the bots init phases then calculates, executes and transitions between phases until all phases are done or timed out.

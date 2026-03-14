@@ -1,5 +1,5 @@
 #pragma once
-#include <json.hpp>
+#include "../lib/json.hpp"
 #include <any>
 #include <iostream>
 #include <spdlog/sinks/basic_file_sink.h>
@@ -27,14 +27,14 @@ namespace Util {
     /**
      * Global Variable, a logger that can be used by every one in case no logger is available.
      */
-    extern std::shared_ptr<spdlog::logger> LOG;
+    extern std::shared_ptr<spdlog::logger> LOGGER;
 
     /**
      * Logs an error and exits the program with status code 1
      * @param msg error message
      * @param log logger instance for error logging
      */
-    [[noreturn]] void fatal(const std::string &msg, const std::shared_ptr<spdlog::logger> &log = LOG);
+    [[noreturn]] void fatal(const std::string &msg, const std::shared_ptr<spdlog::logger> &log = LOGGER);
 
     /**
      *

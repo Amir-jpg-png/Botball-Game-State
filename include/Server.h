@@ -39,5 +39,5 @@ public:
      * listens for a request from bot_b, responds with an acknowledgement, await another request and send the (in init) constructed objects to bot_b
      * @param port to listen on
      */
-    [[nodiscard]] GameState serve(int port);
+    [[nodiscard]] std::unique_ptr<GameState> serve(int port);
 };

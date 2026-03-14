@@ -1,4 +1,6 @@
 #include "Util.h"
+
+#include <spdlog/logger.h>
 #include <spdlog/sinks/dup_filter_sink.h>
 
 namespace Util {
@@ -55,15 +57,14 @@ namespace Util {
         }();
 
         // create per-logger dup filter sink
-        auto dup_sink = std::make_shared<spdlog::sinks::dup_filter_sink_mt>(
-            std::chrono::seconds(1)
-        );
-        dup_sink->set_level(spdlog::level::trace);
-
-        dup_sink->set_level(spdlog::level::trace);
-        dup_sink->add_sink(stdout_sink);
-        dup_sink->add_sink(latest_file_sink);
-        dup_sink->add_sink(permanent_file_sink);
+        // Inside create_logger
+        static const auto dup_sink = [&]() {
+            auto sink = std::make_shared<spdlog::sinks::dup_filter_sink_mt>(std::chrono::seconds(1));
+            sink->add_sink(stdout_sink);
+            sink->add_sink(latest_file_sink);
+            sink->add_sink(permanent_file_sink);
+            return sink;
+        }();
 
         // initialize logger
         auto logger = std::make_shared<spdlog::logger>("[" + new_name + "]", dup_sink);
@@ -73,7 +74,7 @@ namespace Util {
         return logger;
     }
 
-    std::shared_ptr<spdlog::logger> LOG = create_logger("LOG");
+    std::shared_ptr<spdlog::logger> LOGGER = create_logger("LOG");
 
     void fatal(const std::string &msg, const std::shared_ptr<spdlog::logger> &log) {
         log->error(msg);
@@ -146,8 +147,7 @@ namespace Util {
         uint32_t provided = data["checksum"].get<uint32_t>();
 
         if (calculated != provided) {
-            LOG->error("Checksum Mismatch! Calc: {} Provided: {}", calculated, provided);
-            return;
+            LOGGER->error("Checksum Mismatch! Calc: {} Provided: {}", calculated, provided);
         }
     }
 }

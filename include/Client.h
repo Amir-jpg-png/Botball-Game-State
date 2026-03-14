@@ -10,7 +10,7 @@ public:
      * @param port of the remote server
      * @return a GameState object
      */
-    [[nodiscard]] GameState get_remote_state(const std::string &ip_address, uint16_t port);
+    [[nodiscard]] std::unique_ptr<GameState> get_remote_state(const std::string &ip_address, uint16_t port);
 
 private:
     /**
@@ -18,5 +18,5 @@ private:
      * @param data JSON object containing information about table state, phase state, and game state config
      * @return a GameState object
      */
-    [[nodiscard]] GameState parse_remote_state(json data) const;
+    [[nodiscard]] std::unique_ptr<GameState> parse_remote_state(json data) const;
 };

@@ -9,11 +9,13 @@ char *get_ip() {
     char hostname[256];
     gethostname(hostname, sizeof(hostname));
     const hostent *host_entry = gethostbyname(hostname);
+    if (!host_entry) return (char*)"0.0.0.0";
     char *ip = inet_ntoa(*reinterpret_cast<struct in_addr *>(host_entry->h_addr_list[0]));
     return ip;
 }
 
 void Server::validate_phase(const Phase &phase) const {
+    m_log->info("Validating phase: {}", phase.get_id());
     for (const auto &[key, value]: phase.get_conditions()) {
         if (!m_table_state->has(key)) {
             fatal("error: condition key '" + key + "' of phase '" +
@@ -43,44 +45,35 @@ void Server::init(const std::string &table_config_path, const std::string &phase
     std::ifstream phase_config_file(phase_config_path);
     std::ifstream config_file(game_state_config_path);
     std::ifstream table_config_file(table_config_path);
+
     m_table_state = std::make_unique<TableState>(table_config_path);
-    m_log->info("successfully created TableState");
+    m_log->info("successfully created TableState object");
 
-    if (!phase_config_file.is_open()) {
-        fatal("could not open phase config file", m_log);
-    }
-
-    if (!config_file.is_open()) {
-        fatal("could not open config file", m_log);
-    }
-
-    if (!table_config_file.is_open()) {
-        fatal("could not open table config file", m_log);
-    }
+    if (!phase_config_file.is_open()) fatal("could not open phase config file", m_log);
+    if (!config_file.is_open()) fatal("could not open config file", m_log);
+    if (!table_config_file.is_open()) fatal("could not open table config file", m_log);
 
     phase_config_file >> m_phase_data;
 
-    try {
-        Phase init_a("INIT_A", m_phase_data.at("INIT_A"));
-        Phase init_b("INIT_B", m_phase_data.at("INIT_B"));
-
-        m_phase_state = std::make_unique<PhaseState>(init_a, init_b);
-    } catch (std::exception &) {
-        fatal("error: Phases INIT_A or INIT_B not found in config", m_log);
-    }
+    m_phase_state = std::make_unique<PhaseState>();
+    m_log->info("successfully constructed PhaseState");
 
     auto &open_phases = m_phase_state->get_open_phases();
+    open_phases.reserve(open_phases.size() + 5);
     for (const auto &[phase_name, phase]: m_phase_data.items()) {
+        m_log->info("Emplacing phase: {}", phase_name);
         open_phases.emplace_back(phase_name, phase);
     }
+    m_log->info("successfully constructed phases");
 
     phase_config_file.close();
-    m_log->info("successfully created PhaseState");
 
     config_file >> m_config_data;
     m_cfg.Kp = m_config_data.at("points_weight_factor");
     m_cfg.Kt = m_config_data.at("time_weight_factor");
     m_cfg.Kpt = m_config_data.at("potential_weight_factor");
+
+    m_log->info("Running validation on all open phases");
     for (Phase &phase: open_phases) {
         validate_phase(phase);
     }
@@ -89,6 +82,7 @@ void Server::init(const std::string &table_config_path, const std::string &phase
 
     table_config_file >> m_table_data;
     table_config_file.close();
+    m_log->info("Server::init completed successfully");
 }
 
 json Server::generate_response() const {
@@ -100,42 +94,59 @@ json Server::generate_response() const {
     return resp;
 }
 
-GameState Server::serve(const int port) {
+std::unique_ptr<GameState> Server::serve(const int port) {
+    m_log->info("Starting Server::serve on port {}", port);
     init_server(port);
-    m_log->info("listening on: {}:{}", get_ip(), port);
+
+    m_log->info("Getting local IP address");
+    char* ip_addr = get_ip();
+    m_log->info("listening on: {}:{}", ip_addr, port);
+
     sockaddr_in client_addr{};
     socklen_t client_len = sizeof(client_addr);
 
     int listen_fd = m_fd;
-    m_fd = accept(m_fd, reinterpret_cast<sockaddr *>(&client_addr), &client_len);
-    if (m_fd < 0)
+    m_log->info("Waiting for accept()...");
+    m_fd = accept(listen_fd, reinterpret_cast<sockaddr *>(&client_addr), &client_len);
+
+    if (m_fd < 0) {
+        close(listen_fd);
         fatal("error: failed to accept connection", m_log);
+    }
 
     char ip[INET_ADDRSTRLEN];
     inet_ntop(AF_INET, &client_addr.sin_addr, ip, sizeof(ip));
     uint16_t client_port = ntohs(client_addr.sin_port);
     m_log->info("accepted connection from {}:{}", ip, client_port);
 
+    m_log->info("Waiting to receive JSON request");
     std::optional<json> msg_optional = recv_json();
     if (!msg_optional.has_value()) {
         fatal("failed to receive request from client", m_log);
     }
     json msg = msg_optional.value();
+    m_log->info("received JSON request from {}:{}, data: {}", ip, client_port, msg.dump());
 
     std::string req_type;
     try {
         req_type = msg.at("type");
+        m_log->info("Request type: {}", req_type);
     } catch (std::exception &) {
         fatal("error: no type field in request body", m_log);
     }
 
-
     if (req_type == "REQUEST_STATE") {
+        m_log->info("Generating and sending response");
         send_json(generate_response());
     } else {
         fatal("error: unknown request type", m_log);
     }
+
+    m_log->info("Closing listening socket and returning GameState");
     close(listen_fd);
-    auto gs = GameState(*m_table_state, m_cfg, *m_phase_state);
-    return gs;
-}
+
+    return std::make_unique<GameState>(
+        *m_table_state,
+        m_cfg,
+        *m_phase_state
+    );}

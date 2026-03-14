@@ -9,7 +9,7 @@ class PhaseState {
     std::shared_ptr<spdlog::logger> m_log = create_logger("PS");
 
 public:
-    explicit PhaseState(Phase phase_bot_a, Phase phase_bot_b);
+    explicit PhaseState();
 
     /**
      * Gets the id of bot_a's currently active phase

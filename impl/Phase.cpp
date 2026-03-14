@@ -1,5 +1,19 @@
 #include "Phase.h"
 
+template<typename T>
+std::string vec_to_string(const std::vector<T>& vec)
+{
+    std::ostringstream oss;
+    oss << "[";
+    for (size_t i = 0; i < vec.size(); ++i) {
+        oss << vec[i];
+        if (i + 1 < vec.size())
+            oss << ", ";
+    }
+    oss << "]";
+    return oss.str();
+}
+
 Phase::Phase(const std::string &phase_id, const json &data) {
     m_id = phase_id;
     m_status = OPEN;
@@ -14,7 +28,7 @@ Phase::Phase(const std::string &phase_id, const json &data) {
     }
 }
 
-const std::string Phase::get_id() const {
+std::string Phase::get_id() const {
     return m_id;
 }
 

@@ -44,6 +44,8 @@ inline std::string statusCodeToString(const PhaseStatus status) {
             return "TIMEOUT";
         case DONE:
             return "DONE";
+        case RUNNING:
+            return "RUNNING";
         default:
             throw std::logic_error("Unknown phase status");
     }
@@ -70,7 +72,7 @@ public:
     /**
      * @return the phase id
      */
-    [[nodiscard]] const std::string get_id() const;
+    [[nodiscard]] std::string get_id() const;
 
     /**
      * @return the amount of time it takes to complete the phase as an int

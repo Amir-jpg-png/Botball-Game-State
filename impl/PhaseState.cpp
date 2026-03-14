@@ -3,9 +3,7 @@
 
 using json = nlohmann::json;
 
-PhaseState::PhaseState(Phase phase_bot_a, Phase phase_bot_b) : m_open_phases({}),
-                                                               m_phase_id_a(std::move(phase_bot_a.get_id())),
-                                                               m_phase_id_b(std::move(phase_bot_b.get_id())) {
+PhaseState::PhaseState() : m_open_phases({}), m_phase_id_a("INIT_A"),m_phase_id_b("INIT_B") {
 }
 
 void PhaseState::set_phase_id_a(const std::string &phase_id) {
@@ -60,9 +58,5 @@ Phase *PhaseState::get_phase_ptr(const std::string &phase_id) {
 }
 
 void PhaseState::clean() {
-    auto &phases = get_open_phases();
-    std::erase_if(phases,
-                  [](const Phase &p) {
-                      return p.get_done() || p.get_status() == TIMEOUT;
-                  });
+
 }

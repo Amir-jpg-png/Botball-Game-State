@@ -6,9 +6,6 @@
 #include <thread>
 #include "Client.h"
 #include <mutex>
-
-// Private
-
 void GameState::execute_init(const std::function<void()> &action) {
     Phase *init = m_agent == "bot_a"
                       ? m_phase_state.get_phase_ptr("INIT_A")
@@ -36,9 +33,11 @@ static bool value_satisfies(const std::any &actual, const std::any &required) {
 }
 
 bool GameState::has_phases() const {
-    for (const auto &phase: m_phase_state.get_open_phases_const()) {
-        if (phase.get_allowed_agent() == m_agent) {
-            return true;
+    for (const auto &phase : m_phase_state.get_open_phases_const()) {
+        if (!phase.get_done() && phase.get_status() != TIMEOUT) {
+            if (phase.get_allowed_agent() == m_agent) {
+                return true;
+            }
         }
     }
     return false;
@@ -52,6 +51,10 @@ void GameState::update_phase_status(Phase &phase) const {
     }
     if (phase.get_status() == TIMEOUT) {
         m_log->trace("skipped phase {} because it timed out", phase.get_id());
+        return;
+    }
+    if (phase.get_status() == RUNNING) {
+        m_log->trace("skipped phase {} because it is currently running", phase.get_id());
         return;
     }
     const PhaseStatus status = phase.get_status();
@@ -133,10 +136,10 @@ int GameState::time_remaining() const {
 }
 
 std::optional<std::string> GameState::get_next_best_phase() {
-    std::unique_ptr<Phase> best;
+    std::string best_id;
     double best_score = -std::numeric_limits<double>::infinity();
 
-    m_log->info("get next best phase: {}", m_agent);
+    m_log->trace("get next best phase: {}", m_agent);
     for (Phase &phase: m_phase_state.get_open_phases()) {
         if (phase.get_allowed_agent() != m_agent) {
             m_log->trace("skipped phase {} because agent is not allowed", phase.get_id());
@@ -157,16 +160,15 @@ std::optional<std::string> GameState::get_next_best_phase() {
         m_log->info("score of phase {}: {}", phase.get_id(), score);
         if (score > best_score) {
             best_score = score;
-            best = std::make_unique<Phase>(phase);
+            best_id = phase.get_id();
         }
     }
 
-    if (!best) {
-        m_log->info("no more phases to execute");
+    if (best_id.empty()) {
         return std::nullopt;
     }
-    m_log->info("selected phase {} as next phase", best->get_id());
-    return best->get_id();
+    m_log->info("selected phase {} as next phase", best_id);
+    return best_id;
 }
 
 // Public
@@ -177,29 +179,35 @@ GameState::GameState(TableState table_state, const Config &config, PhaseState ph
       m_phase_state(std::move(phase_state)) {
 }
 
-GameState GameState::connect_server(const std::string &game_state_config_path,
-                                    const std::string &table_state_config_path,
-                                    const std::string &phase_state_config_path) {
+std::unique_ptr<GameState> GameState::connect_server(
+    const std::string &game_state_config_path,
+    const std::string &table_state_config_path,
+    const std::string &phase_state_config_path)
+{
     auto srv = std::make_unique<Server>();
     srv->init(table_state_config_path, phase_state_config_path, game_state_config_path);
 
-    GameState gs = srv->serve(3000);
+    auto gs = srv->serve(3000);
 
-    gs.m_socket = std::move(srv);
-
-    gs.m_agent = "bot_a";
-    gs.m_log = create_logger("GS");
+    gs->m_socket = std::move(srv);
+    gs->m_agent = "bot_a";
+    gs->m_log = create_logger("GState");
 
     return gs;
 }
 
-GameState GameState::connect_client(const std::string &ip, const uint16_t port) {
+std::unique_ptr<GameState> GameState::connect_client(
+    const std::string &ip,
+    uint16_t port)
+{
     auto client = std::make_unique<Client>();
+
     auto gs = client->get_remote_state(ip, port);
 
-    gs.m_socket = std::move(client);
-    gs.m_agent = "bot_b";
-    gs.m_log = create_logger("GS");
+    gs->m_socket = std::move(client);
+    gs->m_agent = "bot_b";
+    gs->m_log = create_logger("GS");
+
     return gs;
 }
 
@@ -275,10 +283,12 @@ void GameState::listen() {
 
                     std::lock_guard lock(m_state_mutex);
 
+
                     auto updates = get_key_value(data["payload"]);
                     for (const auto &[key, val]: updates) {
                         m_game_table.set(key, val);
                     }
+                    m_state_changed = true;
                 }
                 if (data["type"] == "UPDATE_PHASE") {
                     json payload = data["payload"];
@@ -297,7 +307,8 @@ void GameState::listen() {
                         }
                     }
                 }
-            } catch (const std::exception &) {
+            } catch (const std::exception &e) {
+                m_log->error("Listen thread exception: {}", e.what());
                 break;
             }
         }
@@ -324,9 +335,18 @@ void GameState::run(const std::unordered_map<std::string, std::function<void()> 
 
             active_id = (m_agent == "bot_a") ? m_phase_state.get_phase_id_a() : m_phase_state.get_phase_id_b();
 
-            if (active_id.empty() || !m_phase_state.has_phase(active_id) || m_phase_state.get_phase(active_id).
-                get_done()) {
+            bool is_running = false;
+
+            if (const Phase* curr = m_phase_state.get_phase_ptr(active_id)) {
+                is_running = curr->get_status() == RUNNING;
+            }
+
+            if (active_id.empty() ||
+                !m_phase_state.has_phase(active_id) ||
+                m_phase_state.get_phase(active_id).get_done() ||
+                (!is_running && m_state_changed)) {
                 auto next_id = get_next_best_phase();
+                m_state_changed = false;
                 if (!next_id) {
                     if (!has_phases()) break;
                 } else {
@@ -360,8 +380,15 @@ void GameState::run(const std::unordered_map<std::string, std::function<void()> 
     while (true) {
         {
             std::lock_guard lock(m_state_mutex);
-            m_phase_state.clean();
-            if (m_phase_state.get_open_phases_const().empty()) {
+            bool any_active = false;
+            for (const auto &p : m_phase_state.get_open_phases_const()) {
+                if (!p.get_done() && p.get_status() != TIMEOUT) {
+                    any_active = true;
+                    break;
+                }
+            }
+
+            if (!any_active) {
                 m_socket->shutdown_socket();
                 m_socket->close_socket();
                 if (m_listen_thread.joinable()) {
@@ -371,5 +398,4 @@ void GameState::run(const std::unordered_map<std::string, std::function<void()> 
             }
         }
         std::this_thread::sleep_for(std::chrono::milliseconds(100));
-    }
-}
+    }}
